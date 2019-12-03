@@ -1,0 +1,46 @@
+<% include ../partials/header %> 
+
+<div class="container">
+    
+     <header class="jumbotron">
+         <div class="container">
+             <h1>Welcome To Metrics OP Tool!</h1>
+             <p>This app helps in creating the Team Metrics and organizing those data by storing them on weekly/monthly/Quarterly </p>
+             
+                  <div class="team-selector">
+                    <div class="col-md-3">
+                      <h3 class="select" >Create new Metrics :</h3>
+                      <select
+                        name="team "
+                        onchange="location = this.value;"
+                        class="form-control selectpicker"><option>Select Your Team</option>
+                        <option value="/campgrounds/new">ITB</option>
+                        <option value="/campgrounds/gok"> GoK </option>
+                        <option value="/campgrounds/metadata">Metadata</option>
+                        <option value="/campgrounds/series">Series</option>
+                        <option value="/campgrounds/xray">X-Ray</option>
+                        <option value="">All</option>
+                      </select>
+                    </div>
+                  </div>
+                
+         </div>
+     </header>
+     
+     <div class="ui main text ">
+         <div class="ui huge header">Recently Posted Metrics...</div>
+             <% campgrounds.slice().reverse().forEach(function(campground){ %>
+                <div class="ui right aligned grid segment">
+                  <div class="left floated left aligned six wide column">
+                      <h4 >Week: 46<b>   |  Team : ITB</b></h4>
+                      <span>Created by <b><%= campground.author.username %></b> on : <i><%= campground.created.toDateString() %></i></span>
+                  </div>
+                  <div class="right floated right aligned six wide column buttons">
+                      <a class="ui floated tiny basic violet button" href="/campgrounds/<%= campground._id %>" ><b>View More</b> <i class="small right chevron icon"></i></a>
+                  </div>
+                </div>
+              <% }) %>
+        </div>
+</div>
+
+<% include ../partials/footer %>

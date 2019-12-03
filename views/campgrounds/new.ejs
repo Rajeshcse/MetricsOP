@@ -1,0 +1,68 @@
+<% include ../partials/header %>
+<div class="ui container">
+    <div class="row">
+        <h1 style="text-align: center">Create New metrics of the week</h1>
+        <div style="margin: 25px auto;">
+        <form action="/campgrounds" method="POST">
+        <table class="ui celled structured striped table">
+          <thead>
+              <tr>
+              <th>
+              </th>
+              <th class="ui center aligned header" colspan="3">Planned</th>
+              <th class="ui center aligned header" colspan="4">Actual</th>
+            </tr>
+            
+            <tr>
+              <th class="ui center aligned ">Title</th>
+              <th>Volume</th>
+              <th>Head Count</th>
+              <th>Productivity</th>
+              <th>Volume</th>
+              <th>Head Count</th>
+              <th>Call outs</th>
+             </tr>
+             <tr>
+                 
+            <th>Inside The Book - Proactive Audits</th>
+            <td><input name="pv1"  class="form-control" id="value1" type="text" value="500" readonly  onkeyup="sum();"></td>
+            <td><input name="pv2"  class="form-control" id="value2" type="text" value="4.99" readonly  onkeyup="sum();"  ></td>
+            <td><input  class="form-control" type="text" value="20.4"  readonly  ></td>
+         <script>
+        function sum() {
+              var txtFirstNumberValue = document.getElementById('value1').value;
+              var txtSecondNumberValue = document.getElementById('value2').value;
+              var result = txtFirstNumberValue / txtSecondNumberValue/5;
+              if (!isNaN(result)) {
+                 document.getElementById('value3').value = result;
+              }
+        }
+        </script>
+                <td><input name="pv3"  class="form-control" type="text" required ></td>
+                <td><input name="pv4"  class="form-control" type="text" required  ></td>
+                 <td><textarea  rows="2" name="couts1" ></textarea></td>
+             </tr>
+            <tr>
+                <th>Proactive Audits</th>
+                <td><input name="pv5"  class="form-control" type="text" value="12" readonly  ></td>
+                <td><input name="pv6"  class="form-control" type="text" value="1"  readonly ></td>
+                <td><input  class="form-control" type="text" value="2.4"  readonly  ></td>
+                <td><input name="pv7"  class="form-control" type="text" required ></td>
+                <td><input name="pv8"  class="form-control" type="text" required ></td>
+               
+                <td><textarea  rows="2"  name="couts2" ></textarea></td>
+             </tr>
+            </thead>
+       </table>
+                
+       <div class="form-group">
+        <button class="ui basic large blue  button" >Submit!</button>
+                </div>
+            </form>
+            
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+
