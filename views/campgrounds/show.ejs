@@ -54,19 +54,119 @@
             <td><%= (campground.pv7 / campground.pv8)/5 %> </td>
             <td><%= campground.couts2 %></td>
           </tr>
+          
+             <tr>
+            <th>Best Sellers</th>
+            <td><%= campground.pv9 %></td>
+            <td><%= campground.pv10 %></td>
+            <td><%= (campground.pv9 / campground.pv10)/5 %></td>
+            <td><%= campground.pv11 %></td>
+            <td><%= campground.pv12 %></td>
+            <td><%= (campground.pv11 / campground.pv12)/5 %></td>
+            <td><%= campground.couts3 %></td>
+          </tr>
+          <tr>
+            <th>Pre-Orders</th>
+            <td><%= campground.pv13 %></td>
+            <td><%= campground.pv14 %></td>
+            <td><%= (campground.pv13 / campground.pv14)/5 %></td>
+            <td><%= campground.pv15 %></td>
+            <td><%= campground.pv16 %></td>
+            <td><%= (campground.pv15 / campground.pv16)/5 %></td>
+            <td><%= campground.couts4 %></td>
+          </tr>
+          
+          <tr>
+            <th>Big Books</th>
+            <td><%= campground.pv17 %></td>
+            <td><%= campground.pv18 %></td>
+            <td><%= (campground.pv17 / campground.pv18)/5 %></td>
+            <td><%= campground.pv19 %></td>
+            <td><%= campground.pv20 %></td>
+            <td><%= (campground.pv19 / campground.pv20)/5 %></td>
+            <td><%= campground.couts5 %></td>
+          </tr>
+          
+          <tr>
+            <th>Kindle Deals</th>
+            <td><%= campground.pv21 %></td>
+            <td><%= campground.pv22 %></td>
+            <td><%= (campground.pv21 / campground.pv22)/5 %></td>
+            <td><%= campground.pv23 %></td>
+            <td><%= campground.pv24 %></td>
+            <td><%= (campground.pv23 / campground.pv24)/5 %></td>
+            <td><%= campground.couts6 %></td>
+          </tr>
+          <tr>
+            <th>Esclation Audits</th>
+            <td><%= campground.pv25 %></td>
+            <td><%= campground.pv26 %></td>
+            <td><%= (campground.pv25 / campground.pv26)/5 %></td>
+            <td><%= campground.pv27 %></td>
+            <td><%= campground.pv28 %></td>
+            <td><%= (campground.pv27 / campground.pv28)/5 %></td>
+            <td><%= campground.couts7 %></td>
+          </tr>
+          
+          <tr>
+            <th>New Scope Proactive Audits</th>
+            <td><%= campground.pv29 %></td>
+            <td><%= campground.pv30 %></td>
+            <td> <%=  (campground.pv29 / campground.pv30)/5  %> </td>
+            <td><%= campground.pv31 %></td>
+            <td><%= campground.pv32 %></td>
+            <td><%= (campground.pv31 / campground.pv32)/5 %></td>
+            <td><%= campground.couts8 %></td>
+          </tr>
+          
+          <tr>
+            <th>KU Page Violation Audits</th>
+            <td><%= campground.pv33 %></td>
+            <td><%= campground.pv34 %></td>
+            <td>
+              <%= (campground.pv33 / campground.pv34)/5  %> 
+            </td>
+            <td><%= campground.pv35 %></td>
+            <td><%= campground.pv36 %></td>
+            <td><%= (campground.pv35 / campground.pv36)/5 %></td>
+            <td><%= campground.couts9 %></td>
+          </tr>
+          
+          <tr>
+            <th>KU Tickets</th>
+            <td><%= campground.pv37 %></td>
+            <td><%= campground.pv38 %></td>
+            <td><%= (campground.pv37 / campground.pv38)/5 %></td>
+            <td><%= campground.pv39 %></td>
+            <td><%= campground.pv40 %></td>
+            <td><%= (campground.pv39 / campground.pv40)/5 %></td>
+            <td><%= campground.couts10 %></td>
+          </tr>
+          
+          <tr>
+            <th>KU All Stars</th>
+            <td><%= campground.pv41 %></td>
+            <td><%= campground.pv42 %></td>
+            <td><%= (campground.pv41 / campground.pv42)/5 %></td>
+            <td><%= campground.pv43 %></td>
+            <td><%= campground.pv44 %></td>
+            <td><%= (campground.pv43 / campground.pv44)/5 %></td>
+            <td><%= campground.couts11 %></td>
+          </tr>
         </thead>
-                
+        
+          
+        </thead>
     </table>
-      
-                    <p>
-                        <em>Submitted By <%= campground.author.username %></em>
-                    </p>
-                    <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
-                        <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
-                        <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-                            <button class="btn btn-xs btn-danger">Delete</button>
-                        </form>
-                    <% }%>
+            <p>
+                <em>Submitted By <%= campground.author.username %></em>
+            </p>
+            <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+                <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-xs btn-danger">Delete</button>
+                </form>
+            <% }%>
                 </div>
             </div>
         </div>

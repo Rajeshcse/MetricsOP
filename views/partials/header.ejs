@@ -17,14 +17,17 @@
                 <ul class="nav navbar-nav navbar-left">
                     <li class="nav-item">
                         <a class="nav-link" href="/campgrounds/reports">View Reports</a>
+                        
                      </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <% if(!currentUser){ %>
+                    
                         <li><a href="/login">Login <i class="sign-in icon"></i></a></li>
                         <li><a href="/register">Sign Up</a></li>
+                        
                     <% } else { %>
-                        <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                        <li><a href="/campgrounds/profile">Signed In As <%= currentUser.username %></a></li>
                         <li><a href="/logout">Logout</a></li>
                     <% } %>
                 </ul>
