@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>Metrics </title>
@@ -6,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
         <link rel="stylesheet" href="/stylesheets/main.css">
     </head>
+    
     <body>
     <nav class=" navbar navbar-inverse">
         <div class="container-fluid">
@@ -17,7 +19,6 @@
                 <ul class="nav navbar-nav navbar-left">
                     <li class="nav-item">
                         <a class="nav-link" href="/campgrounds/reports">View Reports</a>
-                        
                      </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -34,9 +35,8 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container">
-        
         <% if(error && error.length > 0){ %>
             <div class="alert alert-danger" role="alert">
                 <%= error %>

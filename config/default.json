@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://rparaman:Geek123@cluster0-zugga.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}

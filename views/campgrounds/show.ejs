@@ -1,28 +1,24 @@
 <% include ../partials/header %>
-<div class="ui container">
+<div class="container" >
     <div class="row">
      
 <div>
     <div class="thumbnail">
         <img class="img-responsive" src="<%= campground.image %>">
         <div class="caption-full">
+        
             
-            <h4><a><%=campground.name%></a></h4>
-            <span><b>Created on :</b><i><%=  campground.created.toDateString() %></i></span><br>
-
-            <p><%= campground.description %></p>
-            <p><%= campground.week %></p>
-            <p><%= campground.month %></p>
         <table class="ui celled structured striped table">
         <thead>
+
           <tr>
             <th>
-              Year: 2019<br />
-              Week:46
+              [Year- Week]:<p>[ <%= campground.week %>] </p>
             </th>
             <th class="ui center aligned header" colspan="3">Planned</th>
             <th class="ui center aligned header" colspan="4">Actual</th>
           </tr>
+
           <tr>
             <th class="ui center aligned ">Title</th>
             <th>Volume</th>
@@ -33,6 +29,7 @@
             <th>Productivity</th>
             <th>Call outs</th>
           </tr>
+
           <tr>
             <th>Inside The Book - Proactive Audits</th>
             <td><%= campground.pv1 %></td>
@@ -44,6 +41,7 @@
             <td><%= campground.couts1 %></td>
           </tr>
 
+          <!-- 
           <tr>
             <th>Proactive Audits</th>
             <td><%= campground.pv5 %></td>
@@ -53,7 +51,7 @@
             <td><%= campground.pv8 %></td>
             <td><%= (campground.pv7 / campground.pv8)/5 %> </td>
             <td><%= campground.couts2 %></td>
-          </tr>
+          </tr> -->
           
              <tr>
             <th>Best Sellers</th>
@@ -123,9 +121,7 @@
             <th>KU Page Violation Audits</th>
             <td><%= campground.pv33 %></td>
             <td><%= campground.pv34 %></td>
-            <td>
-              <%= (campground.pv33 / campground.pv34)/5  %> 
-            </td>
+            <td> <%= (campground.pv33 / campground.pv34)/5  %>  </td>
             <td><%= campground.pv35 %></td>
             <td><%= campground.pv36 %></td>
             <td><%= (campground.pv35 / campground.pv36)/5 %></td>
@@ -154,13 +150,12 @@
             <td><%= campground.couts11 %></td>
           </tr>
         </thead>
-        
-          
-        </thead>
+      </thead>
     </table>
             <p>
                 <em>Submitted By <%= campground.author.username %></em>
             </p>
+            <span><i>Created on :</i><%=  campground.created.toDateString() %></span><br>
             <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
                 <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
                 <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">

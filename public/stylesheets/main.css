@@ -1,28 +1,31 @@
 .thumbnail img {
-    width: 100%;
+  width: 100%;
 }
 
 .thumbnail {
-    padding: 0;
+  padding: 0;
 }
 
 .thumbnail .caption-full {
-    padding: 9px;
+  padding: 9px;
 }
 
 #delete-form {
-    display: inline;
+  display: inline;
 }
 
-.select{
-    display: inline;
+.select {
+  display: inline;
 }
 
-a{
-    color: black;
+a {
+  color: black;
 }
 
-.loginbtn{
-    background: none;
+.loginbtn {
+  background: none;
 }
 
+.login {
+  width: 260px;
+}

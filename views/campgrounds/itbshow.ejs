@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+
+<div class="ui main  text ">
+        <div class="ui container">
+                <div class="ui huge header">Recently Posted Metrics...</div>
+                <% campgrounds.slice().reverse().forEach(function(campground){ %>
+                <div class="ui right aligned grid segment">
+                  <div class="left floated left aligned six wide column">
+                    <h4>
+                      Year: <%= campground.week %><b> | Team : <%= campground.team %></b>
+                    </h4>
+                    <span
+                      >Created by <b><%= campground.author.username %></b> on :
+                      <i><%= campground.created.toDateString() %></i></span
+                    >
+                  </div>
+                  <div class="right floated right aligned six wide column buttons">
+                  
+                <a class="ui floated tiny basic violet button" href="/campgrounds/<%= campground._id %>"><b>View More</b> <i class="small right chevron icon"></i></a>
+                </div>
+            </div>
+            <% }) %>
+            </div>
+        </div>
+</div>
