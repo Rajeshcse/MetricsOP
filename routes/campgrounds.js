@@ -298,7 +298,7 @@ router.get("/gok", middleware.isLoggedIn, function(req, res) {
   res.render("campgrounds/gok");
 });
 
-router.get("/showITB_month", middleware.isLoggedIn, function(req, res) {
+router.get("/showITB_month", function(req, res) {
   res.render("campgrounds/showITB_month");
 });
 
@@ -316,9 +316,11 @@ router.get("/gokshow", function(req, res) {
 router.get("/metadata", middleware.isLoggedIn, function(req, res) {
   res.render("campgrounds/metadata");
 });
+
 router.get("/series", middleware.isLoggedIn, function(req, res) {
   res.render("campgrounds/series");
 });
+
 router.get("/itb", middleware.isLoggedIn, function(req, res) {
   res.render("campgrounds/itb");
 });

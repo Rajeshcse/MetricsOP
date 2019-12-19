@@ -26,7 +26,60 @@
       </div>
     </div>
   </header>
-  <a href="campgrounds/itbshow">ITB</a>
+
+  <style>
+    .item{
+      background: #f4f4f4;
+      border: #ccc solid 1px;
+      padding: 1rem;
+      text-align: center;
+      margin: .50rem;
+      flex:1;
+      border-radius: 5%;
+    }
+
+    #container{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 4rem;
+    }
+  </style>
+  <h2 class="team">View Reports:</h2>
+  <div id="container" >
+    <div class="item"><h3><a href="campgrounds/itbshow">ITB</a></h3></div>
+    <div class="item"><h3><a href="campgrounds/seriesShow">Series</a></h3></div>
+    <div class="item"><h3><a href="campgrounds/xrayshow">X-ray</a></h3></div>
+    <div class="item"><h3><a href="campgrounds/metadataShow">Metadata</a></h3></div>
+    <div class="item"><h3><a href="campgrounds/gokshow">GOK</a></h3></div>
+    
+  </div>
+
+  <div class="ui container segment">
+    <div class=" main text ">
+      <div class="ui huge header blue">Recent updates : </div>
+      <% campgrounds.slice().reverse().forEach(function(itbMetric){ %> 
+      <div class="ui right aligned grid segment">
+        <div class="left floated left aligned six wide column">
+          <h4><%= itbMetric.week %><b> | Team : ITB</b></h4>
+          <span
+            >Created by <b><%= itbMetric.author.username %></b> on :
+            <i><%= itbMetric.created.toDateString() %></i></span
+          >
+        </div>
+        <div class="right floated right aligned six wide column buttons">
+          <a
+            class="ui floated tiny basic violet button"
+            href="/campgrounds/<%= itbMetric._id %>"
+            ><b>View More</b> <i class="small right chevron icon"></i
+          ></a>
+        </div>
+      </div>
+       <% }) %>
+    </div>
+  </div>
+
+  
+ 
 
   <% include ../partials/footer %>
-</div>
+</di>

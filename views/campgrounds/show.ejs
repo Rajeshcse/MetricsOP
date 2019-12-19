@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 <div class="container" >
     <div class="row">
-     
+
 <div>
     <div class="thumbnail">
         <img class="img-responsive" src="<%= campground.image %>">
@@ -97,6 +97,7 @@
             <td><%= (campground.pv23 / campground.pv24)/5 %></td>
             <td><%= campground.couts6 %></td>
           </tr>
+
           <tr>
             <th>Esclation Audits</th>
             <td><%= campground.pv25 %></td>
@@ -130,6 +131,7 @@
             <td><%= campground.couts9 %></td>
           </tr>
           
+
           <tr>
             <th>KU Tickets</th>
             <td><%= campground.pv37 %></td>
@@ -151,6 +153,7 @@
             <td><%= (campground.pv43 / campground.pv44)/5 %></td>
             <td><%= campground.couts11 %></td>
           </tr>
+
         </thead>
       </thead>
     </table>
