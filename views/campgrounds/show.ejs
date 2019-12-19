@@ -32,7 +32,9 @@
 
           <tr>
             <th>Inside The Book - Proactive Audits</th>
-            <td><%= campground.pv1 %></td>
+            <td><%= campground.pv1 %></td> 
+
+
             <td><%= campground.pv2 %></td>
             <td><%= (campground.pv1 / campground.pv2)/5 %></td>
             <td><%= campground.pv3 %></td>
@@ -89,7 +91,7 @@
             <th>Kindle Deals</th>
             <td><%= campground.pv21 %></td>
             <td><%= campground.pv22 %></td>
-            <td><%= (campground.pv21 / campground.pv22)/5 %></td>
+            <td><%= (campground.pv21 / campground.pv22)/5%></td>
             <td><%= campground.pv23 %></td>
             <td><%= campground.pv24 %></td>
             <td><%= (campground.pv23 / campground.pv24)/5 %></td>
@@ -152,19 +154,19 @@
         </thead>
       </thead>
     </table>
-            <p>
-                <em>Submitted By <%= campground.author.username %></em>
-            </p>
-            <span><i>Created on :</i><%=  campground.created.toDateString() %></span><br>
-            <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
-                <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
-                <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-                    <button class="btn btn-xs btn-danger">Delete</button>
-                </form>
-            <% }%>
-                </div>
+        <p>
+            <em>Submitted By <%= campground.author.username %></em>
+        </p>
+        <span><i>Created on :</i><%=  campground.created.toDateString() %></span><br>
+        <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+            <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+            <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-xs btn-danger">Delete</button>
+            </form>
+        <% }%>
             </div>
         </div>
+    </div>
     </div>
 </div>
 

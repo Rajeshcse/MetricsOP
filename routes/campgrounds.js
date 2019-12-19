@@ -298,6 +298,10 @@ router.get("/gok", middleware.isLoggedIn, function(req, res) {
   res.render("campgrounds/gok");
 });
 
+router.get("/showITB_month", middleware.isLoggedIn, function(req, res) {
+  res.render("campgrounds/showITB_month");
+});
+
 router.get("/gokshow", function(req, res) {
   // Get all campgrounds from DB
   Campground.find({}, function(err, allCampgrounds) {
@@ -381,7 +385,7 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req, res) {
   });
 });
 
-// DESTROY CAMPGROUND ROUTE
+// DESTROY CAMPGROUND ROUTE:
 router.delete("/:id", middleware.checkCampgroundOwnership, function(req, res) {
   Campground.findByIdAndRemove(req.params.id, function(err) {
     if (err) {
