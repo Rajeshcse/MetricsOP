@@ -1,9 +1,53 @@
 <% include partials/header %>
 
-<div class="ui container main text ">
-    <h1>Landing Page!</h1>
-    <p>Welcome to Metrics App</p>
-    <a href="/campgrounds">View All Metrics reports</a>
-</div>
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Welcome To Metrics OP Tool!</h1>
+      <p>
+        This app helps in creating the KCQ Team Performance Metrics and
+        organizing those data by storing them on weekly/monthly/Quarterly
+      </p>
+    </div>
+  </header>
 
+  <style>
+    .item {
+      background: #f4f4f4;
+      border: #ccc solid 1px;
+      padding: 1rem;
+      text-align: center;
+      margin: 0.5rem;
+      flex: 1;
+      border-radius: 5%;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 4rem;
+    }
+  </style>
+
+  <div class="ui segment">
+    <h2 class="ui  header blue">View Reports:</h2>
+    <div id="container">
+      <a class="item" href="campgrounds"
+        ><div><h3>ITB</h3></div></a
+      >
+      <a class="item" href="gokmetrics"
+        ><div><h3>GOK</h3></div></a
+      >
+      <a class="item" href="#"
+        ><div><h3>Series</h3></div></a
+      >
+      <a class="item" href="#"
+        ><div><h3>X-ray</h3></div></a
+      >
+      <a class="item" href="#"
+        ><div><h3>Metadata</h3></div></a
+      >
+    </div>
+  </div>
+</div>
 <% include partials/footer %>

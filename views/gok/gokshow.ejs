@@ -1,0 +1,282 @@
+<% include ../partials/header %>
+
+<style>
+  table {
+    width: 40%;
+    height: 300px;
+  }
+  a:hover {
+    background: rgb(66, 65, 65);
+  }
+
+  th,
+  tr,
+  td,
+  table {
+    height: 3.5rem;
+    border: 2px solid wheat;
+    text-align: center;
+  }
+  th {
+    font-size: x-large;
+  }
+  .quaterly {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .month {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  thead {
+    text-align: center;
+  }
+  a{
+    color:wheat;
+  }
+</style>
+
+
+
+<div class="container">
+  <caption>
+    <h2 class="team" > GOK Reports  , Year:2019 </h2>
+  </caption>
+  <table class="ui fixed inverted single line celled table">
+    <thead>
+      <tr>
+        <th>Quaterly</th>
+        <th>Monthly</th>
+        <th colspan="5">Weekly</th>
+      </tr>
+    </thead>
+    
+    <tr>
+      <td class="quaterly" rowspan="3">Q3</td>
+      <td class="month"><a href="/gokmetrics/showITB_month">July</a></td>
+      <td> 
+        <% gokTeam.forEach(function(gokMetrics) {  %>
+          <% if(gokMetrics.week == "2019-W27" ){  %>
+           <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%= gokMetrics.week  %> </a>
+          <% }  %> 
+        <% }) %>
+      </td>
+    
+      <td>
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+          <% if(gokMetrics.week == "2019-W28" ){  %>
+            <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+          <% }  %> 
+        <% })  %> 
+      </td>
+      
+      <td>
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+          <% if(gokMetrics.week == "2019-W29" ){  %>
+           <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+          <% }  %> 
+        <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+          <% if(gokMetrics.week == "2019-W30" ){  %>
+            <a href="/gokmetrics/<%= gokMetrics._id %>"> <%=  gokMetrics.week  %> </a>
+          <% }  %> 
+        <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W31" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+        <% }  %> 
+        <% })  %> 
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="month"><a  href="/gokmetrics/showITB_month"  > August </a></td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+          <% if(gokMetrics.week == "2019-W32" ){  %>
+          <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+          <% }  %> 
+        <% })  %> 
+      
+      </td>
+      
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W33" ){  %>
+          <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+        <% }  %> 
+      <% })  %> 
+      </td>
+
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W34" ){  %>
+          <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+         <% }  %> 
+       <% })  %> 
+      </td>
+
+      <td>
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W35" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+    </tr>
+    <tr>
+      <td class="month"><a  href="/gokmetrics/showITB_month"  > September </a></td>
+      <td>
+
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W36" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+          <% if(gokMetrics.week == "2019-W37" ){  %>
+          <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+          <% }  %> 
+        <% })  %> 
+      </td>
+
+      <td>
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W38" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W39" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+      <td>
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W41" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+    </tr>
+    <tr>
+      <td class="quaterly" rowspan="3">Q4</td>
+      <td class="month"><a  href="/gokmetrics/showITB_month"  > October </a></td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W41" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W42" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W43" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+       <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W44" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+       <% })  %> 
+      </td>
+    </tr>
+  
+    <tr>
+      <td class="month"><a  href="/gokmetrics/showITB_month"  > November </a></td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W45" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+       <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W46" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+      <td>
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W47" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W48" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+    </tr>
+    <tr>
+      <td class="month"><a  href="/gokmetrics/showITB_month"  > December </a></td>
+      <td>
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W49" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+        <% }  %> 
+        <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W50" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+        <% }  %>  
+        <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W51" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+        <% }  %> 
+        <% })  %> 
+      </td>
+      <td> 
+        <% gokTeam.forEach( function(gokMetrics) {  %>
+        <% if(gokMetrics.week == "2019-W52" ){  %>
+        <a  href="/gokmetrics/<%= gokMetrics._id %>"  > <%=  gokMetrics.week  %> </a>
+      <% }  %> 
+      <% })  %> 
+      </td>
+    </tr>
+  </table>
+
+  <div class="right floated right aligned six wide column buttons">
+    <a
+      class="ui floated big basic blue button"
+      href="/gokmetrics/gokcreate"
+      ><b>Create New Metrics </b> <i class="small right chevron icon"></i
+    ></a>
+  </div>
+  </div>
+</div>
+
+
+
+<br>

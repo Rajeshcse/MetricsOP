@@ -1,31 +1,5 @@
 <% include ../partials/header %>
 <div class="container">
-  <header class="jumbotron">
-    <div class="container">
-      <h1>Welcome To Metrics OP Tool!</h1>
-      <p>
-        This app helps in creating the KCQ Team Performance Metrics and
-        organizing those data by storing them on weekly/monthly/Quarterly
-      </p>
-      <div class="team-selector">
-        <div class="col-md-3">
-          <h3 class="select">Create new Metrics :</h3>
-          <select
-            name="team "
-            onchange="location = this.value;"
-            class="form-control selectpicker"
-            ><option>Select Your Team</option>
-            <option value="/campgrounds/new">ITB</option>
-            <option value="/campgrounds/gok"> GoK </option>
-            <option value="/campgrounds/metadata">Metadata</option>
-            <option value="/campgrounds/series">Series</option>
-            <option value="/campgrounds/xray">X-Ray</option>
-            <option value="">All</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </header>
 
   <style>
     .item{
@@ -44,18 +18,11 @@
       margin-bottom: 4rem;
     }
   </style>
-  <h2 class="team">View Reports:</h2>
-  <div id="container" >
-    <div class="item"><h3><a href="campgrounds/itbshow">ITB</a></h3></div>
-    <div class="item"><h3><a href="campgrounds/seriesShow">Series</a></h3></div>
-    <div class="item"><h3><a href="campgrounds/xrayshow">X-ray</a></h3></div>
-    <div class="item"><h3><a href="campgrounds/metadataShow">Metadata</a></h3></div>
-    <div class="item"><h3><a href="campgrounds/gokshow">GOK</a></h3></div>
-    
-  </div>
+ 
 
   <div class="ui container segment">
     <div class=" main text ">
+      <a class="ui blue big button "  href="campgrounds/itbshow">View ITB Metrics >></a>
       <div class="ui huge header blue">Recent updates : </div>
       <% campgrounds.slice().reverse().forEach(function(itbMetric){ %> 
       <div class="ui right aligned grid segment">

@@ -1,0 +1,242 @@
+<% include ../partials/header %>
+<div class="ui main class container segment">
+  <div class="ui huge header centered">GoK</div>
+  <fieldset>
+    <form class="ui form" action="/gokmetrics/gokshow" method="POST">
+      <table class="ui celled structured striped table">
+        <thead>
+          <tr>
+            <th>
+              <div class="ui action input">
+                <button class="ui blue  icon button">
+                  Select:
+                </button>
+                <input required type="week" name="week" />
+              </div>
+            </th>
+            <th class="ui center aligned header" colspan="3">Planned</th>
+            <th class="ui center aligned header" colspan="4">Actual</th>
+          </tr>
+          <tr>
+            <th class="ui center aligned ">
+              Title
+              <input
+                type="text"
+                class="form-control"
+                value="GOK"
+                name="team"
+                readonly
+              />
+            </th>
+            <th>Volume</th>
+            <th>Head Count</th>
+            <th>Productivity</th>
+            <th>Volume</th>
+            <th>Head Count</th>
+            <th>Call outs</th>
+          </tr>
+          <tr>
+            <th>GoK-Content Quality Score</th>
+            <td>
+              <input
+                name="gok1"
+                class="form-control"
+                type="text"
+                value="500"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="gok2"
+                class="form-control"
+                type="text"
+                value="4.99"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="20.02" readonly />
+            </td>
+            <td><input name="gok3" class="form-control" type="text" /></td>
+            <td><input name="gok4" class="form-control" type="text" /></td>
+            <td>
+              <div class="ui large icon input"><input type="text" /></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>GOK Proactive Audits</th>
+            <td>
+              <input
+                name="gok5"
+                class="form-control"
+                type="text"
+                value="12"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="gok6"
+                class="form-control"
+                type="text"
+                value="1"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="2.4" readonly />
+            </td>
+            <td><input name="gok7" class="form-control" type="text" /></td>
+            <td><input name="gok8" class="form-control" type="text" /></td>
+
+            <td>
+              <div class="ui large icon input"><input type="text" /></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>GOK Reactive Audits</th>
+            <td>
+              <input
+                name="gok9"
+                class="form-control"
+                type="text"
+                value="46"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="gok10"
+                class="form-control"
+                type="text"
+                value=".55"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="16.72" readonly />
+            </td>
+            <td>
+              <input name="gok11" class="form-control" type="text" />
+            </td>
+            <td>
+              <input name="gok12" class="form-control" type="text" />
+            </td>
+
+            <td>
+              <div class="ui large icon input"><input type="text" /></div>
+            </td>
+          </tr>
+          <tr>
+            <th>GoK-X-Ray</th>
+            <td>
+              <input
+                name="gok13"
+                class="form-control"
+                type="text"
+                value="152"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="gok14"
+                class="form-control"
+                type="text"
+                value="1.26"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="24.12" readonly />
+            </td>
+            <td>
+              <input name="gok15" class="form-control" type="text" />
+            </td>
+            <td>
+              <input name="gok16" class="form-control" type="text" />
+            </td>
+
+            <td>
+              <div class="ui large icon input"><input type="text" /></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>GoK-HDV</th>
+            <td>
+              <input
+                name="gok17"
+                class="form-control"
+                type="text"
+                value="8"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="gok18"
+                class="form-control"
+                type="text"
+                value="0.12"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="24.12" readonly />
+            </td>
+            <td>
+              <input name="gok19" class="form-control" type="text" />
+            </td>
+            <td>
+              <input name="gok20" class="form-control" type="text" />
+            </td>
+
+            <td>
+              <div class="ui large icon input"><input type="text" /></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>GoK-RPN (Real Page Number)</th>
+            <td>
+              <input
+                name="gok21"
+                class="form-control"
+                type="text"
+                value="185"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="gok22"
+                class="form-control"
+                type="text"
+                value="1.98"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="18.68" readonly />
+            </td>
+            <td>
+              <input name="gok23" class="form-control" type="text" />
+            </td>
+            <td>
+              <input name="gok24" class="form-control" type="text" />
+            </td>
+
+            <td>
+              <div class="ui large icon input"><input type="text" /></div>
+            </td>
+          </tr>
+        </thead>
+      </table>
+      <input class="ui basic blue button" type="submit" />
+    </form>
+  </fieldset>
+</div>

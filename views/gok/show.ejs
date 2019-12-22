@@ -1,0 +1,111 @@
+<% include ../partials/header %>
+<div class="container" >
+    <div class="row">
+    <div>
+        <div class="thumbnail">
+            
+            <div class="caption-full">
+              <caption>
+                <h2 class="team " > GOK Team:[Year<%= campground.week %> ]</h2>
+              </caption>
+            
+        <table class="ui celled structured striped table">
+        <thead>
+          <tr>
+            <th>
+              [Year- Week]:<p>[ <%= campground.week %>] </p>
+            </th>
+            <th class="ui center aligned header" colspan="3">Planned</th>
+            <th class="ui center aligned header" colspan="4">Actual</th>
+          </tr>
+
+          <tr>
+            <th class="ui center aligned "> <%= campground.team %> Metrics Title</th>
+            <th>Volume</th>
+            <th>Head Count</th>
+            <th>Productivity</th>
+            <th>Volume</th>
+            <th>Head Count</th>
+            <th>Productivity</th>
+            <th>Call outs</th>
+          </tr>
+          <tr>
+            <th>GoK-Content Quality Score</th>
+            <td><%= campground.gok1 %></td> 
+            <td><%= campground.gok2 %></td>
+            <td><%= (campground.gok1 / campground.gok2)/5 %></td>
+            <td><%= campground.gok3 %></td>
+            <td><%= campground.gok4 %></td>
+            <td><%= (campground.gok3 / campground.gok4)/5 %></td>
+            <td><%= campground.couts1 %></td>
+          </tr>
+          <tr>
+            <th>GOK Proactive Audits</th>
+            <td><%= campground.gok5 %></td> 
+            <td><%= campground.gok6 %></td>
+            <td><%= (campground.gok5 / campground.gok6)/5 %></td>
+            <td><%= campground.gok7 %></td>
+            <td><%= campground.gok8 %></td>
+            <td><%= (campground.gok7 / campground.gok8)/5 %></td>
+            <td><%= campground.couts2 %></td>
+          </tr>
+          <tr>
+            <th>GOK Reactive Audits	</th>
+            <td><%= campground.gok9 %></td> 
+            <td><%= campground.gok10 %></td>
+            <td><%= (campground.gok9 / campground.gok10)/5 %></td>
+            <td><%= campground.gok11 %></td>
+            <td><%= campground.gok12 %></td>
+            <td><%= (campground.gok11 / campground.gok12)/5 %></td>
+            <td><%= campground.couts3 %></td>
+          </tr>
+          
+          <tr>
+            <th>GoK-X-Ray	</th>
+            <td><%= campground.gok13 %></td> 
+            <td><%= campground.gok14 %></td>
+            <td><%= (campground.gok13 / campground.gok14)/5 %></td>
+            <td><%= campground.gok15 %></td>
+            <td><%= campground.gok16 %></td>
+            <td><%= (campground.gok15 / campground.gok16)/5 %></td>
+            <td><%= campground.couts4 %></td>
+          </tr>
+          <tr>
+            <th>GoK-HDV	</th>
+            <td><%= campground.gok17 %></td> 
+            <td><%= campground.gok18 %></td>
+            <td><%= (campground.gok17 / campground.gok18)/5 %></td>
+            <td><%= campground.gok19 %></td>
+            <td><%= campground.gok20 %></td>
+            <td><%= (campground.gok19 / campground.gok20)/5 %></td>
+            <td><%= campground.couts5 %></td>
+          </tr>
+          <tr>
+            <th>GoK-RPN (Real Page Number)	</th>
+            <td><%= campground.gok21 %></td> 
+            <td><%= campground.gok22 %></td>
+            <td><%= (campground.gok21 / campground.gok22)/5 %></td>
+            <td><%= campground.gok23 %></td>
+            <td><%= campground.gok24 %></td>
+            <td><%= (campground.gok22 / campground.gok24)/5 %></td>
+            <td><%= campground.couts6 %></td>
+          </tr>
+        </thead>
+      </thead>
+    </table>
+
+    <p>
+        <em>Submitted By <%= campground.author.username %></em>
+    </p>
+    <span><i>Created on :</i><%=  campground.created.toDateString() %></span><br>
+    <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+        <a class="btn btn-xs btn-warning" href="/gokMetrics/<%= campground._id %>/edit">Edit</a>
+        <form id="delete-form" action="/gokMetrics/<%= campground._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-xs btn-danger">Delete</button>
+        </form>
+    <% }%>
+    </div>      
+  </div>
+</div>
+
+<% include ../partials/footer %>

@@ -10,6 +10,7 @@ var express = require("express"),
   LocalStrategy = require("passport-local"),
   methodOverride = require("method-override"),
   Campground = require("./models/campground"),
+  Gok = require("./models/gok"),
   Comment = require("./models/comment"),
   User = require("./models/user"),
   seedDB = require("./seeds");
@@ -17,6 +18,7 @@ var express = require("express"),
 //requiring routes
 var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
+  gokRoutes = require("./routes/gokMetrics"),
   indexRoutes = require("./routes/index");
 
 mongoose.connect("mongodb://localhost/yelp_camp_v10", { useMongoClient: true });
@@ -58,6 +60,7 @@ app.use(function(req, res, next) {
 
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
+app.use("/gokMetrics", gokRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 const PORT = process.env.PORT || 5000;

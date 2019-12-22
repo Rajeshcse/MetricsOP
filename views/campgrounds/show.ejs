@@ -1,16 +1,14 @@
 <% include ../partials/header %>
 <div class="container" >
     <div class="row">
-
-<div>
-    <div class="thumbnail">
-        <img class="img-responsive" src="<%= campground.image %>">
-        <div class="caption-full">
-        
-            
+    <div>
+        <div class="thumbnail">
+            <div class="caption-full">
+              <caption>
+                <h2 class="team " > ITB Team:[Year<%= campground.week %> ]</h2>
+              </caption>
         <table class="ui celled structured striped table">
         <thead>
-
           <tr>
             <th>
               [Year- Week]:<p>[ <%= campground.week %>] </p>
@@ -20,7 +18,7 @@
           </tr>
 
           <tr>
-            <th class="ui center aligned ">Title</th>
+            <th class="ui center aligned "> <%= campground.team %> Metrics Title</th>
             <th>Volume</th>
             <th>Head Count</th>
             <th>Productivity</th>
@@ -142,7 +140,7 @@
             <td><%= (campground.pv39 / campground.pv40)/5 %></td>
             <td><%= campground.couts10 %></td>
           </tr>
-          
+
           <tr>
             <th>KU All Stars</th>
             <td><%= campground.pv41 %></td>
