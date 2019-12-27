@@ -8,16 +8,18 @@
         
         <img class="img-responsive" src="">
         <div class="caption-full">
-          <h2 class="ui basic big green label "> July Report, 2019: </i></h2>
+          <h2 class="ui basic big green label "> 1st Quarter Report , 2019: </i></h2>
 
          <% var sum = 0 %>
          <% monthITB.forEach( function(itbMetrics, index) {  %>
-          <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31"   ){  %>
+          <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31" ||  itbMetrics.week == "2019-W32" ||  itbMetrics.week == "2019-W33" || itbMetrics.week == "2019-W34"  ||  itbMetrics.week == "2019-W35" || itbMetrics.week == "2019-W36" || itbMetrics.week == "2019-W37"  || itbMetrics.week == "2019-W38" ||  itbMetrics.week == "2019-W39" || itbMetrics.week == "2019-W40" ){  %>
+           
             <% var add = itbMetrics.pv3  %>
-                 <%= add %> |
-                <% sum = sum + add %>
-                <%= console.log(add )%>
-             <% }  %>
+                volume 1="<%= add %>"" |
+            <% sum = sum + add %>
+            <%= console.log(add )%>
+            <% }  %>
+         
 
           <% }) %>
           <%= console.log("sum ="+sum/5 )%>
@@ -54,7 +56,7 @@
               
             <% var sum1 = 0 %>
             <% monthITB.forEach( function(itbMetrics) {  %>
-              <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31"   ){   %>
+              <% if(  itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31" ||  itbMetrics.week == "2019-W32" ||  itbMetrics.week == "2019-W33" || itbMetrics.week == "2019-W34"  ||  itbMetrics.week == "2019-W35" || itbMetrics.week == "2019-W36" || itbMetrics.week == "2019-W37"  || itbMetrics.week == "2019-W38" ||  itbMetrics.week == "2019-W39" || itbMetrics.week == "2019-W40"  ){   %>
 
                 <% var add = itbMetrics.pv3  %>
                     
@@ -69,7 +71,7 @@
             <td>
               <% var sum2 = 0 %>
               <% monthITB.forEach( function(itbMetrics) {  %>
-               <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31"   ){   %>
+               <% if(  itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31" ||  itbMetrics.week == "2019-W32" ||  itbMetrics.week == "2019-W33" || itbMetrics.week == "2019-W34"  ||  itbMetrics.week == "2019-W35" || itbMetrics.week == "2019-W36" || itbMetrics.week == "2019-W37"  || itbMetrics.week == "2019-W38" ||  itbMetrics.week == "2019-W39" || itbMetrics.week == "2019-W40"  ){   %>
      
                  <% var add = itbMetrics.pv4  %>
                      
@@ -98,7 +100,7 @@
             <td>
               <% var sum3 = 0 %>
               <% monthITB.forEach( function(itbMetrics, index) {  %>
-               <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31"   ){   %>
+               <% if(  itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31" ||  itbMetrics.week == "2019-W32"  ||  itbMetrics.week == "2019-W33" || itbMetrics.week == "2019-W34"  ||  itbMetrics.week == "2019-W35" || itbMetrics.week == "2019-W36" || itbMetrics.week == "2019-W37"  || itbMetrics.week == "2019-W38" ||  itbMetrics.week == "2019-W39" || itbMetrics.week == "2019-W40" ){   %>
      
                  <% var add = itbMetrics.pv11  %>
                      
@@ -113,7 +115,7 @@
             <td>
               <% var sum4 = 0 %>
               <% monthITB.forEach( function(itbMetrics, index) {  %>
-               <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31"   ){   %>
+               <% if(  itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31" ||  itbMetrics.week == "2019-W32" ||  itbMetrics.week == "2019-W33" || itbMetrics.week == "2019-W34"  ||  itbMetrics.week == "2019-W35" || itbMetrics.week == "2019-W36" || itbMetrics.week == "2019-W37"  || itbMetrics.week == "2019-W38" ||  itbMetrics.week == "2019-W39" || itbMetrics.week == "2019-W40"  ){   %>
      
                  <% var add = itbMetrics.pv12  %>
                      
@@ -135,7 +137,7 @@
             <td>33.4</td>
             <td><% var sum5 = 0 %>
               <% monthITB.forEach( function(itbMetrics, index) {  %>
-               <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31"   ){   %>
+               <% if(  itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31" ||  itbMetrics.week == "2019-W32" ||  itbMetrics.week == "2019-W33" || itbMetrics.week == "2019-W34"  ||  itbMetrics.week == "2019-W35" || itbMetrics.week == "2019-W36" || itbMetrics.week == "2019-W37"  || itbMetrics.week == "2019-W38" ||  itbMetrics.week == "2019-W39" || itbMetrics.week == "2019-W40"  ){   %>
      
                  <% var add = itbMetrics.pv15  %>
                      
@@ -149,7 +151,7 @@
             <td>
               <% var sum6 = 0 %>
               <% monthITB.forEach( function(itbMetrics, index) {  %>
-               <% if( itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31"   ){   %>
+               <% if(  itbMetrics.week == "2019-W27" || itbMetrics.week == "2019-W28" || itbMetrics.week == "2019-W29" || itbMetrics.week == "2019-W30"  || itbMetrics.week == "2019-W31" ||  itbMetrics.week == "2019-W32" ||  itbMetrics.week == "2019-W33" || itbMetrics.week == "2019-W34"  ||  itbMetrics.week == "2019-W35" || itbMetrics.week == "2019-W36" || itbMetrics.week == "2019-W37"  || itbMetrics.week == "2019-W38" ||  itbMetrics.week == "2019-W39" || itbMetrics.week == "2019-W40" ){   %>
      
                  <% var add = itbMetrics.pv16  %>
                      
@@ -165,7 +167,7 @@
           </tr>
 
 
-
+          
         <!--           
           <tr>
             <th>Big Books</th>

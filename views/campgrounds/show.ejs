@@ -31,13 +31,14 @@
           <tr>
             <th>Inside The Book - Proactive Audits</th>
             <td><%= campground.pv1 %></td> 
-
-
             <td><%= campground.pv2 %></td>
             <td><%= (campground.pv1 / campground.pv2)/5 %></td>
             <td><%= campground.pv3 %></td>
             <td><%= campground.pv4 %></td>
-            <td><%= (campground.pv3 / campground.pv4)/5 %></td>
+            <td>
+              
+              <%= campground.prod1 = (campground.pv3/ campground.pv3)/5 %>
+            </td>
             <td><%= campground.couts1 %></td>
           </tr>
 
@@ -60,9 +61,10 @@
             <td><%= (campground.pv9 / campground.pv10)/5 %></td>
             <td><%= campground.pv11 %></td>
             <td><%= campground.pv12 %></td>
-            <td><%= (campground.pv11 / campground.pv12)/5 %></td>
+            <td><%= campground.prod2 = (campground.pv11/ campground.pv12)/5 %></td>
             <td><%= campground.couts3 %></td>
           </tr>
+          
           <tr>
             <th>Pre-Orders</th>
             <td><%= campground.pv13 %></td>
@@ -70,7 +72,7 @@
             <td><%= (campground.pv13 / campground.pv14)/5 %></td>
             <td><%= campground.pv15 %></td>
             <td><%= campground.pv16 %></td>
-            <td><%= (campground.pv15 / campground.pv16)/5 %></td>
+            <td><%= campground.prod3 = (campground.pv15/ campground.pv16)/5 %></td>
             <td><%= campground.couts4 %></td>
           </tr>
           
@@ -160,9 +162,9 @@
         </p>
         <span><i>Created on :</i><%=  campground.created.toDateString() %></span><br>
         <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
-            <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+            <a class="btn  btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit <i class="edit icon" > </i> </a>
             <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-xs btn-danger">Delete</button>
+                <button class="btn  btn-danger">Delete <i class="trash alternate icon" > </i></button>
             </form>
         <% }%>
             </div>

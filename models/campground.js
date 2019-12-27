@@ -59,6 +59,17 @@ var campgroundSchema = new mongoose.Schema({
   pv43: Number,
   pv44: Number,
   pv45: Number,
+  prod1: Number,
+  prod2: Number,
+  prod3: Number,
+  prod4: Number,
+  prod5: Number,
+  prod6: Number,
+  prod7: Number,
+  prod8: Number,
+  prod9: Number,
+  prod10: Number,
+
 
   created: { type: Date, default: Date },
   week: String,

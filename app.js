@@ -12,10 +12,11 @@ var express = require("express"),
   Campground = require("./models/campground"),
   Gok = require("./models/gok"),
   Comment = require("./models/comment"),
-  User = require("./models/user"),
-  seedDB = require("./seeds");
+  User = require("./models/user");
+
 // mongodb+srv://rparaman:<password>@cluster0-owy2w.mongodb.net/test?retryWrites=true&w=majority
 //requiring routes
+
 var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   gokRoutes = require("./routes/gokMetrics"),

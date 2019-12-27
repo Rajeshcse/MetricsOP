@@ -37,7 +37,6 @@
 </style>
 
 
-
 <div class="container">
   <caption>
     <h2 class="team" > ITB Reports  , Year:2019 </h2>
@@ -52,11 +51,13 @@
     </thead>
     
     <tr>
-      <td class="quaterly" rowspan="3">Q3</td>
-      <td class="month"><a href="/campgrounds/showITB_month">July</a></td>
+      <td class="quaterly" rowspan="3"><a href="/campgrounds/q3">Q3</a></td>
+      <td class="month">
+        <a href="/campgrounds/showITB_month">July</a>
+      </td>
       <td> 
         <% campgrounds.forEach(function(itbMetric) {  %>
-          <% if(itbMetric.week == "2019-W27" && itbMetric.team == "ITB" ){  %>
+          <% if(itbMetric.week == "2019-W27"  ){  %>
            <a  href="/campgrounds/<%= itbMetric._id %>"  > <%= itbMetric.week  %> </a>
           <% }  %> 
         <% }) %>
@@ -94,7 +95,7 @@
     </tr>
   
     <tr>
-      <td class="month"><a  href="/campgrounds/showITB_month"  > August </a></td>
+      <td class="month"><a  href="/campgrounds/aug"  > August </a></td>
       <td> 
         <% campgrounds.forEach( function(itbMetric) {  %>
           <% if(itbMetric.week == "2019-W32" ){  %>
@@ -263,15 +264,14 @@
         <a  href="/campgrounds/<%= itbMetric._id %>"  > <%=  itbMetric.week  %> </a>
       <% }  %> 
       <% })  %> 
+
       </td>
     </tr>
   </table>
   <div class="right floated right aligned six wide column buttons">
     <a
-      class="ui floated big basic blue button"
-      href="/campgrounds/itb"
-      ><b>Create New Metrics </b> <i class="small right chevron icon"></i
-    ></a>
+      class="ui floated big basic blue button" href="/campgrounds/itb"> <b>Create New Metrics </b>  <i class=" arrow circle right  icon"></i>
+    </a>
   </div>
 
 

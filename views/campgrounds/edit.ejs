@@ -12,7 +12,7 @@
               <th class="ui center aligned header" colspan="4">Actual</th>
             </tr>
             <tr>
-              <th class="ui center aligned ">Title</th>
+              <th class="ui center aligned ">Title: <%= campground.team %> Team  Metrics</th>
               <th>Volume</th>
               <th>Head Count</th>
               <th>Productivity</th>
@@ -22,9 +22,9 @@
              </tr>
              <tr>
                 <th>Inside The Book - Proactive Audits</th>
-                <td><input name="campground[pv1]"  class="form-control" id="value1" type="text" value="500" readonly  onkeyup="sum();"></td>
-                 <td><input  name="campground[pv2]"   class="form-control" id="value2" type="text" value="4.99" readonly  onkeyup="sum();"  ></td>
-                 <td><input  class="form-control" type="text" id="value3" value="20.3" readonly ></td>
+                <td><input name="campground[pv1]"  class="form-control" id="value1" type="text" value="5456" readonly  onkeyup="sum();"  ></td>
+                 <td><input  name="campground[pv2]"   class="form-control" id="value2" type="text" value="3.92" readonly  onkeyup="sum();"   ></td>
+                 <td><input  class="form-control" type="text" id="value3" value="23.2" readonly ></td>
                  <script>
                 function sum() {
                       var txtFirstNumberValue = document.getElementById('value1').value;
@@ -39,44 +39,44 @@
                         <td><input  name="campground[pv4]" value="<%= campground.pv4 %>"  class="form-control" type="text" required  ></td>
                          <td><textarea  rows="2" name="couts1" ></textarea></td>
              </tr>
-            <tr>
-                <th>Proactive Audits</th>
-                <td><input  name="campground[pv5]"  class="form-control" type="text" value="12"  readonly  ></td>
-                <td><input  name="campground[pv6]"   class="form-control" type="text" value="1"  readonly ></td>
-                <td><input  class="form-control" type="text" value="2.4"  readonly  ></td>
-                <td><input name="campground[pv7]"  value="<%= campground.pv7 %>" class="form-control" type="text" ></td>
-                <td><input name="campground[pv8]"  value="<%= campground.pv8 %>" class="form-control" type="text" ></td>
-                <td><textarea  rows="2"  name="couts2"  ></textarea></td>
-             </tr>
+                  <!-- <tr>
+                     <th>Proactive Audits</th>
+                     <td><input  name="campground[pv5]"  class="form-control" type="text" value="12"  readonly  ></td>
+                     <td><input  name="campground[pv6]"   class="form-control" type="text" value="1"  readonly ></td>
+                     <td><input  class="form-control" type="text" value="2.4"  readonly  ></td>
+                     <td><input name="campground[pv7]"  value="<%= campground.pv7 %>" class="form-control" type="text" ></td>
+                     <td><input name="campground[pv8]"  value="<%= campground.pv8 %>" class="form-control" type="text" ></td>
+                     <td><textarea  rows="2"  name="couts2"  ></textarea></td>
+                  </tr> -->
              
              
                 <tr>
                 <th>Best Sellers</th>
-                <td><input name="campground[pv9]"  class="form-control" type="text" value="46" readonly  ></td>
-                <td><input name="campground[pv10]"  class="form-control" type="text" value=".55"  readonly ></td>
-                <td><input  class="form-control" type="text" value="16.72"  readonly  ></td>
-                <td><input name="campground[pv11]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv12]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv9]"  class="form-control" type="text" value="600" readonly  ></td>
+                <td><input name="campground[pv10]"  class="form-control" type="text" value=".52"  readonly ></td>
+                <td><input  class="form-control" type="text" value="23.2"  readonly  ></td>
+                <td><input name="campground[pv11]"  value="<%= campground.pv11 %>" class="form-control" type="text" required ></td>
+                <td><input name="campground[pv12]" value="<%= campground.pv12 %>"  class="form-control" type="text" required ></td>
                
                 <td><textarea  rows="2" name="campground[couts3]" ></textarea></td>
              </tr>
              <tr>
                 <th>Pre-Orders</th>
-                <td><input name="campground[pv13]"  class="form-control" type="text" value="152" readonly  ></td>
-                <td><input name="campground[pv14]"  class="form-control" type="text" value="1.26"  readonly ></td>
-                <td><input  class="form-control" type="text" value="24.12"  readonly  ></td>
-                <td><input name="campground[pv15]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv16]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv13]"  class="form-control" type="text" value="2024" readonly  ></td>
+                <td><input name="campground[pv14]"  class="form-control" type="text" value="1"  readonly ></td>
+                <td><input  class="form-control" type="text" value="33.3"  readonly  ></td>
+                <td><input name="campground[pv15]" value="<%= campground.pv15 %>"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv16]" value="<%= campground.pv16 %>"  class="form-control" type="text" required ></td>
                
                 <td><textarea  rows="2" name="campground[couts4]" ></textarea></td>
              </tr>
-             <tr>
+             <!-- <tr>
                 <th>Big Books</th>
                 <td><input name="campground[pv17]"  class="form-control" type="text"  value="8" readonly  ></td>
                 <td><input name="campground[pv18]"  class="form-control" type="text"  value="0.12"  readonly ></td>
                 <td><input  class="form-control" type="text" value="13.3"  readonly  ></td>
-                <td><input name="campground[pv19]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv20]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv19]" value="<%= campground.pv19 %>"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv20]"  value="<%= campground.pv20 %>" class="form-control" type="text" required ></td>
                
                 <td><textarea  rows="2" name="campground[couts5]" ></textarea></td>
              </tr>
@@ -86,8 +86,8 @@
                 <td><input name="campground[pv21]"  class="form-control" type="text" value="185"  readonly  ></td>
                 <td><input name="campground[pv22]"  class="form-control" type="text" value="1.98"  readonly ></td>
                 <td><input  class="form-control" type="text" value="18.68"  readonly  ></td>
-                <td><input name="campground[pv23]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv24]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv23]" value="<%= campground.pv23 %>"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv24]"  value="<%= campground.pv24 %>" class="form-control" type="text" required ></td>
                
                 <td><textarea  rows="2" name="campground[couts6]" ></textarea></td>
              </tr>
@@ -96,8 +96,8 @@
                 <td><input name="campground[pv25]"  class="form-control" type="text" value="25"   readonly  ></td>
                 <td><input name="campground[pv26]"  class="form-control" type="text"  value="0.26"  readonly ></td>
                 <td><input  class="form-control" type="text" value="19.23"  readonly  ></td>
-                <td><input name="campground[pv27]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv28]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv27]" value="<%= campground.pv27 %>"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv28]"  value="<%= campground.pv28 %>" class="form-control" type="text" required ></td>
                
                 <td><textarea  rows="2" name="campground[couts7]" ></textarea></td>
              </tr>
@@ -107,8 +107,8 @@
                 <td><input name="campground[pv29]"  class="form-control" type="text" value="12" readonly  ></td>
                 <td><input name="campground[pv30]"  class="form-control" type="text" value="12"  readonly ></td>
                 <td><input  class="form-control" type="text" value="0.2"  readonly  ></td>
-                <td><input name="campground[pv31]"  class="form-control" type="text"  required></td>
-                <td><input name="campground[pv32]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv31]" value="<%= campground.pv31 %>"  class="form-control" type="text"  required></td>
+                <td><input name="campground[pv32]" value="<%= campground.pv32 %>"  class="form-control" type="text" required ></td>
                 <td><textarea  rows="2" name="campground[couts8]" ></textarea></td>
              </tr>
           
@@ -117,8 +117,8 @@
                 <td><input name="campground[pv33]"  class="form-control" type="text"  value="84" readonly  ></td>
                 <td><input name="campground[pv34]"  class="form-control" type="text" value="0.82"  readonly ></td>
                 <td><input  class="form-control" type="text" value="20.48"  readonly  ></td>
-                <td><input name="campground[pv35]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv36]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv35]"  value="<%= campground.pv35 %>"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv36]" value="<%= campground.pv36 %>"  class="form-control" type="text" required ></td>
                 <td><textarea  rows="2" name="campground[couts9]" ></textarea></td>
              </tr>
             <tr>
@@ -126,8 +126,8 @@
                 <td><input name="campground[pv37]"  class="form-control" type="text" value="22"readonly  ></td>
                 <td><input name="campground[pv38]"  class="form-control" type="text" value="1"  readonly ></td>
                 <td><input  class="form-control" type="text" value="4.4"  readonly  ></td>
-                <td><input name="campground[pv39]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv40]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv39]" value="<%= campground.pv39 %>"   class="form-control" type="text" required ></td>
+                <td><input name="campground[pv40]"  value="<%= campground.pv40 %>"  class="form-control" type="text" required ></td>
                 <td><textarea  rows="2" name="campground[couts10]" ></textarea></td>
              </tr>
             <tr>
@@ -135,10 +135,10 @@
                 <td><input name="campground[pv41]"  class="form-control" type="text" value="12" readonly  ></td>
                 <td><input name="campground[pv42]"  class="form-control" type="text" value="2"  readonly ></td>
                 <td><input  class="form-control" type="text" value="1.2"  readonly  ></td>
-                <td><input name="campground[pv43]"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv44]"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv43]"  value="<%= campground.pv41 %>"  class="form-control" type="text" required ></td>
+                <td><input name="campground[pv44]" value="<%= campground.pv42 %>"   class="form-control" type="text" required ></td>
                 <td><textarea  rows="2" name="campground[couts11]" ></textarea></td>
-             </tr>
+             </tr> -->
             </thead>
        </table>
                 
