@@ -79,7 +79,7 @@
         <% })  %> 
       </td>
       <td> 
-        <% campgrounds.forEach( function(itbMetric) {  %>
+        <% campgrounds.forEach(function(itbMetric) {  %>
           <% if(itbMetric.week == "2019-W30" ){  %>
             <a href="/campgrounds/<%= itbMetric._id %>"> <%=  itbMetric.week  %> </a>
           <% }  %> 
@@ -258,19 +258,19 @@
         <% }  %> 
         <% })  %> 
       </td>
-      <td> 
+      <td>
         <% campgrounds.forEach( function(itbMetric) {  %>
         <% if(itbMetric.week == "2019-W52" ){  %>
         <a  href="/campgrounds/<%= itbMetric._id %>"  > <%=  itbMetric.week  %> </a>
-      <% }  %> 
-      <% })  %> 
+      <% }  %>
+      <% })  %>
 
       </td>
     </tr>
   </table>
   <div class="right floated right aligned six wide column buttons">
     <a
-      class="ui floated big basic blue button" href="/campgrounds/itb"> <b>Create New Metrics </b>  <i class=" arrow circle right  icon"></i>
+      class="ui floated big basic blue button" href="/campgrounds/itb"> <b>Create New Metrics <em> </b><i class="plus circle icon"></i>
     </a>
   </div>
 

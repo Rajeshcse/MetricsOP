@@ -29,131 +29,366 @@
           </tr>
 
           <tr>
-            <th>Inside The Book - Proactive Audits</th>
-            <td><%= campground.pv1 %></td> 
-            <td><%= campground.pv2 %></td>
-            <td><%= (campground.pv1 / campground.pv2)/5 %></td>
-            <td><%= campground.pv3 %></td>
-            <td><%= campground.pv4 %></td>
+            <th  class="ui center aligned header blue" >Proactive (Fresh Audits)</th>
+            <td><%= campground.P_Vol1 %></td> 
+            <td><%= campground.P_HCount1 %></td>
+            <td><%= (campground.P_Vol1 / campground.P_HCount1)/5 %></td>
+            <td><%= campground.A_Vol1 %></td> 
+            <td><%= campground.A_HCount1 %></td>
             <td>
               
-              <%= campground.prod1 = (campground.pv3/ campground.pv3)/5 %>
+              <%= campground.prod1 = (campground.A_Vol1/ campground.A_HCount1)/5 %>
             </td>
             <td><%= campground.couts1 %></td>
+
           </tr>
 
-          <!-- 
-          <tr>
-            <th>Proactive Audits</th>
-            <td><%= campground.pv5 %></td>
-            <td><%= campground.pv6 %></td>
-            <td><%= (campground.pv5 / campground.pv6)/5 %></td>
-            <td><%= campground.pv7 %></td>
-            <td><%= campground.pv8 %></td>
-            <td><%= (campground.pv7 / campground.pv8)/5 %> </td>
-            <td><%= campground.couts2 %></td>
-          </tr> -->
+          
           
              <tr>
             <th>Best Sellers</th>
-            <td><%= campground.pv9 %></td>
-            <td><%= campground.pv10 %></td>
-            <td><%= (campground.pv9 / campground.pv10)/5 %></td>
-            <td><%= campground.pv11 %></td>
-            <td><%= campground.pv12 %></td>
-            <td><%= campground.prod2 = (campground.pv11/ campground.pv12)/5 %></td>
-            <td><%= campground.couts3 %></td>
+            <td><%= campground.P_Vol2 %></td> 
+            <td><%= campground.P_HCount2 %></td>
+            <td><%= (campground.P_Vol2 / campground.P_HCount2)/5 %></td>
+            <td><%= campground.A_Vol2 %></td> 
+            <td><%= campground.A_HCount2 %></td>
+            <td>
+              
+              <%= campground.prod2 = (campground.A_Vol2/ campground.A_HCount2)/5 %>
+            </td>
+            <td><%= campground.couts2 %></td>
           </tr>
           
           <tr>
             <th>Pre-Orders</th>
-            <td><%= campground.pv13 %></td>
-            <td><%= campground.pv14 %></td>
-            <td><%= (campground.pv13 / campground.pv14)/5 %></td>
-            <td><%= campground.pv15 %></td>
-            <td><%= campground.pv16 %></td>
-            <td><%= campground.prod3 = (campground.pv15/ campground.pv16)/5 %></td>
-            <td><%= campground.couts4 %></td>
+            <td><%= campground.P_Vol3 %></td> 
+            <td><%= campground.P_HCount3 %></td>
+            <td><%= (campground.P_Vol3 / campground.P_HCount3)/5 %></td>
+            <td><%= campground.A_Vol3 %></td> 
+            <td><%= campground.A_HCount3 %></td>
+            <td><%= campground.prod3 = (campground.A_Vol3/ campground.A_HCount3)/5 %></td>
+            <td><%= campground.couts3 %></td>
           </tr>
           
           <tr>
             <th>Big Books</th>
-            <td><%= campground.pv17 %></td>
-            <td><%= campground.pv18 %></td>
-            <td><%= (campground.pv17 / campground.pv18)/5 %></td>
-            <td><%= campground.pv19 %></td>
-            <td><%= campground.pv20 %></td>
-            <td><%= (campground.pv19 / campground.pv20)/5 %></td>
-            <td><%= campground.couts5 %></td>
+            <td><%= campground.P_Vol4  %></td> 
+            <td><%= campground.P_HCount4  %></td>
+            <td><%= (campground.P_Vol4  / campground.P_HCount4 )/5 %></td>
+            <td><%= campground.A_Vol4  %></td> 
+            <td><%= campground.A_HCount4  %></td>
+            <td><%= campground.prod4  = (campground.A_Vol4 / campground.A_HCount4 )/5 %></td>
+            <td><%= campground.couts4 %></td>
           </tr>
           
           <tr>
             <th>Kindle Deals</th>
-            <td><%= campground.pv21 %></td>
-            <td><%= campground.pv22 %></td>
-            <td><%= (campground.pv21 / campground.pv22)/5%></td>
-            <td><%= campground.pv23 %></td>
-            <td><%= campground.pv24 %></td>
-            <td><%= (campground.pv23 / campground.pv24)/5 %></td>
-            <td><%= campground.couts6 %></td>
+            <td><%= campground.P_Vol5  %></td> 
+            <td><%= campground.P_HCount5  %></td>
+            <td><%= (campground.P_Vol5  / campground.P_HCount5 )/5 %></td>
+            <td><%= campground.A_Vol5  %></td> 
+            <td><%= campground.A_HCount5  %></td>
+            <td><%= campground.prod5  = (campground.A_Vol5 / campground.A_HCount5 )/5 %></td>
+            <td><%= campground.couts5 %></td>
           </tr>
 
           <tr>
-            <th>Esclation Audits</th>
-            <td><%= campground.pv25 %></td>
-            <td><%= campground.pv26 %></td>
-            <td><%= (campground.pv25 / campground.pv26)/5 %></td>
-            <td><%= campground.pv27 %></td>
-            <td><%= campground.pv28 %></td>
-            <td><%= (campground.pv27 / campground.pv28)/5 %></td>
-            <td><%= campground.couts7 %></td>
-          </tr>
-          
-          <tr>
-            <th>New Scope Proactive Audits</th>
-            <td><%= campground.pv29 %></td>
-            <td><%= campground.pv30 %></td>
-            <td> <%=  (campground.pv29 / campground.pv30)/5  %> </td>
-            <td><%= campground.pv31 %></td>
-            <td><%= campground.pv32 %></td>
-            <td><%= (campground.pv31 / campground.pv32)/5 %></td>
-            <td><%= campground.couts8 %></td>
+            <th>Ad-hoc Requests /Esclation Audits</th>
+            <td><%= campground.P_Vol6  %></td> 
+            <td><%= campground.P_HCount6  %></td>
+            <td><%= (campground.P_Vol6  / campground.P_HCount6 )/5 %></td>
+            <td><%= campground.A_Vol6  %></td> 
+            <td><%= campground.A_HCount6  %></td>
+            <td><%= campground.prod6  = (campground.A_Vol6 / campground.A_HCount6 )/5 %></td>
+            <td><%= campground.couts6 %></td>
           </tr>
           
           <tr>
             <th>KU Page Violation Audits</th>
-            <td><%= campground.pv33 %></td>
-            <td><%= campground.pv34 %></td>
-            <td> <%= (campground.pv33 / campground.pv34)/5  %>  </td>
-            <td><%= campground.pv35 %></td>
-            <td><%= campground.pv36 %></td>
-            <td><%= (campground.pv35 / campground.pv36)/5 %></td>
-            <td><%= campground.couts9 %></td>
+              <td><%= campground.P_Vol7  %></td> 
+              <td><%= campground.P_HCount7  %></td>
+              <td><%= (campground.P_Vol7  / campground.P_HCount7 )/5 %></td>
+              <td><%= campground.A_Vol7  %></td> 
+              <td><%= campground.A_HCount7  %></td>
+              <td><%= campground.prod7  = (campground.A_Vol7 / campground.A_HCount7 )/5 %></td>
+              <td><%= campground.couts7 %></td>
+          </tr>
+
+          <tr>
+            <th class="ui center aligned header blue" >Reactive (Contacts)</th>
+              <td><%= campground.P_Vol8  %></td> 
+              <td><%= campground.P_HCount8  %></td>
+              <td><%= (campground.P_Vol8  / campground.P_HCount8 )/5 %></td>
+              <td><%= campground.A_Vol8  %></td> 
+              <td><%= campground.A_HCount8  %></td>
+              <td><%= campground.prod8  = (campground.A_Vol8 / campground.A_HCount8 )/5 %></td>
+              <td><%= campground.couts8 %></td>
+          </tr>
+
+          <tr>
+            <th class="ui  header subhead grey ">Andons & Regulars	</th>
+              <td><%= campground.P_Vol9  %></td> 
+              <td><%= campground.P_HCount9  %></td>
+              <td><%= (campground.P_Vol9  / campground.P_HCount9 )/5 %></td>
+              <td><%= campground.A_Vol9  %></td> 
+              <td><%= campground.A_HCount9  %></td>
+              <td><%= campground.prod9  = (campground.A_Vol9 / campground.A_HCount9 )/5 %></td>
+              <td><%= campground.couts9 %></td>
           </tr>
           
-
           <tr>
-            <th>KU Tickets</th>
-            <td><%= campground.pv37 %></td>
-            <td><%= campground.pv38 %></td>
-            <td><%= (campground.pv37 / campground.pv38)/5 %></td>
-            <td><%= campground.pv39 %></td>
-            <td><%= campground.pv40 %></td>
-            <td><%= (campground.pv39 / campground.pv40)/5 %></td>
-            <td><%= campground.couts10 %></td>
+            <th class="ui  header subhead grey">Report Content Errors		</th>
+              <td><%= campground.P_Vol10  %></td> 
+              <td><%= campground.P_HCount10  %></td>
+              <td><%= (campground.P_Vol10  / campground.P_HCount10 )/5 %></td>
+              <td><%= campground.A_Vol10  %></td> 
+              <td><%= campground.A_HCount10  %></td>
+              <td><%= campground.prod10  = (campground.A_Vol10 / campground.A_HCount10 )/5 %></td>
+              <td><%= campground.couts10 %></td>
+          </tr>
+          
+          <tr>
+            <th>English</th>
+              <td><%= campground.P_Vol11  %></td> 
+              <td><%= campground.P_HCount11  %></td>
+              <td><%= (campground.P_Vol11  / campground.P_HCount11 )/5 %></td>
+              <td><%= campground.A_Vol11  %></td> 
+              <td><%= campground.A_HCount11  %></td>
+              <td><%= campground.prod11  = (campground.A_Vol11 / campground.A_HCount11 )/5 %></td>
+              <td><%= campground.couts11 %></td>
           </tr>
 
           <tr>
-            <th>KU All Stars</th>
-            <td><%= campground.pv41 %></td>
-            <td><%= campground.pv42 %></td>
-            <td><%= (campground.pv41 / campground.pv42)/5 %></td>
-            <td><%= campground.pv43 %></td>
-            <td><%= campground.pv44 %></td>
-            <td><%= (campground.pv43 / campground.pv44)/5 %></td>
-            <td><%= campground.couts11 %></td>
+            <th>English (High-value titles to be considered by Ops)</th>
+              <td><%= campground.P_Vol12  %></td> 
+              <td><%= campground.P_HCount12  %></td>
+              <td><%= (campground.P_Vol12  / campground.P_HCount12 )/5 %></td>
+              <td><%= campground.A_Vol12  %></td> 
+              <td><%= campground.A_HCount12  %></td>
+              <td><%= campground.prod12  = (campground.A_Vol12 / campground.A_HCount12 )/5 %></td>
+              <td><%= campground.couts12 %></td>
           </tr>
 
+          <tr>
+            <th>German</th>
+              <td><%= campground.P_Vol13  %></td> 
+              <td><%= campground.P_HCount13  %></td>
+              <td><%= (campground.P_Vol13  / campground.P_HCount13 )/5 %></td>
+              <td><%= campground.A_Vol13  %></td> 
+              <td><%= campground.A_HCount13  %></td>
+              <td><%= campground.prod13  = (campground.A_Vol13 / campground.A_HCount13 )/5 %></td>
+              <td><%= campground.couts13 %></td>
+          </tr>
+
+          <tr>
+            <th>French</th>
+              <td><%= campground.P_Vol14  %></td> 
+              <td><%= campground.P_HCount14  %></td>
+              <td><%= (campground.P_Vol14  / campground.P_HCount14 )/5 %></td>
+              <td><%= campground.A_Vol14  %></td> 
+              <td><%= campground.A_HCount14  %></td>
+              <td><%= campground.prod14  = (campground.A_Vol14 / campground.A_HCount14 )/5 %></td>
+              <td><%= campground.couts14 %></td>
+          </tr>
+
+          <tr>
+            <th class="ui  header subhead grey "  >Customer Reviews</th>
+              <td><%= campground.P_Vol15  %></td> 
+              <td><%= campground.P_HCount15  %></td>
+              <td><%= (campground.P_Vol15  / campground.P_HCount15 )/5 %></td>
+              <td><%= campground.A_Vol15  %></td> 
+              <td><%= campground.A_HCount15  %></td>
+              <td><%= campground.prod15  = (campground.A_Vol15 / campground.A_HCount15 )/5 %></td>
+              <td><%= campground.couts15 %></td>
+          </tr>
+
+          <tr>
+            <th class="ui  header subhead grey "  >Massmail Tickets</th>
+              <td><%= campground.P_Vol16  %></td> 
+              <td><%= campground.P_HCount16  %></td>
+              <td><%= (campground.P_Vol16  / campground.P_HCount16 )/5 %></td>
+              <td><%= campground.A_Vol16  %></td> 
+              <td><%= campground.A_HCount16  %></td>
+              <td><%= campground.prod16  = (campground.A_Vol16 / campground.A_HCount16 )/5 %></td>
+              <td><%= campground.couts16 %></td>
+          </tr>
+          
+          <tr>
+            <th class="ui  header subhead grey "  >Publisher Response	</th>
+              <td><%= campground.P_Vol17  %></td> 
+              <td><%= campground.P_HCount17  %></td>
+              <td><%= (campground.P_Vol17  / campground.P_HCount17 )/5 %></td>
+              <td><%= campground.A_Vol17  %></td> 
+              <td><%= campground.A_HCount17  %></td>
+              <td><%= campground.prod17  = (campground.A_Vol17 / campground.A_HCount17 )/5 %></td>
+              <td><%= campground.couts17 %></td>
+          </tr>
+
+          <tr>
+            <th>Submitted Corrections	</th>
+              <td><%= campground.P_Vol18  %></td> 
+              <td><%= campground.P_HCount18  %></td>
+              <td><%= (campground.P_Vol18  / campground.P_HCount18 )/5 %></td>
+              <td><%= campground.A_Vol18  %></td> 
+              <td><%= campground.A_HCount18  %></td>
+              <td><%= campground.prod18  = (campground.A_Vol18 / campground.A_HCount18 )/5 %></td>
+              <td><%= campground.couts18 %></td>
+          </tr>
+
+          <tr>
+            <th>Queries + Escalations</th>
+              <td><%= campground.P_Vol19  %></td> 
+              <td><%= campground.P_HCount19  %></td>
+              <td><%= (campground.P_Vol19  / campground.P_HCount19 )/5 %></td>
+              <td><%= campground.A_Vol19  %></td> 
+              <td><%= campground.A_HCount19  %></td>
+              <td><%= campground.prod19  = (campground.A_Vol19 / campground.A_HCount19 )/5 %></td>
+              <td><%= campground.couts19 %></td>
+          </tr>
+
+          <tr>
+            <th class="ui center aligned header blue" >Rework</th>
+              <td><%= campground.P_Vol20  %></td> 
+              <td><%= campground.P_HCount20  %></td>
+              <td><%= (campground.P_Vol20  / campground.P_HCount20 )/5 %></td>
+              <td><%= campground.A_Vol20  %></td> 
+              <td><%= campground.A_HCount20  %></td>
+              <td><%= campground.prod20  = (campground.A_Vol20 / campground.A_HCount20 )/5 %></td>
+              <td><%= campground.couts20 %></td>
+          </tr>
+
+          <tr>
+            <th>Rework Blocking</th>
+              <td><%= campground.P_Vol21  %></td> 
+              <td><%= campground.P_HCount21  %></td>
+              <td><%= (campground.P_Vol21  / campground.P_HCount21 )/5 %></td>
+              <td><%= campground.A_Vol21  %></td> 
+              <td><%= campground.A_HCount21  %></td>
+              <td><%= campground.prod21  = (campground.A_Vol21 / campground.A_HCount21 )/5 %></td>
+              <td><%= campground.couts21 %></td>
+          </tr>
+          
+          
+          <tr>
+            <th>Rework CFQI</th>
+              <td><%= campground.P_Vol22  %></td> 
+              <td><%= campground.P_HCount22  %></td>
+              <td><%= (campground.P_Vol22  / campground.P_HCount22 )/5 %></td>
+              <td><%= campground.A_Vol22  %></td> 
+              <td><%= campground.A_HCount22  %></td>
+              <td><%= campground.prod22  = (campground.A_Vol22 / campground.A_HCount22 )/5 %></td>
+              <td><%= campground.couts22 %></td>
+          </tr>
+
+
+          <tr>
+            <th>Rework Non-Blocking	</th>
+              <td><%= campground.P_Vol23  %></td> 
+              <td><%= campground.P_HCount23  %></td>
+              <td><%= (campground.P_Vol23  / campground.P_HCount23 )/5 %></td>
+              <td><%= campground.A_Vol23  %></td> 
+              <td><%= campground.A_HCount23  %></td>
+              <td><%= campground.prod23  = (campground.A_Vol23 / campground.A_HCount23 )/5 %></td>
+              <td><%= campground.couts23 %></td>
+          </tr>
+          
+          <tr>
+            <th class="ui center aligned header blue">KCVP Detections</th>
+              <td><%= campground.P_Vol24  %></td> 
+              <td><%= campground.P_HCount24  %></td>
+              <td><%= (campground.P_Vol24  / campground.P_HCount24 )/5 %></td>
+              <td><%= campground.A_Vol24  %></td> 
+              <td><%= campground.A_HCount24  %></td>
+              <td><%= campground.prod24  = (campground.A_Vol24 / campground.A_HCount24 )/5 %></td>
+              <td><%= campground.couts24 %></td>
+          </tr>
+
+
+          <tr>
+            <th>Language Mismatch</th>
+              <td><%= campground.P_Vol25  %></td> 
+              <td><%= campground.P_HCount25  %></td>
+              <td><%= (campground.P_Vol25  / campground.P_HCount25 )/5 %></td>
+              <td><%= campground.A_Vol25  %></td> 
+              <td><%= campground.A_HCount25  %></td>
+              <td><%= campground.prod25  = (campground.A_Vol25 / campground.A_HCount25 )/5 %></td>
+              <td><%= campground.couts25 %></td>
+          </tr>
+
+          <tr>
+            <th>Unknown Language</th>
+              <td><%= campground.P_Vol26  %></td> 
+              <td><%= campground.P_HCount26  %></td>
+              <td><%= (campground.P_Vol26  / campground.P_HCount26 )/5 %></td>
+              <td><%= campground.A_Vol26  %></td> 
+              <td><%= campground.A_HCount26  %></td>
+              <td><%= campground.prod26  = (campground.A_Vol26 / campground.A_HCount26 )/5 %></td>
+              <td><%= campground.couts26 %></td>
+          </tr>
+
+          <tr>
+            <th>Switcheroo</th>
+              <td><%= campground.P_Vol27  %></td> 
+              <td><%= campground.P_HCount27  %></td>
+              <td><%= (campground.P_Vol27  / campground.P_HCount25 )/5 %></td>
+              <td><%= campground.A_Vol27  %></td> 
+              <td><%= campground.A_HCount27  %></td>
+              <td><%= campground.prod257 = (campground.A_Vol27 / campground.A_HCount27 )/5 %></td>
+              <td><%= campground.couts27 %></td>
+          </tr>
+
+          <tr>
+            <th>Fixed Layout</th>
+              <td><%= campground.P_Vol28  %></td> 
+              <td><%= campground.P_HCount28  %></td>
+              <td><%= (campground.P_Vol28  / campground.P_HCount28 )/5 %></td>
+              <td><%= campground.A_Vol28  %></td> 
+              <td><%= campground.A_HCount28  %></td>
+              <td><%= campground.prod28  = (campground.A_Vol28 / campground.A_HCount28 )/5 %></td>
+              <td><%= campground.couts28 %></td>
+          </tr>
+          
+          <tr>
+            <th class="ui center aligned header blue" >Content Testing</th>
+              <td><%= campground.P_Vol29  %></td> 
+              <td><%= campground.P_HCount29  %></td>
+              <td><%= (campground.P_Vol29  / campground.P_HCount29 )/5 %></td>
+              <td><%= campground.A_Vol29 %></td> 
+              <td><%= campground.A_HCount29  %></td>
+              <td><%= campground.prod29  = (campground.A_Vol29 / campground.A_HCount29 )/5 %></td>
+              <td><%= campground.couts29 %></td>
+          </tr>
+
+          <tr>
+            <th class="ui center aligned header blue" >KDP Cover Gen</th>
+              <td><%= campground.P_Vol30  %></td> 
+              <td><%= campground.P_HCount30  %></td>
+              <td><%= (campground.P_Vol30  / campground.P_HCount30 )/5 %></td>
+              <td><%= campground.A_Vol30  %></td> 
+              <td><%= campground.A_HCount30  %></td>
+              <td><%= campground.prod30  = (campground.A_Vol30 / campground.A_HCount30 )/5 %></td>
+              <td><%= campground.couts30 %></td>
+          </tr>
+          <tr>
+            <th class="ui center aligned header blue" >Author Fix-up</th>
+              <td><%= campground.P_Vol31  %></td> 
+              <td><%= campground.P_HCount31  %></td>
+              <td><%= (campground.P_Vol31  / campground.P_HCount31 )/5 %></td>
+              <td><%= campground.A_Vol31  %></td> 
+              <td><%= campground.A_HCount31  %></td>
+              <td><%= campground.prod31  = (campground.A_Vol31 / campground.A_HCount31 )/5 %></td>
+              <td><%= campground.couts31 %></td>
+          </tr>
+          <tr>
+            <th class="ui center aligned header blue" >All Field Audit</th>
+              <td><%= campground.P_Vol32  %></td> 
+              <td><%= campground.P_HCount32  %></td>
+              <td><%= (campground.P_Vol32  / campground.P_HCount32 )/5 %></td>
+              <td><%= campground.A_Vol32  %></td> 
+              <td><%= campground.A_HCount32  %></td>
+              <td><%= campground.prod32  = (campground.A_Vol32 / campground.A_HCount32 )/5 %></td>
+              <td><%= campground.couts32 %></td>
+          </tr>          
         </thead>
       </thead>
     </table>

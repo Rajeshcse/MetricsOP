@@ -1,20 +1,40 @@
-<% include ../partials/header %> 
-<script>
-  //         function sum() {
-  //               var txtFirstNumberValue = document.getElementById('value1').value;
-  //               var txtSecondNumberValue = document.getElementById('value2').value;
-  //               var result = txtFirstNumberValue / txtSecondNumberValue/5;
-  //               if (!isNaN(result)) {
-  //                  document.getElementById('value3').value = result;
-  //               }
-  //         }
+<% include ../partials/header %>
 
+<script>
+  
+  function sum() {
+    var v1 = document.getElementById("value1").value;
+    var v2 = document.getElementById("value2").value;
+    var v3 = document.getElementById("value3").value;
+    var v4 = document.getElementById("value4").value;
+    var v5 = document.getElementById("value5").value;
+    var v6 = document.getElementById("value6").value;
+    var result = +v1 + +v2 + +v3 + +v4 + +v5 + +v6;
+    if (!isNaN(result)) {
+      document.getElementById("sum_value").value = result;
+    }
+  }
+
+  function hcsum() {
+    var hc1 = document.getElementById("headcount1").value;
+    var hc2 = document.getElementById("headcount2").value;
+    var hc3 = document.getElementById("headcount3").value;
+    var hc4 = document.getElementById("headcount4").value;
+    var hc5 = document.getElementById("headcount5").value;
+    var hc6 = document.getElementById("headcount6").value;
+    var result = +hc1 + +hc2 + +hc3 + +hc4 + +hc5 + +hc6;
+    if (!isNaN(result)) {
+      document.getElementById("hc_value").value = result;
+    }
+  }
+
+  
 </script>
-<div class=" container">
+
+<div class="container">
   <div class="row">
     <h1 style="text-align: center">Create New metrics of the week</h1>
-
-    <div style="margin: 20px auto; ">
+    <div style="margin: 25px auto; ">
       <form action="/campgrounds/itbshow" method="POST">
         <table class="ui celled structured striped table">
           <thead>
@@ -24,7 +44,8 @@
                   <button class="ui blue  icon button">
                     Select:
                   </button>
-                  <input type="week" name="week" />
+
+                  <input type="week" name="week" required />
                 </div>
               </th>
               <th class="ui center aligned header" colspan="3">Planned</th>
@@ -32,7 +53,9 @@
             </tr>
 
             <tr>
-              <th class="ui center aligned " >Title <input type="text" class="form-control" value="ITB"   name="team"  readonly >  </th>
+              <th class="ui center aligned ">
+                Title
+              </th>
               <th>Volume</th>
               <th>Head Count</th>
               <th>Productivity</th>
@@ -40,131 +63,899 @@
               <th>Head Count</th>
               <th>Call outs</th>
             </tr>
+
+            <!-- 1  Proactive (Fresh Audits) -->
             <tr>
-              <th>Inside The Book - Proactive Audits</th>
+              <th class="ui center aligned header blue">
+                Proactive (Fresh Audits)
+              </th>
               <td>
                 <input
-                  name="pv1"
+                  name="P_Vol1"
                   class="form-control"
-                  id="value1"
                   type="text"
-                  value="5456"
+                  value="589.77"
                   readonly
-                  onkeyup="sum();"
                 />
-              </td>
-              <td>
-                <input
-                  name="pv2"
-                  class="form-control"
-                  id="value2"
-                  type="text"
-                  value="3.92"
-                  readonly
-                  onkeyup="sum();"
-                />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="23.2" readonly />
               </td>
 
               <td>
-                <input name="pv3" class="form-control" type="text" required />
+                <input
+                  name="P_HCount1"
+                  class="form-control"
+                  type="text"
+                  value="3.56"
+                  readonly
+                />
               </td>
               <td>
-                <input name="pv4" class="form-control" type="text" required />
+                <input
+                  class="form-control"
+                  type="text"
+                  value="13.5"
+                  readonly
+                />
+              </td>
+
+              <td>
+                <input
+                  name="A_Vol1"
+                  id="sum_value"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="A_HCount1"
+                  class="form-control"
+                  id="hc_value"
+                  type="text"
+                  readonly
+                />
               </td>
               <td><textarea rows="2" name="couts1"></textarea></td>
             </tr>
-            <!--<tr>-->
-            <!--    <th>Proactive Audits</th>-->
-            <!--    <td><input name="pv5"  class="form-control" type="text" value="12" readonly  ></td>-->
-            <!--    <td><input name="pv6"  class="form-control" type="text" value="1"  readonly ></td>-->
-            <!--    <td><input  class="form-control" type="text" value="2.4"  readonly  ></td>-->
-            <!--    <td><input name="pv7"  class="form-control" type="text" required ></td>-->
-            <!--    <td><input name="pv8"  class="form-control" type="text" required ></td>-->
 
-            <!--    <td><textarea  rows="2"  name="couts2" ></textarea></td>-->
-            <!-- </tr>-->
-
+            <!-- 2. Best Sellers -->
             <tr>
               <th>Best Sellers</th>
               <td>
                 <input
-                  name="pv9"
+                  name="P_Vol2"
                   class="form-control"
                   type="text"
-                  value="600"
+                  value="46.15"
                   readonly
                 />
               </td>
               <td>
                 <input
-                  name="pv10"
+                  name="P_HCount2"
                   class="form-control"
                   type="text"
-                  value=".52"
+                  value=".38"
                   readonly
                 />
               </td>
               <td>
-                <input class="form-control" type="text" value="23.2" readonly />
+                <input
+                  class="form-control"
+                  type="text"
+                  value="23.2"
+                  readonly
+                />
               </td>
               <td>
-                <input name="pv11" class="form-control" type="text" required />
-              </td>
+                <input
+                  name="A_Vol2"
+                  id="value1"
+                  onkeyup="sum();"
+                  class="form-control"
+                  type="text"
+                />
+              </td>0
               <td>
-                <input name="pv12" class="form-control" type="text" required />
+                <input
+                  name="A_HCount2"
+                  class="form-control"
+                  id="headcount1"
+                  onkeyup="hcsum();"
+                  type="text"
+                />
               </td>
 
-              <td><textarea rows="2" name="couts3"></textarea></td>
+              <td><textarea rows="2" name="couts2"></textarea></td>
             </tr>
+
+          <!-- Pre-Orders -->
             <tr>
               <th>Pre-Orders</th>
               <td>
                 <input
-                  name="pv13"
+                  name="P_Vol3"
                   class="form-control"
                   type="text"
-                  value="2024"
+                  value="264.69"
                   readonly
                 />
               </td>
               <td>
                 <input
-                  name="pv14"
+                  name="P_HCount3"
                   class="form-control"
                   type="text"
-                  value="1.21"
+                  value="1.61"
                   readonly
                 />
               </td>
               <td>
-                <input class="form-control" type="text" value="33.4" readonly />
+                <input
+                  class="form-control"
+                  type="text"
+                  value="33.4"
+                  readonly
+                />
               </td>
               <td>
-                <input name="pv15" class="form-control" type="text" required />
+                <input
+                  name="A_Vol3"
+                  id="value2"
+                  onkeyup="sum();"
+                  class="form-control"
+                  type="text"
+                />
               </td>
               <td>
-                <input name="pv16" class="form-control" type="text" required />
+                <input
+                  name="A_HCount3"
+                  id="headcount2"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  type="text"
+                />
               </td>
 
-              <td><textarea rows="2" name="couts4"></textarea></td>
-               </tr>
-        <!--    <tr>
+              <td><textarea rows="2" name="couts3"></textarea></td>
+            </tr>
+
+            <!-- 4. Big Books -->
+            <tr>
               <th>Big Books</th>
               <td>
                 <input
-                  name="pv17"
+                  name="P_Vol4"
                   class="form-control"
                   type="text"
-                  value="112"
+                  value="10.15"
                   readonly
                 />
               </td>
               <td>
                 <input
-                  name="pv18"
+                  name="P_HCount4"
+                  class="form-control"
+                  type="text"
+                  value="0.12"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="text"
+                  value="19.9"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="A_Vol4"
+                  class="form-control"
+                  id="value3"
+                  onkeyup="sum();"
+                  type="text"
+                />
+              </td>
+              <td>
+                <input
+                  name="A_HCount4"
+                  id="headcount3"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  type="text"
+                />
+              </td>
+
+              <td><textarea rows="2" name="couts4"></textarea></td>
+            </tr>
+
+            <!-- 5. Kindle Deals -->
+            <tr>
+              <th>Kindle Deals</th>
+              <td>
+                <input
+                  name="P_Vol5"
+                  class="form-control"
+                  type="text"
+                  value="184.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount5"
+                  class="form-control"
+                  type="text"
+                  value="1.40"
+                  readonly
+                />
+              </td>
+
+              <td>
+                <input
+                  class="form-control"
+                  type="text"
+                  value="25.9"
+                  readonly
+                />
+              </td>
+
+              <td>
+                <input
+                  name="A_Vol5"
+                  class="form-control"
+                  id="value4"
+                  onkeyup="sum();"
+                  type="text"
+                />
+              </td>
+
+              <td>
+                <input
+                  name="A_HCount5"
+                  id="headcount4"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  type="text"
+                />
+              </td>
+
+              <td><textarea rows="2" name="couts5"></textarea></td>
+            </tr>
+
+
+
+
+
+
+
+            <!--  6. Ad-hoc Requests / Escalation Audits -->
+            <tr>
+              <th>Ad-hoc Requests / Escalation Audits</th>
+              <td>
+                <input
+                  name="P_Vol6"
+                  class="form-control"
+                  type="text"
+                  value="6.46"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount6"
+                  class="form-control"
+                  type="text"
+                  value="0.05"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="text"
+                  value="27.8"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="A_Vol6"
+                  id="value5"
+                  onkeyup="sum();"
+                  class="form-control"
+                  type="text"
+                />
+              </td>
+              <td>
+                <input
+                  name="A_HCount6"
+                  id="headcount5"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  type="text"
+                />
+              </td>
+              <td><textarea rows="2" name="couts6"></textarea></td>
+            </tr> 
+            
+            
+            
+            <!-- 7. KU Page Violation Audits -->
+            <tr>
+              <th> KU Page Violation Audits </th>
+              <td>
+                <input
+                  name="P_Vol7"
+                  class="form-control"
+                  type="text"
+                  value="84.16"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount7"
+                  class="form-control"
+                  type="text"
+                  value="0.05"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="text"
+                  value="27.8"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="A_Vol7"
+                  id="value6"
+                  onkeyup="sum();"
+                  class="form-control"
+                  type="text"
+                />
+              </td>
+              <td>
+                <input
+                  name="A_HCount7"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  type="text"
+                />
+              </td>
+              <td><textarea rows="2" name="couts7"></textarea></td>
+            </tr>
+
+
+   
+
+        <!--8. Reactive (Contacts) -->
+          <tr>
+            <th class="ui center aligned header blue" >Reactive (Contacts) </th>
+            <td>
+              <input
+                name="P_Vol8"
+                class="form-control"
+                type="text"
+                value="1572"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="P_HCount8"
+                class="form-control"
+                type="text"
+                value="10.65"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="25.9" readonly />
+            </td>
+            <td>
+              <input name="A_Vol8" class="form-control" type="text" id="sum_value2" readonly />
+            </td>
+            <td>
+              <input name="A_HCount8" class="form-control" type="text"  id="hc_value2" readonly />
+            </td>
+            <td><textarea rows="2" name="couts8"></textarea></td>
+          </tr>
+
+
+          <!--9. Andons & Regulars -->
+
+            <tr>
+              <th class="ui  header subhead grey " >Andons & Regulars</th>
+              <td>
+                <input
+                  name="P_Vol9"
+                  class="form-control"
+                  type="text"
+                  value="127.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount9"
+                  class="form-control"
+                  type="text"
+                  value="0.97"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="52.2" readonly    />
+              </td>
+              <td>
+                <input name="A_Vol9" class="form-control" type="text"  id="value7"
+                onkeyup="sum2();" />
+              </td>
+              <td>
+                <input name="A_HCount9" class="form-control" type="text"  id="headcount7"
+                onkeyup="hcsum2();" />
+              </td>
+              <td><textarea rows="2" name="couts9"></textarea></td>
+            </tr>
+
+
+
+            <!--10  Report Content Errors -->
+            <tr>
+              <th class="ui  header subhead grey ">Report Content Errors</th>
+              </th>
+              <td>
+                <input
+                  name="P_Vol10"
+                  class="form-control"
+                  type="text"
+                  value="1005.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount10"
+                  class="form-control"
+                  type="text"
+                  value="7.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol10" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount10" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts10"></textarea></td>
+            </tr>
+
+            <!--11. English -->
+            <tr>
+              <th>English</th>
+              <td>
+                <input
+                  name="P_Vol11"
+                  class="form-control"
+                  type="text"
+                  value="779.16"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount11"
+                  class="form-control"
+                  type="text"
+                  value="6.03"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol11" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount11" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts11"></textarea></td>
+            </tr>
+            </tr>
+
+            <!-- 12. English (High-value titles to be considered by Ops) -->
+            <tr>
+              <th>English (High-value titles to be considered by Ops)</th>
+              <td>
+                <input
+                  name="P_Vol12"
+                  class="form-control"
+                  type="text"
+                  value="0"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount12"
+                  class="form-control"
+                  type="text"
+                  value="0"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol12" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount12" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts12"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!-- 13.German  -->
+
+            <tr>
+              <th>German</th>
+              <td>
+                <input
+                  name="P_Vol13"
+                  class="form-control"
+                  type="text"
+                  value="173"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount13"
+                  class="form-control"
+                  type="text"
+                  value="1.22"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol13" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount13" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts13"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!-- 14. French -->
+            <tr>
+              <th>French</th>
+              <td>
+                <input
+                  name="P_Vol14"
+                  class="form-control"
+                  type="text"
+                  value="53.47"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount14"
+                  class="form-control"
+                  type="text"
+                  value="0.38"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol14" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount14" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts14"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!--  15.Customer Reviews -->
+            <tr>
+              <th class="ui  header subhead grey">Customer Reviews  </th>
+              <td>
+                <input
+                  name="P_Vol15"
+                  class="form-control"
+                  type="text"
+                  value="125.08"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount15"
+                  class="form-control"
+                  type="text"
+                  value="0.95"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol15" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount15" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts15"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!-- 16 Massmail Tickets -->
+            <tr>
+              <th class="ui  header subhead grey">Massmail Tickets </th>
+              <td>
+                <input
+                  name="P_Vol16"
+                  class="form-control"
+                  type="text"
+                  value="50.77"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount16"
+                  class="form-control"
+                  type="text"
+                  value="0.29"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol16" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount16" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts16"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 17. Publisher Response  -->
+            
+
+            <tr>
+              <th class="ui  header subhead grey">Publisher Response       </th>
+              <td>
+                <input
+                  name="P_Vol17"
+                  class="form-control"
+                  type="text"
+                  value="262.93"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount17"
+                  class="form-control"
+                  type="text"
+                  value="0.82"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol17" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount17" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts17"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            
+            <!--  18 .Submitted Corrections   -->
+
+            <tr>
+              <th>Submitted Corrections   </th>
+              <td>
+                <input
+                  name="P_Vol18"
+                  class="form-control"
+                  type="text"
+                  value="202.92"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount18"
+                  class="form-control"
+                  type="text"
+                  value="0.32"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol18" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount18" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts18"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 19.Queries + Escalations  -->
+
+            <tr>
+              <th>Queries + Escalations     </th>
+              <td>
+                <input
+                  name="P_Vol19"
+                  class="form-control"
+                  type="text"
+                  value="60"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount19"
+                  class="form-control"
+                  type="text"
+                  value="0.50"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol19" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount19" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts19"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 20. Rework  -->
+            <tr>
+              <th class="ui center aligned header blue">Rework  </th>
+              <td>
+                <input
+                  name="P_Vol20"
+                  class="form-control"
+                  type="text"
+                  value="462.93"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount20"
+                  class="form-control"
+                  type="text"
+                  value="1.22"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol20" class="form-control" type="text"  readonly />
+              </td>
+              <td>
+                <input name="A_HCount20" class="form-control" type="text"  readonly />
+              </td>
+              <td><textarea rows="2" name="couts20"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            
+            <!-- 21.Rework Blocking  -->
+            <tr>
+              <th>Rework Blocking  </th>
+              <td>
+                <input
+                  name="P_Vol21"
+                  class="form-control"
+                  type="text"
+                  value="48.46"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount21"
+                  class="form-control"
+                  type="text"
+                  value="0.35"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol21" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount21" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts21"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            
+            
+          <!-- 22. Rework CFQ -->
+            <tr>
+              <th>Rework CFQI </th>
+              <td>
+                <input
+                  name="P_Vol22"
+                  class="form-control"
+                  type="text"
+                  value="40.07"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount22"
                   class="form-control"
                   type="text"
                   value="0.11"
@@ -172,162 +963,40 @@
                 />
               </td>
               <td>
-                <input class="form-control" type="text" value="19.9" readonly />
+                <input class="form-control" type="text" value="0" readonly />
               </td>
               <td>
-                <input name="pv19" class="form-control" type="text" required />
+                <input name="A_Vol22" class="form-control" type="text"  />
               </td>
               <td>
-                <input name="pv20" class="form-control" type="text" required />
+                <input name="A_HCount22" class="form-control" type="text"  />
               </td>
-
-              <td><textarea rows="2" name="couts5"></textarea></td>
+              <td><textarea rows="2" name="couts22"></textarea></td>
+            </tr>
             </tr>
 
-            <tr>
-              <th>Kindle Deals</th>
-              <td>
-                <input
-                  name="pv21"
-                  class="form-control"
-                  type="text"
-                  value="2400"
-                  readonly
-                />
-              </td>
-              <td>
-                <input
-                  name="pv22"
-                  class="form-control"
-                  type="text"
-                  value="1.85"
-                  readonly
-                />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="25.9" readonly />
-              </td>
-              <td>
-                <input name="pv23" class="form-control" type="text" required />
-              </td>
-              <td>
-                <input name="pv24" class="form-control" type="text" required />
-              </td>
 
-              <td><textarea rows="2" name="couts6"></textarea></td>
-            </tr>
-            <tr>
-              <th>Esclation Audits</th>
-              <td>
-                <input
-                  name="pv25"
-                  class="form-control"
-                  type="text"
-                  value="320"
-                  readonly
-                />
-              </td>
-              <td>
-                <input
-                  name="pv26"
-                  class="form-control"
-                  type="text"
-                  value="0.23"
-                  readonly
-                />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="27.8" readonly />
-              </td>
-              <td>
-                <input name="pv27" class="form-control" type="text" required />
-              </td>
-              <td>
-                <input name="pv28" class="form-control" type="text" required />
-              </td>
-              <td><textarea rows="2" name="couts7"></textarea></td>
-            </tr>
+
+            
+            <!-- 23.Rework Non-Blocking  -->
 
             <tr>
-              <th>New Scope Proactive Audits</th>
+              <th>Rework Non-Blocking  </th>
               <td>
                 <input
-                  name="pv29"
+                  name="P_Vol23"
                   class="form-control"
                   type="text"
-                  value="0"
+                  value="374.38"
                   readonly
                 />
               </td>
               <td>
                 <input
-                  name="pv30"
+                  name="P_HCount23"
                   class="form-control"
                   type="text"
-                  value="0"
-                  readonly
-                />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="25.9" readonly />
-              </td>
-              <td>
-                <input name="pv31" class="form-control" type="text" required />
-              </td>
-              <td>
-                <input name="pv32" class="form-control" type="text" required />
-              </td>
-              <td><textarea rows="2" name="couts8"></textarea></td>
-            </tr>
-
-            <tr>
-              <th>KU Page Violation Audits</th>
-              <td>
-                <input
-                  name="pv33"
-                  class="form-control"
-                  type="text"
-                  value="1035"
-                  readonly
-                />
-              </td>
-              <td>
-                <input
-                  name="pv34"
-                  class="form-control"
-                  type="text"
-                  value="0.40"
-                  readonly
-                />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="52.2" readonly />
-              </td>
-              <td>
-                <input name="pv35" class="form-control" type="text" required />
-              </td>
-              <td>
-                <input name="pv36" class="form-control" type="text" required />
-              </td>
-              <td><textarea rows="2" name="couts9"></textarea></td>
-            </tr>
-            <tr>
-              <th>KU Tickets</th>
-              <td>
-                <input
-                  name="pv37"
-                  class="form-control"
-                  type="text"
-                  value="0"
-                  readonly
-                />
-              </td>
-              <td>
-                <input
-                  name="pv38"
-                  class="form-control"
-                  type="text"
-                  value="0"
+                  value="0.76"
                   readonly
                 />
               </td>
@@ -335,30 +1004,37 @@
                 <input class="form-control" type="text" value="0" readonly />
               </td>
               <td>
-                <input name="pv39" class="form-control" type="text" required />
+                <input name="A_Vol23" class="form-control" type="text"  />
               </td>
               <td>
-                <input name="pv40" class="form-control" type="text" required />
+                <input name="A_HCount23" class="form-control" type="text"  />
               </td>
-              <td><textarea rows="2" name="couts10"></textarea></td>
+              <td><textarea rows="2" name="couts23"></textarea></td>
             </tr>
+            </tr>
+
+
+
+            
+            
+            <!-- 24.KCVP Detections  -->
             <tr>
-              <th>KU All Stars</th>
+              <th class="ui center aligned header blue">KCVP Detections   </th>
               <td>
                 <input
-                  name="pv41"
+                  name="P_Vol24"
                   class="form-control"
                   type="text"
-                  value="0"
+                  value="165.62"
                   readonly
                 />
               </td>
               <td>
                 <input
-                  name="pv42"
+                  name="P_HCount24"
                   class="form-control"
                   type="text"
-                  value="0"
+                  value="0.30"
                   readonly
                 />
               </td>
@@ -366,14 +1042,306 @@
                 <input class="form-control" type="text" value="0" readonly />
               </td>
               <td>
-                <input name="pv43" class="form-control" type="text" required />
+                <input name="A_Vol24" class="form-control" type="text" readonly  />
               </td>
               <td>
-                <input name="pv44" class="form-control" type="text" required />
+                <input name="A_HCount24" class="form-control" type="text"  readonly />
               </td>
-              <td><textarea rows="2" name="couts11"></textarea></td>
-            </tr> -->
+              <td><textarea rows="2" name="couts24"></textarea></td>
             </tr>
+            </tr>
+
+
+
+            <!-- 25.Language Mismatch  -->
+            
+            <tr>
+              <th > Language Mismatch  </th>
+              <td>
+                <input
+                  name="P_Vol25"
+                  class="form-control"
+                  type="text"
+                  value="125"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount25"
+                  class="form-control"
+                  type="text"
+                  value="0.20"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol25" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount25" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts25"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!-- 26.Unknown Language -->
+            <tr>
+              <th >Unknown Language </th>
+              <td>
+                <input
+                  name="P_Vol26"
+                  class="form-control"
+                  type="text"
+                  value="18.47"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount26"
+                  class="form-control"
+                  type="text"
+                  value="0.03"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol26" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount26" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts26"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 27.Switcheroo  -->
+            
+            <tr>
+              <th >Switcheroo</th>
+              <td>
+                <input
+                  name="P_Vol27"
+                  class="form-control"
+                  type="text"
+                  value="15.70"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount27"
+                  class="form-control"
+                  type="text"
+                  value="0.05"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol27" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount27" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts27"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 28.Fixed Layout  -->
+            
+            <tr>
+              <th>Fixed Layout   </th>
+              <td>
+                <input
+                  name="P_Vol28"
+                  class="form-control"
+                  type="text"
+                  value="6.47"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount28"
+                  class="form-control"
+                  type="text"
+                  value="0.02"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol28" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount28" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts28"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 29.Content Testing  -->
+            
+            <tr>
+              <th class="ui center aligned header blue">Content Testing  </th>
+              <td>
+                <input
+                  name="P_Vol29"
+                  class="form-control"
+                  type="text"
+                  value="92.30"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount29"
+                  class="form-control"
+                  type="text"
+                  value="2"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol29" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount29" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts29"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            
+            <!-- 30.KDP Cover Gen  -->
+            <tr>
+              <th class="ui center aligned header blue">KDP Cover Gen  </th>
+              <td>
+                <input
+                  name="P_Vol30"
+                  class="form-control"
+                  type="text"
+                  value="2500"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount30"
+                  class="form-control"
+                  type="text"
+                  value="0.10"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol30" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount30" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts30"></textarea></td>
+            </tr>
+            </tr>
+
+            <!-- 31.Author Fix-up   -->
+            <tr>
+              <th class="ui center aligned header blue">Author Fix-up</th>
+              <td>
+                <input
+                  name="P_Vol31"
+                  class="form-control"
+                  type="text"
+                  value="92.30"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount31"
+                  class="form-control"
+                  type="text"
+                  value="0.01"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol31" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount31" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts31"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            
+            <!--  32. All Field Audit -->
+            <tr>
+              <th class="ui center aligned header blue"> All Field Audit   </th>
+              <td>
+                <input
+                  name="P_Vol32"
+                  class="form-control"
+                  type="text"
+                  value="85.84"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount32"
+                  class="form-control"
+                  type="text"
+                  value="0.10"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input name="A_Vol32" class="form-control" type="text"  />
+              </td>
+              <td>
+                <input name="A_HCount32" class="form-control" type="text"  />
+              </td>
+              <td><textarea rows="2" name="couts32"></textarea></td>
+            </tr>
+            </tr>
+
           </thead>
         </table>
 
@@ -381,7 +1349,7 @@
           <button class="ui basic large blue  button">Submit!</button>
         </div>
       </form>
-      
+
       <a href="/campgrounds">Go Back</a>
     </div>
   </div>

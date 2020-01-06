@@ -1,155 +1,1635 @@
 <% include ../partials/header %>
 <div class="container">
-    <div class="row">
-        <h1 style="text-align: center">Edit <%= campground.week %> </h1>
-        <div style=" margin: 25px auto;">
-        <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+  <div class="row">
+    <h1 style="text-align: center">Edit <%= campground.week %></h1>
+    <div style=" margin: 25px auto;">
+      <form
+        action="/campgrounds/<%= campground._id %>?_method=PUT"
+        method="POST"
+      >
         <table class="ui celled structured striped table">
           <thead>
-              <tr>
-              <th  ></th>
+            <tr>
+              <th>
+                <!-- <div class="ui action input">
+                  <button class="ui blue  icon button">
+                    Select:
+                  </button>
+
+                  <input type="week" name="week" />
+                </div> -->
+              </th>
               <th class="ui center aligned header" colspan="3">Planned</th>
               <th class="ui center aligned header" colspan="4">Actual</th>
             </tr>
+
             <tr>
-              <th class="ui center aligned ">Title: <%= campground.team %> Team  Metrics</th>
+              <th class="ui center aligned ">
+                Title
+              </th>
               <th>Volume</th>
               <th>Head Count</th>
               <th>Productivity</th>
               <th>Volume</th>
               <th>Head Count</th>
               <th>Call outs</th>
-             </tr>
-             <tr>
-                <th>Inside The Book - Proactive Audits</th>
-                <td><input name="campground[pv1]"  class="form-control" id="value1" type="text" value="5456" readonly  onkeyup="sum();"  ></td>
-                 <td><input  name="campground[pv2]"   class="form-control" id="value2" type="text" value="3.92" readonly  onkeyup="sum();"   ></td>
-                 <td><input  class="form-control" type="text" id="value3" value="23.2" readonly ></td>
-                 <script>
-                function sum() {
-                      var txtFirstNumberValue = document.getElementById('value1').value;
-                      var txtSecondNumberValue = document.getElementById('value2').value;
-                      var result = txtFirstNumberValue / txtSecondNumberValue/5;
-                      if (!isNaN(result)) {
-                         document.getElementById('value3').value = result;
-                      }
-                }
-                </script>
-                        <td><input  name="campground[pv3]" value="<%= campground.pv3 %>"  class="form-control" type="text" required ></td>
-                        <td><input  name="campground[pv4]" value="<%= campground.pv4 %>"  class="form-control" type="text" required  ></td>
-                         <td><textarea  rows="2" name="couts1" ></textarea></td>
-             </tr>
-                  <!-- <tr>
-                     <th>Proactive Audits</th>
-                     <td><input  name="campground[pv5]"  class="form-control" type="text" value="12"  readonly  ></td>
-                     <td><input  name="campground[pv6]"   class="form-control" type="text" value="1"  readonly ></td>
-                     <td><input  class="form-control" type="text" value="2.4"  readonly  ></td>
-                     <td><input name="campground[pv7]"  value="<%= campground.pv7 %>" class="form-control" type="text" ></td>
-                     <td><input name="campground[pv8]"  value="<%= campground.pv8 %>" class="form-control" type="text" ></td>
-                     <td><textarea  rows="2"  name="couts2"  ></textarea></td>
-                  </tr> -->
-             
-             
-                <tr>
-                <th>Best Sellers</th>
-                <td><input name="campground[pv9]"  class="form-control" type="text" value="600" readonly  ></td>
-                <td><input name="campground[pv10]"  class="form-control" type="text" value=".52"  readonly ></td>
-                <td><input  class="form-control" type="text" value="23.2"  readonly  ></td>
-                <td><input name="campground[pv11]"  value="<%= campground.pv11 %>" class="form-control" type="text" required ></td>
-                <td><input name="campground[pv12]" value="<%= campground.pv12 %>"  class="form-control" type="text" required ></td>
-               
-                <td><textarea  rows="2" name="campground[couts3]" ></textarea></td>
-             </tr>
-             <tr>
-                <th>Pre-Orders</th>
-                <td><input name="campground[pv13]"  class="form-control" type="text" value="2024" readonly  ></td>
-                <td><input name="campground[pv14]"  class="form-control" type="text" value="1"  readonly ></td>
-                <td><input  class="form-control" type="text" value="33.3"  readonly  ></td>
-                <td><input name="campground[pv15]" value="<%= campground.pv15 %>"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv16]" value="<%= campground.pv16 %>"  class="form-control" type="text" required ></td>
-               
-                <td><textarea  rows="2" name="campground[couts4]" ></textarea></td>
-             </tr>
-             <!-- <tr>
-                <th>Big Books</th>
-                <td><input name="campground[pv17]"  class="form-control" type="text"  value="8" readonly  ></td>
-                <td><input name="campground[pv18]"  class="form-control" type="text"  value="0.12"  readonly ></td>
-                <td><input  class="form-control" type="text" value="13.3"  readonly  ></td>
-                <td><input name="campground[pv19]" value="<%= campground.pv19 %>"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv20]"  value="<%= campground.pv20 %>" class="form-control" type="text" required ></td>
-               
-                <td><textarea  rows="2" name="campground[couts5]" ></textarea></td>
-             </tr>
-             
-             <tr>
-                <th>Kindle Deals</th>
-                <td><input name="campground[pv21]"  class="form-control" type="text" value="185"  readonly  ></td>
-                <td><input name="campground[pv22]"  class="form-control" type="text" value="1.98"  readonly ></td>
-                <td><input  class="form-control" type="text" value="18.68"  readonly  ></td>
-                <td><input name="campground[pv23]" value="<%= campground.pv23 %>"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv24]"  value="<%= campground.pv24 %>" class="form-control" type="text" required ></td>
-               
-                <td><textarea  rows="2" name="campground[couts6]" ></textarea></td>
-             </tr>
-             <tr>
-                <th>Esclation Audits</th>
-                <td><input name="campground[pv25]"  class="form-control" type="text" value="25"   readonly  ></td>
-                <td><input name="campground[pv26]"  class="form-control" type="text"  value="0.26"  readonly ></td>
-                <td><input  class="form-control" type="text" value="19.23"  readonly  ></td>
-                <td><input name="campground[pv27]" value="<%= campground.pv27 %>"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv28]"  value="<%= campground.pv28 %>" class="form-control" type="text" required ></td>
-               
-                <td><textarea  rows="2" name="campground[couts7]" ></textarea></td>
-             </tr>
-             
-             <tr>
-                <th>New Scope Proactive Audits</th>
-                <td><input name="campground[pv29]"  class="form-control" type="text" value="12" readonly  ></td>
-                <td><input name="campground[pv30]"  class="form-control" type="text" value="12"  readonly ></td>
-                <td><input  class="form-control" type="text" value="0.2"  readonly  ></td>
-                <td><input name="campground[pv31]" value="<%= campground.pv31 %>"  class="form-control" type="text"  required></td>
-                <td><input name="campground[pv32]" value="<%= campground.pv32 %>"  class="form-control" type="text" required ></td>
-                <td><textarea  rows="2" name="campground[couts8]" ></textarea></td>
-             </tr>
-          
-             <tr>
-                <th>KU Page Violation Audits</th>
-                <td><input name="campground[pv33]"  class="form-control" type="text"  value="84" readonly  ></td>
-                <td><input name="campground[pv34]"  class="form-control" type="text" value="0.82"  readonly ></td>
-                <td><input  class="form-control" type="text" value="20.48"  readonly  ></td>
-                <td><input name="campground[pv35]"  value="<%= campground.pv35 %>"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv36]" value="<%= campground.pv36 %>"  class="form-control" type="text" required ></td>
-                <td><textarea  rows="2" name="campground[couts9]" ></textarea></td>
-             </tr>
+            </tr>
             <tr>
-                <th>KU Tickets</th>
-                <td><input name="campground[pv37]"  class="form-control" type="text" value="22"readonly  ></td>
-                <td><input name="campground[pv38]"  class="form-control" type="text" value="1"  readonly ></td>
-                <td><input  class="form-control" type="text" value="4.4"  readonly  ></td>
-                <td><input name="campground[pv39]" value="<%= campground.pv39 %>"   class="form-control" type="text" required ></td>
-                <td><input name="campground[pv40]"  value="<%= campground.pv40 %>"  class="form-control" type="text" required ></td>
-                <td><textarea  rows="2" name="campground[couts10]" ></textarea></td>
-             </tr>
+              <th class="ui center aligned header blue">
+                Proactive (Fresh Audits)
+              </th>
+              <td>
+                <input
+                  name="P_Vol1"
+                  class="form-control"
+                  type="number"
+                  value="589.77"
+                  readonly
+                />
+              </td>
+
+              <td>
+                <input
+                  name="P_HCount1"
+                  class="form-control"
+                  type="number"
+                  value="3.56"
+                  onkeyup="sum();"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  value="13.5"
+                  readonly
+                />
+              </td>
+
+              <td>
+                <input
+                  name="A_Vol1"
+                  id="sum_value"
+                  value="<%= campground.A_Vol1 %>"
+                  class="form-control"
+                  type="number"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="A_HCount1"
+                  value="<%= campground.A_HCount1 %>"
+                  class="form-control"
+                  id="hc_value"
+                  type="number"
+                  readonly
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts1]"></textarea></td>
+            </tr>
+
+            <!-- Best Sellers -->
             <tr>
-                <th>KU All Stars</th>
-                <td><input name="campground[pv41]"  class="form-control" type="text" value="12" readonly  ></td>
-                <td><input name="campground[pv42]"  class="form-control" type="text" value="2"  readonly ></td>
-                <td><input  class="form-control" type="text" value="1.2"  readonly  ></td>
-                <td><input name="campground[pv43]"  value="<%= campground.pv41 %>"  class="form-control" type="text" required ></td>
-                <td><input name="campground[pv44]" value="<%= campground.pv42 %>"   class="form-control" type="text" required ></td>
-                <td><textarea  rows="2" name="campground[couts11]" ></textarea></td>
-             </tr> -->
-            </thead>
-       </table>
-                
-                
-                <div class="form-group">
-                    <button class="ui basic blue button">Submit!</button>
-                </div>
-            </form>
-            <a href="/campgrounds">Go Back</a>
+              <th>Best Sellers</th>
+              <td>
+                <input
+                  name="P_Vol2"
+                  class="form-control"
+                  type="number"
+                  value="46.15"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount2"
+                  class="form-control"
+                  type="number"
+                  value=".38"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  value="23.2"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol2]"
+                  id="value1"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol2 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount2]"
+                  class="form-control"
+                  value="<%= campground.A_HCount2 %>"
+                  id="headcount1"
+                  onkeyup="hcsum();"
+                  type="number"
+                />
+              </td>
+
+              <td><textarea rows="2" name="campground[couts3]"></textarea></td>
+            </tr>
+            <tr>
+              <th>Pre-Orders</th>
+              <td>
+                <input
+                  name="P_Vol3"
+                  class="form-control"
+                  type="number"
+                  value="264.69"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount3"
+                  class="form-control"
+                  type="number"
+                  value="1.61"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  value="33.4"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol3]"
+                  id="value2"
+                  value="<%= campground.A_Vol3 %>"
+                  onkeyup="sum();"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount3]"
+                  id="headcount2"
+                  value="<%= campground.A_HCount3 %>"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+
+              <td><textarea rows="2" name="campground[couts4]"></textarea></td>
+            </tr>
+            <tr>
+              <th>Big Books</th>
+              <td>
+                <input
+                  name="P_Vol4"
+                  class="form-control"
+                  type="number"
+                  value="10.15"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount4"
+                  class="form-control"
+                  type="number"
+                  value="0.12"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  value="19.9"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol4]"
+                  class="form-control"
+                  id="value3"
+                  value="<%= campground.A_Vol4 %>"
+                  onkeyup="sum();"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount4]"
+                  id="headcount3"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  value="<%= campground.A_HCount4 %>"
+                  type="number"
+                />
+              </td>
+
+              <td><textarea rows="2" name="campground[couts5]"></textarea></td>
+            </tr>
+
+            <tr>
+              <th>Kindle Deals</th>
+              <td>
+                <input
+                  name="P_Vol5"
+                  class="form-control"
+                  type="number"
+                  value="184.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount5"
+                  class="form-control"
+                  type="number"
+                  value="1.40"
+                  readonly
+                />
+              </td>
+
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  value="25.9"
+                  readonly
+                />
+              </td>
+
+              <td>
+                <input
+                  name="campground[A_Vol5]"
+                  class="form-control"
+                  id="value4"
+                  value="<%= campground.A_Vol5 %>"
+                  onkeyup="sum();"
+                  type="number"
+                />
+              </td>
+
+              <td>
+                <input
+                  name="campground[A_HCount5]"
+                  id="headcount4"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount5 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+
+              <td><textarea rows="2" name="campground[couts6]"></textarea></td>
+            </tr>
+
+            <tr>
+              <th>Ad-hoc Requests / Escalation Audits</th>
+              <td>
+                <input
+                  name="P_Vol6"
+                  class="form-control"
+                  type="number"
+                  value="6.46"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount6"
+                  class="form-control"
+                  type="number"
+                  value="0.05"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  value="27.8"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol6]"
+                  id="value5"
+                  onkeyup="sum();"
+                  class="form-control"
+                  value="<%= campground.A_Vol6 %>"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount6]"
+                  id="headcount5"
+                  onkeyup="hcsum();"
+                  class="form-control"
+                  value="<%= campground.A_HCount6 %>"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts7]"></textarea></td>
+            </tr>
+
+            <!-- KU Page Violation Audits -->
+
+            <tr>
+              <th>KU Page Violation Audits</th>
+              <td>
+                <input
+                  name="P_Vol7"
+                  class="form-control"
+                  type="number"
+                  value="84.16"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount7"
+                  class="form-control"
+                  type="number"
+                  value="0.05"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  class="form-control"
+                  type="number"
+                  value="27.8"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol7]"
+                  id="value6"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol7 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount7]"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount7 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts7]"></textarea></td>
+            </tr>
+
+             <!--8. Reactive (Contacts) -->
+          <tr>
+            <th class="ui center aligned header blue" >Reactive (Contacts) </th>
+            <td>
+              <input
+                name="P_Vol8"
+              
+                class="form-control"
+                type="text"
+                value="1572"
+                readonly
+              />
+            </td>
+            <td>
+              <input
+                name="P_HCount8"
+                class="form-control"
+                type="text"
+                value="10.65"
+                readonly
+              />
+            </td>
+            <td>
+              <input class="form-control" type="text" value="25.9" readonly />
+            </td>
+            <td>
+              <input   name="campground[A_Vol8]" value="<%= campground.A_Vol8 %>" class="form-control" type="number"  readonly />
+            </td>
+            <td>
+              <input  name="campground[A_HCount8]" value="<%= campground.A_HCount8 %>" class="form-control" type="number"  readonly />
+            </td>
+            <td><textarea rows="2" name="campground[couts8]"></textarea></td>
+          </tr>
+
+
+          <!--9. Andons & Regulars -->
+
+            <tr>
+              <th class="ui  header subhead grey " >Andons & Regulars</th>
+              <td>
+                <input
+                  name="P_Vol9"
+                  class="form-control"
+                  type="text"
+                  value="127.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount9"
+                  class="form-control"
+                  type="text"
+                  value="0.97"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="52.2" readonly    />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol9]"
+                  id="value6"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol9 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount9]"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount9 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts9]"></textarea></td>
+            </tr>
+
+
+
+            <!--10  Report Content Errors -->
+            <tr>
+              <th class="ui  header subhead grey ">Report Content Errors</th>
+              </th>
+              <td>
+                <input
+                  name="P_Vol10"
+                  class="form-control"
+                  type="text"
+                  value="1005.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount10"
+                  class="form-control"
+                  type="text"
+                  value="7.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol10]"
+                  id="value6"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol10 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount10]"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount10 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts10]"></textarea></td>
+            </tr>
+
+            <!--11. English -->
+            <tr>
+              <th>English</th>
+              <td>
+                <input
+                  name="P_Vol11"
+                  class="form-control"
+                  type="text"
+                  value="779.16"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount11"
+                  class="form-control"
+                  type="text"
+                  value="6.03"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol11]"
+                  id="value6"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol11 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount11]"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount11 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts11]"></textarea></td>
+            </tr>
+            </tr>
+
+            <!-- 12. English (High-value titles to be considered by Ops) -->
+            <tr>
+              <th>English (High-value titles to be considered by Ops)</th>
+              <td>
+                <input
+                  name="P_Vol12"
+                  class="form-control"
+                  type="text"
+                  value="0"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount12"
+                  class="form-control"
+                  type="text"
+                  value="0"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol12]"
+                  id="value6"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol12 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount12]"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount12 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts12]"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!-- 13.German  -->
+
+            <tr>
+              <th>German</th>
+              <td>
+                <input
+                  name="P_Vol13"
+                  class="form-control"
+                  type="text"
+                  value="173"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount13"
+                  class="form-control"
+                  type="text"
+                  value="1.22"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol13]"
+                  id="value6"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol13 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount13]"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount13 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts13]"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!-- 14. French -->
+            <tr>
+              <th>French</th>
+              <td>
+                <input
+                  name="P_Vol14"
+                  class="form-control"
+                  type="text"
+                  value="53.47"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount14"
+                  class="form-control"
+                  type="text"
+                  value="0.38"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol14]"
+                  id="value6"
+                  onkeyup="sum();"
+                  value="<%= campground.A_Vol14 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount14]"
+                  id="headcount6"
+                  onkeyup="hcsum();"
+                  value="<%= campground.A_HCount14 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts14]"></textarea></td>
+            </tr>
+            </tr>
+
+
+              <!--  15.Customer Reviews -->
+              <tr>
+                <th class="ui  header subhead grey">Customer Reviews  </th>
+                <td>
+                  <input
+                    name="P_Vol15"
+                    class="form-control"
+                    type="text"
+                    value="125.08"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount15"
+                    class="form-control"
+                    type="text"
+                    value="0.95"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol15]"
+                    id="value6"
+                    onkeyup="sum();"
+                    value="<%= campground.A_Vol15 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount15]"
+                    id="headcount6"
+                    onkeyup="hcsum();"
+                    value="<%= campground.A_HCount15 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts15]"></textarea></td>
+              </tr>
+              </tr>
+  
+  
+              <!-- 16 Massmail Tickets -->
+              <tr>
+                <th class="ui  header subhead grey">Massmail Tickets </th>
+                <td>
+                  <input
+                    name="P_Vol16"
+                    class="form-control"
+                    type="text"
+                    value="50.77"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount16"
+                    class="form-control"
+                    type="text"
+                    value="0.29"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol16]"
+                    id="value6"
+                    onkeyup="sum();"
+                    value="<%= campground.A_Vol16 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount16]"
+                    id="headcount6"
+                    onkeyup="hcsum();"
+                    value="<%= campground.A_HCount16%>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts16]"></textarea></td>
+              </tr>
+              </tr>
+  
+  
+  
+              <!-- 17. Publisher Response  -->
+              
+  
+              <tr>
+                <th class="ui  header subhead grey">Publisher Response       </th>
+                <td>
+                  <input
+                    name="P_Vol17"
+                    class="form-control"
+                    type="text"
+                    value="262.93"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount17"
+                    class="form-control"
+                    type="text"
+                    value="0.82"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol17]"
+                    id="value6"
+                    onkeyup="sum();"
+                    value="<%= campground.A_Vol17 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount17]"
+                    id="headcount6"
+                    onkeyup="hcsum();"
+                    value="<%= campground.A_HCount17 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts17]"></textarea></td>
+              </tr>
+              </tr>
+  
+  
+  
+              
+              <!--  18 .Submitted Corrections   -->
+  
+              <tr>
+                <th>Submitted Corrections   </th>
+                <td>
+                  <input
+                    name="P_Vol18"
+                    class="form-control"
+                    type="text"
+                    value="202.92"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount18"
+                    class="form-control"
+                    type="text"
+                    value="0.32"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol18]"
+                    id="value6"
+                    onkeyup="sum();"
+                    value="<%= campground.A_Vol18 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount18]"
+                    id="headcount6"
+                    onkeyup="hcsum();"
+                    value="<%= campground.A_HCount18 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts18]"></textarea></td>
+              </tr>
+              </tr>
+  
+  
+  
+              <!-- 19.Queries + Escalations  -->
+  
+              <tr>
+                <th>Queries + Escalations     </th>
+                <td>
+                  <input
+                    name="P_Vol19"
+                    class="form-control"
+                    type="text"
+                    value="60"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount19"
+                    class="form-control"
+                    type="text"
+                    value="0.50"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol19]"
+                    id="value6"
+                    onkeyup="sum();"
+                    value="<%= campground.A_Vol19 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount19]"
+                    id="headcount6"
+                    onkeyup="hcsum();"
+                    value="<%= campground.A_HCount19 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts19]"></textarea></td>
+              </tr>
+              </tr>
+  
+  
+  
+              <!-- 20. Rework  -->
+              <tr>
+                <th class="ui center aligned header blue">Rework  </th>
+                <td>
+                  <input
+                    name="P_Vol20"
+                    class="form-control"
+                    type="text"
+                    value="462.93"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount20"
+                    class="form-control"
+                    type="text"
+                    value="1.22"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol20]"
+                    id="value6"
+                    value="<%= campground.A_Vol20 %>"
+                    class="form-control"
+                    type="number"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount20]"
+                    id="headcount6"
+                    value="<%= campground.A_HCount20 %>"
+                    class="form-control"
+                    type="number" readonly
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts20]"></textarea></td>
+              </tr>
+              </tr>
+
+              <!-- 21.Rework Blocking  -->
+              <tr>
+                <th>Rework Blocking  </th>
+                <td>
+                  <input
+                    name="P_Vol21"
+                    class="form-control"
+                    type="text"
+                    value="48.46"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount21"
+                    class="form-control"
+                    type="text"
+                    value="0.35"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+               <td>
+                  <input
+                    name="campground[A_Vol21]"
+                    id="value6"
+                    onkeyup="sum();"
+                    value="<%= campground.A_Vol21 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount21]"
+                    id="headcount6"
+                    onkeyup="hcsum();"
+                    value="<%= campground.A_HCount21 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts21]"></textarea></td>
+              </tr>
+              </tr>
+  
+  
+  
+              
+              
+            <!-- 22. Rework CFQ -->
+              <tr>
+                <th>Rework CFQI </th>
+                <td>
+                  <input
+                    name="P_Vol22"
+                    class="form-control"
+                    type="text"
+                    value="40.07"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount22"
+                    class="form-control"
+                    type="text"
+                    value="0.11"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol22]"
+                    id="value6"
+                    value="<%= campground.A_Vol22 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount22]"
+                    id="headcount6"
+                    value="<%= campground.A_HCount22 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts22]"></textarea></td>
+              </tr>
+              </tr>
+  
+  
+  
+              
+              <!-- 23.Rework Non-Blocking  -->
+  
+              <tr>
+                <th>Rework Non-Blocking  </th>
+                <td>
+                  <input
+                    name="P_Vol23"
+                    class="form-control"
+                    type="text"
+                    value="374.38"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    name="P_HCount23"
+                    class="form-control"
+                    type="text"
+                    value="0.76"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input class="form-control" type="text" value="0" readonly />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_Vol23]"
+                    id="value6"
+                    value="<%= campground.A_Vol23 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td>
+                  <input
+                    name="campground[A_HCount23]"
+                    id="headcount6"
+                    value="<%= campground.A_HCount23 %>"
+                    class="form-control"
+                    type="number"
+                  />
+                </td>
+                <td><textarea rows="2" name="campground[couts23]"></textarea></td>
+              </tr>
+              </tr>
+  
+   <!-- 24.KCVP Detections  -->
+            <tr>
+              <th class="ui center aligned header blue">KCVP Detections   </th>
+              <td>
+                <input
+                  name="P_Vol24"
+                  class="form-control"
+                  type="text"
+                  value="165.62"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount24"
+                  class="form-control"
+                  type="text"
+                  value="0.30"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol24]"
+                  id="value6"
+                  value="<%= campground.A_Vol24 %>"
+                  class="form-control"
+                  type="number"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount24]"
+                  id="headcount6"
+                  value="<%= campground.A_HCount24 %>"
+                  class="form-control"
+                  type="number"
+                  readonly
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts24]"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 25.Language Mismatch  -->
+            
+            <tr>
+              <th > Language Mismatch  </th>
+              <td>
+                <input
+                  name="P_Vol25"
+                  class="form-control"
+                  type="text"
+                  value="125"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount25"
+                  class="form-control"
+                  type="text"
+                  value="0.20"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol25]"
+                  id="value6"
+                  value="<%= campground.A_Vol25 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount25]"
+                  id="headcount6"
+                  value="<%= campground.A_HCount25 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts25]" value="<%= campground.couts25 %>"></textarea></td>
+            </tr>
+            </tr>
+
+
+            <!-- 26.Unknown Language -->
+            <tr>
+              <th >Unknown Language </th>
+              <td>
+                <input
+                  name="P_Vol26"
+                  class="form-control"
+                  type="text"
+                  value="18.47"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount26"
+                  class="form-control"
+                  type="text"
+                  value="0.03"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol26]"
+                  id="value6"
+                  value="<%= campground.A_Vol26 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount26]"
+                  id="headcount6"
+                  value="<%= campground.A_HCount26 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts26]" value="<%= campground.couts26 %>"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 27.Switcheroo  -->
+            
+            <tr>
+              <th >Switcheroo</th>
+              <td>
+                <input
+                  name="P_Vol27"
+                  class="form-control"
+                  type="text"
+                  value="15.70"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount27"
+                  class="form-control"
+                  type="text"
+                  value="0.05"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol27]"
+                  id="value6"
+                  value="<%= campground.A_Vol27 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount27]"
+                  id="headcount6"
+                  value="<%= campground.A_HCount27 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts27]  value="<%= campground.couts27 %>""></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 28.Fixed Layout  -->
+            
+            <tr>
+              <th>Fixed Layout   </th>
+              <td>
+                <input
+                  name="P_Vol28"
+                  class="form-control"
+                  type="text"
+                  value="6.47"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount28"
+                  class="form-control"
+                  type="text"
+                  value="0.02"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol28]"
+                  id="value6"
+                  value="<%= campground.A_Vol28 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount28]"
+                  id="headcount6"
+                  value="<%= campground.A_HCount28 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts28]"  value="<%= campground.couts28 %>"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            <!-- 29.Content Testing  -->
+            
+            <tr>
+              <th class="ui center aligned header blue">Content Testing  </th>
+              <td>
+                <input
+                  name="P_Vol29"
+                  class="form-control"
+                  type="text"
+                  value="92.30"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount29"
+                  class="form-control"
+                  type="text"
+                  value="2"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol29]"
+                  id="value6"
+                  value="<%= campground.A_Vol29 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount29]"
+                  id="headcount6"
+                  value="<%= campground.A_HCount29 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts29] "  value="<%= campground.couts29 %>"></textarea></td>
+            </tr>
+            </tr>
+
+
+
+            
+            <!-- 30.KDP Cover Gen  -->
+            <tr>
+              <th class="ui center aligned header blue">KDP Cover Gen  </th>
+              <td>
+                <input
+                  name="P_Vol30"
+                  class="form-control"
+                  type="text"
+                  value="2500"
+                  readonly
+                />
+              </td>
+              <td>
+                <input
+                  name="P_HCount30"
+                  class="form-control"
+                  type="text"
+                  value="0.10"
+                  readonly
+                />
+              </td>
+              <td>
+                <input class="form-control" type="text" value="0" readonly />
+              </td>
+              <td>
+                <input
+                  name="campground[A_Vol30]"
+                  id="value6"
+                  value="<%= campground.A_Vol30 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td>
+                <input
+                  name="campground[A_HCount30]"
+                  id="headcount6"
+                  value="<%= campground.A_HCount30 %>"
+                  class="form-control"
+                  type="number"
+                />
+              </td>
+              <td><textarea rows="2" name="campground[couts30]" value="<%= campground.couts30 %>"></textarea></td>
+            </tr>
+            </tr>
+
+      <!-- 31.Author Fix-up   -->
+      <tr>
+        <th class="ui center aligned header blue">Author Fix-up</th>
+        <td>
+          <input
+            name="P_Vol31"
+            class="form-control"
+            type="text"
+            value="92.30"
+            readonly
+          />
+        </td>
+        <td>
+          <input
+            name="P_HCount31"
+            class="form-control"
+            type="text"
+            value="0.01"
+            readonly
+          />
+        </td>
+        <td>
+          <input class="form-control" type="text" value="0" readonly />
+        </td>
+        <td>
+          <input
+            name="campground[A_Vol31]"
+            id="value6"
+            value="<%= campground.A_Vol31 %>"
+            class="form-control"
+            type="number"
+          />
+        </td>
+        <td>
+          <input
+            name="campground[A_HCount31]"
+            id="headcount6"
+            value="<%= campground.A_HCount31 %>"
+            class="form-control"
+            type="number"
+          />
+        </td>
+        <td><textarea rows="2" name="campground[couts31]" value="<%= campground.couts31 %>"></textarea></td>
+      </tr>
+      </tr>
+
+
+
+      
+      <!--  32. All Field Audit -->
+      <tr>
+        <th class="ui center aligned header blue"> All Field Audit   </th>
+        <td>
+          <input
+            name="P_Vol32"
+            class="form-control"
+            type="text"
+            value="85.84"
+            readonly
+          />
+        </td>
+        <td>
+          <input
+            name="P_HCount32"
+            class="form-control"
+            type="text"
+            value="0.10"
+            readonly
+          />
+        </td>
+        <td>
+          <input class="form-control" type="text" value="0" readonly />
+        </td>
+        <td>
+          <input
+            name="campground[A_Vol32]"
+            id="value6"
+            value="<%= campground.A_Vol32 %>"
+            class="form-control"
+            type="number"
+          />
+        </td>
+        <td>
+          <input
+            name="campground[A_HCount32]"
+            id="headcount6"
+            value="<%= campground.A_HCount32 %>"
+            class="form-control"
+            type="number"
+          />
+        </td>
+        <td><textarea rows="2" name="campground[couts32]"  value="<%= campground.couts32 %>"  ></textarea></td>
+      </tr>
+      </tr>
+
+
+
+
+
+          </thead>
+        </table>
+
+        <div class="form-group">
+          <button class="ui basic blue button">Submit!</button>
         </div>
+      </form>
+      <a href="/campgrounds">Go Back</a>
     </div>
+  </div>
 </div>
 <% include ../partials/footer %>
-
