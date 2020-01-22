@@ -6,6 +6,7 @@
   padding: 0;
 }
 
+
 .thumbnail .caption-full {
   padding: 9px;
 }
@@ -40,6 +41,11 @@ a {
   font-size: 15px;
 }
 
+
+.show{
+  padding: 4rem;
+  margin-top: -2.9rem;
+}
     
 
 

@@ -28,27 +28,811 @@
     }
   }
 
+
+  function reactive(){
+    var v1 = document.getElementById("value11").value;
+    var v2 = document.getElementById("value12").value;
+    var v3 = document.getElementById("value13").value;
+    var v4 = document.getElementById("value14").value;
+    var v5 = document.getElementById("value15").value;
+    var v6 = document.getElementById("value16").value;
+    var v7 = document.getElementById("value17").value;
+    var v8 = document.getElementById("value18").value;
+    var v9 = document.getElementById("value19").value;
+    var v10 = document.getElementById("value20").value;
+    var v11 = document.getElementById("value21").value;
+    var result = +v1 + +v2 + +v3 + +v4 + +v5 + +v6 + +v7  + +v8 + +v9 + +v10 + +v11  ;
+    if (!isNaN(result)) {
+      document.getElementById("sum_reactive").value = result;
+    }
+  }
+
+  function reactiveHCount(){
+    var v1 = document.getElementById("value111").value;
+    var v2 = document.getElementById("value112").value;
+    var v3 = document.getElementById("value113").value;
+    var v4 = document.getElementById("value114").value;
+    var v5 = document.getElementById("value115").value;
+    var v6 = document.getElementById("value116").value;
+    var v7 = document.getElementById("value117").value;
+    var v8 = document.getElementById("value118").value;
+    var v9 = document.getElementById("value119").value;
+    var v10 = document.getElementById("value120").value;
+    var v11 = document.getElementById("value121").value;
+    
+    
+    var result = +v1 + +v2 + +v3 + +v4 + +v5 + +v6 + +v7  + +v8 + +v9 + +v10 + +v11  ;
+    if (!isNaN(result)) {
+      document.getElementById("sum_reactiveHCount").value = result;
+    }
+  }
+
+  function rework(){
+    var v1 = document.getElementById("value1110").value;
+    var v2 = document.getElementById("value1120").value;
+
+    var v3 = document.getElementById("value1130").value;
+    
+    var result = +v1 + +v2 + +v3;
+    if (!isNaN(result)) {
+      document.getElementById("sum_rework").value = result;
+    }
+  }
+
+  function reworkHCount(){
+    var v1 = document.getElementById("value1010").value;
+    var v2 = document.getElementById("value1020").value;
+
+    var v3 = document.getElementById("value1030").value;
+    
+    var result = +v1 + +v2 + +v3;
+    if (!isNaN(result)) {
+      document.getElementById("sum_reworkHCount").value = result;
+    }
+  }
+
+  function kcvp(){
+    var v1 = document.getElementById("kcvp1").value;
+    var v2 = document.getElementById("kcvp2").value;
+    var v3 = document.getElementById("kcvp3").value;
+    var v4 = document.getElementById("kcvp4").value;
+    var result = +v1 + +v2 + +v3 + +v4;
+    if (!isNaN(result)) {
+      document.getElementById("sum_kcvp").value = result;
+    }
+  }
+  
+  function kcvpHCount(){
+    var v1 = document.getElementById("kcvpHCount1").value;
+    var v2 = document.getElementById("kcvpHCount2").value;
+    var v3 = document.getElementById("kcvpHCount3").value;
+    var v4 = document.getElementById("kcvpHCount4").value;
+    var result = +v1 + +v2 + +v3 + +v4;
+    if (!isNaN(result)) {
+      document.getElementById("sum_kcvpHCount").value = result;
+    }
+  }
+
+ 
+  function weekly() {
+
+  var x = document.getElementById("myText").value;
+
+  if( x=== "2019-W27" || x=== "2019-W28" || x=== "2019-W29" || x=== "2019-W30" || x=== "2019-W31" || x=== "2019-W32" || x=== "2019-W33" || x=== "2019-W34"|| x=== "2019-W35"|| x=== "2019-W36" || x=== "2019-W37" || x=== "2019-W38"|| x=== "2019-W39" ){
+    
+    document.getElementById("Planned_v1" ).innerHTML = "596.23";
+    document.getElementById("Planned_v2").innerHTML = "46.15";
+    document.getElementById("Planned_v3").innerHTML = "264.69";
+    document.getElementById("Planned_v4").innerHTML = "10.15";
+    document.getElementById("Planned_v5" ).innerHTML = "184.61";
+    document.getElementById("Planned_v6").innerHTML = "6.47";
+    document.getElementById("Planned_v7").innerHTML = "84.15";
+    document.getElementById("Planned_v8").innerHTML = "1572";
+    document.getElementById("Planned_v9" ).innerHTML = "127.61";
+    document.getElementById("Planned_v10").innerHTML = "1005.62";
+    document.getElementById("Planned_v11").innerHTML = "780";
+    document.getElementById("Planned_v12").innerHTML = "";
+    document.getElementById("Planned_v13" ).innerHTML = "173";
+    document.getElementById("Planned_v14").innerHTML = "53.46";
+    document.getElementById("Planned_v15").innerHTML = "125.1";
+    document.getElementById("Planned_v16").innerHTML = "50.76";
+    document.getElementById("Planned_v17" ).innerHTML = "262.92";
+    document.getElementById("Planned_v18").innerHTML = "202.92";
+    document.getElementById("Planned_v19").innerHTML = "60";
+    document.getElementById("Planned_v20").innerHTML = "462.92";
+    document.getElementById("Planned_v21" ).innerHTML = "48.46";
+    document.getElementById("Planned_v22").innerHTML = "40.07";
+    document.getElementById("Planned_v23").innerHTML = "374.41";
+    document.getElementById("Planned_v24").innerHTML = "165.62";
+    document.getElementById("Planned_v25" ).innerHTML = "125";
+    document.getElementById("Planned_v26").innerHTML = "18.46";
+    document.getElementById("Planned_v27").innerHTML = "15.69";
+    document.getElementById("Planned_v28").innerHTML = "6.46";
+    document.getElementById("Planned_v29" ).innerHTML = "92.31";
+    document.getElementById("Planned_v30").innerHTML = "2500";
+    document.getElementById("Planned_v31").innerHTML = "92.31";
+    document.getElementById("Planned_v32").innerHTML = "85.85";
+
+
+    document.getElementById("Planned_hc1" ).innerHTML = "4.05";
+    document.getElementById("Planned_hc2").innerHTML = "0.38";
+    document.getElementById("Planned_hc3").innerHTML = "1.61";
+    document.getElementById("Planned_hc4").innerHTML = "0.12";
+    document.getElementById("Planned_hc5" ).innerHTML = "1.40";
+    document.getElementById("Planned_hc6").innerHTML = "0.05";
+    document.getElementById("Planned_hc7").innerHTML = "0.49";
+    document.getElementById("Planned_hc8").innerHTML = "17.65";
+    document.getElementById("Planned_hc9" ).innerHTML = "0.97";
+    document.getElementById("Planned_hc10").innerHTML = "7.62";
+    document.getElementById("Planned_hc11").innerHTML = "6.03";
+    document.getElementById("Planned_hc12").innerHTML = "";
+    document.getElementById("Planned_hc13" ).innerHTML = "1.22";
+    document.getElementById("Planned_hc14").innerHTML = "0.38";
+    document.getElementById("Planned_hc15").innerHTML = "0.95";
+    document.getElementById("Planned_hc16").innerHTML = "0.29";
+    document.getElementById("Planned_hc17" ).innerHTML = "0.82";
+    document.getElementById("Planned_hc18").innerHTML = "0.32";
+    document.getElementById("Planned_hc19").innerHTML = "0.50";
+    document.getElementById("Planned_hc20").innerHTML = "1.22";
+    document.getElementById("Planned_hc21" ).innerHTML = "0.35";
+    document.getElementById("Planned_hc22").innerHTML = "0.11";
+    document.getElementById("Planned_hc23").innerHTML = "0.76";
+    document.getElementById("Planned_hc24").innerHTML = "0.30";
+    document.getElementById("Planned_hc25" ).innerHTML = "0.20";
+    document.getElementById("Planned_hc26").innerHTML = "0.03";
+    document.getElementById("Planned_hc27").innerHTML = "0.05";
+    document.getElementById("Planned_hc28").innerHTML = "0.02";
+    document.getElementById("Planned_hc29" ).innerHTML = "2";
+    document.getElementById("Planned_hc30").innerHTML = "0.10";
+    document.getElementById("Planned_hc31").innerHTML = "2";
+    document.getElementById("Planned_hc32").innerHTML = "0.10";
+
+    document.getElementById("Planned_prod1" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod2").innerHTML = "6.5";
+    document.getElementById("Planned_prod3").innerHTML = "68.5";
+    document.getElementById("Planned_prod4").innerHTML = "4.5";
+    document.getElementById("Planned_prod5" ).innerHTML = "4.5";
+    document.getElementById("Planned_prod6").innerHTML = "34.5";
+    document.getElementById("Planned_prod7").innerHTML = "5.5";
+    document.getElementById("Planned_prod8").innerHTML = "6.5";
+    document.getElementById("Planned_prod9" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod10").innerHTML = "1.5";
+    document.getElementById("Planned_prod11").innerHTML = "3.5";
+    document.getElementById("Planned_prod12").innerHTML = "863.5";
+    document.getElementById("Planned_prod13" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod14").innerHTML = "6.5";
+    document.getElementById("Planned_prod15").innerHTML = "7.5";
+    document.getElementById("Planned_prod16").innerHTML = "3.5";
+    document.getElementById("Planned_prod17" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod18").innerHTML = "6.5";
+    document.getElementById("Planned_prod19").innerHTML = "7.5";
+    document.getElementById("Planned_prod20").innerHTML = "8.5";
+    document.getElementById("Planned_prod21" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod22").innerHTML = "6.5";
+    document.getElementById("Planned_prod23").innerHTML = "7.5";
+    document.getElementById("Planned_prod24").innerHTML = "8.5";
+    document.getElementById("Planned_prod25" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod26").innerHTML = "6.5";
+    document.getElementById("Planned_prod27").innerHTML = "7.5";
+    document.getElementById("Planned_prod28").innerHTML = "8.5";
+    document.getElementById("Planned_prod29" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod30").innerHTML = "6.5";
+    document.getElementById("Planned_prod31").innerHTML = "7.5";
+    document.getElementById("Planned_prod32").innerHTML = "8.5";
+
+  }
+
+  else if(  x=== "2019-W40" || x=== "2019-W41" || x=== "2019-W42" || x=== "2019-W43" || x=== "2019-W44"|| x=== "2019-W45"|| x=== "2019-W46" || x=== "2019-W47" || x=== "2019-W48" || x=== "2019-W49" || x=== "2019-W50"|| x=== "2019-W52"|| x=== "2019-W52"){
+    
+    document.getElementById("Planned_v1" ).innerHTML = "658.84";
+    document.getElementById("Planned_v2").innerHTML = "46.15";
+    document.getElementById("Planned_v3").innerHTML = "264.69";
+    document.getElementById("Planned_v4").innerHTML = "10.15";
+    document.getElementById("Planned_v5" ).innerHTML = "184.61";
+    document.getElementById("Planned_v6").innerHTML = "6.46";
+    document.getElementById("Planned_v7").innerHTML = "84.15";
+    document.getElementById("Planned_v8").innerHTML = "1572";
+    document.getElementById("Planned_v9" ).innerHTML = "123.2";
+    document.getElementById("Planned_v10").innerHTML = "52";
+    document.getElementById("Planned_v11").innerHTML = "14";
+    document.getElementById("Planned_v12").innerHTML = "63";
+    document.getElementById("Planned_v13" ).innerHTML = "5";
+    document.getElementById("Planned_v14").innerHTML = "663.5";
+    document.getElementById("Planned_v15").innerHTML = "763.5";
+    document.getElementById("Planned_v16").innerHTML = "863.5";
+    document.getElementById("Planned_v17" ).innerHTML = "563.5";
+    document.getElementById("Planned_v18").innerHTML = "663.5";
+    document.getElementById("Planned_v19").innerHTML = "763.5";
+    document.getElementById("Planned_v20").innerHTML = "863.5";
+    document.getElementById("Planned_v21" ).innerHTML = "563.5";
+    document.getElementById("Planned_v22").innerHTML = "663.5";
+    document.getElementById("Planned_v23").innerHTML = "763.5";
+    document.getElementById("Planned_v24").innerHTML = "863.5";
+    document.getElementById("Planned_v25" ).innerHTML = "563.5";
+    document.getElementById("Planned_v26").innerHTML = "663.5";
+    document.getElementById("Planned_v27").innerHTML = "763.5";
+    document.getElementById("Planned_v28").innerHTML = "863.5";
+    document.getElementById("Planned_v29" ).innerHTML = "563.5";
+    document.getElementById("Planned_v30").innerHTML = "663.5";
+    document.getElementById("Planned_v31").innerHTML = "763.5";
+    document.getElementById("Planned_v32").innerHTML = "863.5";
+
+    document.getElementById("Planned_hc1" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc2").innerHTML = "5.5";
+    document.getElementById("Planned_hc3").innerHTML = "8.05";
+    document.getElementById("Planned_hc4").innerHTML = "4.5";
+    document.getElementById("Planned_hc5" ).innerHTML = "3.15";
+    document.getElementById("Planned_hc6").innerHTML = "4.5";
+    document.getElementById("Planned_hc7").innerHTML = "3.5";
+    document.getElementById("Planned_hc8").innerHTML = "2.05";
+    document.getElementById("Planned_hc9" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc10").innerHTML = "6.5";
+    document.getElementById("Planned_hc11").innerHTML = "6.5";
+    document.getElementById("Planned_hc12").innerHTML = "8.5";
+    document.getElementById("Planned_hc13" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc14").innerHTML = "6.5";
+    document.getElementById("Planned_hc15").innerHTML = "76.35";
+    document.getElementById("Planned_hc16").innerHTML = "8.5";
+    document.getElementById("Planned_hc17" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc18").innerHTML = "66.5";
+    document.getElementById("Planned_hc19").innerHTML = "6.35";
+    document.getElementById("Planned_hc20").innerHTML = "6.5";
+    document.getElementById("Planned_hc21" ).innerHTML = "6.05";
+    document.getElementById("Planned_hc22").innerHTML = "66.5";
+    document.getElementById("Planned_hc23").innerHTML = "6.5";
+    document.getElementById("Planned_hc24").innerHTML = "86.5";
+    document.getElementById("Planned_hc25" ).innerHTML = "56.15";
+    document.getElementById("Planned_hc26").innerHTML = "66.5";
+    document.getElementById("Planned_hc27").innerHTML = "6.5";
+    document.getElementById("Planned_hc28").innerHTML = "6.5";
+    document.getElementById("Planned_hc29" ).innerHTML = "6.15";
+    document.getElementById("Planned_hc30").innerHTML = "6.5";
+    document.getElementById("Planned_hc31").innerHTML = "7.5";
+    document.getElementById("Planned_hc32").innerHTML = "6.5";
+
+
+    document.getElementById("Planned_prod1" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod2").innerHTML = "6.5";
+    document.getElementById("Planned_prod3").innerHTML = "68.5";
+    document.getElementById("Planned_prod4").innerHTML = "4.5";
+    document.getElementById("Planned_prod5" ).innerHTML = "4.5";
+    document.getElementById("Planned_prod6").innerHTML = "34.5";
+    document.getElementById("Planned_prod7").innerHTML = "5.5";
+    document.getElementById("Planned_prod8").innerHTML = "6.5";
+    document.getElementById("Planned_prod9" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod10").innerHTML = "1.5";
+    document.getElementById("Planned_prod11").innerHTML = "3.5";
+    document.getElementById("Planned_prod12").innerHTML = "863.5";
+    document.getElementById("Planned_prod13" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod14").innerHTML = "6.5";
+    document.getElementById("Planned_prod15").innerHTML = "7.5";
+    document.getElementById("Planned_prod16").innerHTML = "3.5";
+    document.getElementById("Planned_prod17" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod18").innerHTML = "5.5";
+    document.getElementById("Planned_prod19").innerHTML = "7.5";
+    document.getElementById("Planned_prod20").innerHTML = "8.5";
+    document.getElementById("Planned_prod21" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod22").innerHTML = "6.5";
+    document.getElementById("Planned_prod23").innerHTML = "7.5";
+    document.getElementById("Planned_prod24").innerHTML = "8.5";
+    document.getElementById("Planned_prod25" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod26").innerHTML = "6.5";
+    document.getElementById("Planned_prod27").innerHTML = "7.5";
+    document.getElementById("Planned_prod28").innerHTML = "8.5";
+    document.getElementById("Planned_prod29" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod30").innerHTML = "6.5";
+    document.getElementById("Planned_prod31").innerHTML = "7.5";
+    document.getElementById("Planned_prod32").innerHTML = "8.5";
+    
+  }
+
+
+  else if(x=== "2020-W01" || x=== "2020-W02" || x=== "2020-W03" || x=== "2020-W04" || x=== "2020-W05" || x=== "2020-W06"   || x=== "2020-W07" || x=== "2020-W08" || x=== "2020-W09" || x=== "2020-W10" || x=== "2020-W11" || x=== "2020-W12" || x=== "2020-W13" ){
+    
+    document.getElementById("Planned_v1" ).innerHTML = "563.5";
+    document.getElementById("Planned_v2").innerHTML = "663.5";
+    document.getElementById("Planned_v3").innerHTML = "763.5";
+    document.getElementById("Planned_v4").innerHTML = "863.5";
+    document.getElementById("Planned_v5" ).innerHTML = "563.5";
+    document.getElementById("Planned_v6").innerHTML = "663.5";
+    document.getElementById("Planned_v7").innerHTML = "763.5";
+    document.getElementById("Planned_v8").innerHTML = "863.5";
+    document.getElementById("Planned_v9" ).innerHTML = "563.5";
+    document.getElementById("Planned_v10").innerHTML = "663.5";
+    document.getElementById("Planned_v11").innerHTML = "763.5";
+    document.getElementById("Planned_v12").innerHTML = "863.5";
+    document.getElementById("Planned_v13" ).innerHTML = "563.5";
+    document.getElementById("Planned_v14").innerHTML = "663.5";
+    document.getElementById("Planned_v15").innerHTML = "763.5";
+    document.getElementById("Planned_v16").innerHTML = "863.5";
+    document.getElementById("Planned_v17" ).innerHTML = "563.5";
+    document.getElementById("Planned_v18").innerHTML = "663.5";
+    document.getElementById("Planned_v19").innerHTML = "763.5";
+    document.getElementById("Planned_v20").innerHTML = "863.5";
+    document.getElementById("Planned_v21" ).innerHTML = "563.5";
+    document.getElementById("Planned_v22").innerHTML = "663.5";
+    document.getElementById("Planned_v23").innerHTML = "763.5";
+    document.getElementById("Planned_v24").innerHTML = "863.5";
+    document.getElementById("Planned_v25" ).innerHTML = "563.5";
+    document.getElementById("Planned_v26").innerHTML = "663.5";
+    document.getElementById("Planned_v27").innerHTML = "763.5";
+    document.getElementById("Planned_v28").innerHTML = "863.5";
+    document.getElementById("Planned_v29" ).innerHTML = "563.5";
+    document.getElementById("Planned_v30").innerHTML = "663.5";
+    document.getElementById("Planned_v31").innerHTML = "763.5";
+    document.getElementById("Planned_v32").innerHTML = "863.5";
+
+    document.getElementById("Planned_hc1" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc2").innerHTML = "5.5";
+    document.getElementById("Planned_hc3").innerHTML = "8.05";
+    document.getElementById("Planned_hc4").innerHTML = "4.5";
+    document.getElementById("Planned_hc5" ).innerHTML = "3.15";
+    document.getElementById("Planned_hc6").innerHTML = "4.5";
+    document.getElementById("Planned_hc7").innerHTML = "3.5";
+    document.getElementById("Planned_hc8").innerHTML = "2.05";
+    document.getElementById("Planned_hc9" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc10").innerHTML = "6.5";
+    document.getElementById("Planned_hc11").innerHTML = "6.5";
+    document.getElementById("Planned_hc12").innerHTML = "8.5";
+    document.getElementById("Planned_hc13" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc14").innerHTML = "6.5";
+    document.getElementById("Planned_hc15").innerHTML = "76.35";
+    document.getElementById("Planned_hc16").innerHTML = "8.5";
+    document.getElementById("Planned_hc17" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc18").innerHTML = "66.5";
+    document.getElementById("Planned_hc19").innerHTML = "6.35";
+    document.getElementById("Planned_hc20").innerHTML = "6.5";
+    document.getElementById("Planned_hc21" ).innerHTML = "6.05";
+    document.getElementById("Planned_hc22").innerHTML = "66.5";
+    document.getElementById("Planned_hc23").innerHTML = "6.5";
+    document.getElementById("Planned_hc24").innerHTML = "86.5";
+    document.getElementById("Planned_hc25" ).innerHTML = "56.15";
+    document.getElementById("Planned_hc26").innerHTML = "66.5";
+    document.getElementById("Planned_hc27").innerHTML = "6.5";
+    document.getElementById("Planned_hc28").innerHTML = "6.5";
+    document.getElementById("Planned_hc29" ).innerHTML = "6.15";
+    document.getElementById("Planned_hc30").innerHTML = "6.5";
+    document.getElementById("Planned_hc31").innerHTML = "7.5";
+    document.getElementById("Planned_hc32").innerHTML = "6.5";
+
+
+    document.getElementById("Planned_prod1" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod2").innerHTML = "6.5";
+    document.getElementById("Planned_prod3").innerHTML = "68.5";
+    document.getElementById("Planned_prod4").innerHTML = "4.5";
+    document.getElementById("Planned_prod5" ).innerHTML = "4.5";
+    document.getElementById("Planned_prod6").innerHTML = "34.5";
+    document.getElementById("Planned_prod7").innerHTML = "5.5";
+    document.getElementById("Planned_prod8").innerHTML = "6.5";
+    document.getElementById("Planned_prod9" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod10").innerHTML = "1.5";
+    document.getElementById("Planned_prod11").innerHTML = "3.5";
+    document.getElementById("Planned_prod12").innerHTML = "863.5";
+    document.getElementById("Planned_prod13" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod14").innerHTML = "6.5";
+    document.getElementById("Planned_prod15").innerHTML = "7.5";
+    document.getElementById("Planned_prod16").innerHTML = "3.5";
+    document.getElementById("Planned_prod17" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod18").innerHTML = "6.5";
+    document.getElementById("Planned_prod19").innerHTML = "7.5";
+    document.getElementById("Planned_prod20").innerHTML = "8.5";
+    document.getElementById("Planned_prod21" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod22").innerHTML = "6.5";
+    document.getElementById("Planned_prod23").innerHTML = "7.5";
+    document.getElementById("Planned_prod24").innerHTML = "8.5";
+    document.getElementById("Planned_prod25" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod26").innerHTML = "6.5";
+    document.getElementById("Planned_prod27").innerHTML = "7.5";
+    document.getElementById("Planned_prod28").innerHTML = "8.5";
+    document.getElementById("Planned_prod29" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod30").innerHTML = "6.5";
+    document.getElementById("Planned_prod31").innerHTML = "7.5";
+    document.getElementById("Planned_prod32").innerHTML = "8.5";
+    
+  }
+  else if( x=== "2020-W14" || x=== "2020-W15" || x=== "2020-W16"   || x=== "2020-W17" || x=== "2020-W18" || x=== "2020-W19" || x=== "2020-W20" || x=== "2020-W21" || x=== "2020-W22" || x=== "2020-W23" || x=== "2020-W24"|| x=== "2020-W25"|| x=== "2020-W26" ){
+    document.getElementById("Planned_v1" ).innerHTML = "563.5";
+    document.getElementById("Planned_v2").innerHTML = "663.5";
+    document.getElementById("Planned_v3").innerHTML = "763.5";
+    document.getElementById("Planned_v4").innerHTML = "863.5";
+    document.getElementById("Planned_v5" ).innerHTML = "563.5";
+    document.getElementById("Planned_v6").innerHTML = "663.5";
+    document.getElementById("Planned_v7").innerHTML = "763.5";
+    document.getElementById("Planned_v8").innerHTML = "863.5";
+    document.getElementById("Planned_v9" ).innerHTML = "563.5";
+    document.getElementById("Planned_v10").innerHTML = "663.5";
+    document.getElementById("Planned_v11").innerHTML = "763.5";
+    document.getElementById("Planned_v12").innerHTML = "863.5";
+    document.getElementById("Planned_v13").innerHTML = "563.5";
+    document.getElementById("Planned_v14").innerHTML = "663.5";
+    document.getElementById("Planned_v15").innerHTML = "763.5";
+    document.getElementById("Planned_v16").innerHTML = "863.5";
+    document.getElementById("Planned_v17").innerHTML = "563.5";
+    document.getElementById("Planned_v18").innerHTML = "663.5";
+    document.getElementById("Planned_v19").innerHTML = "763.5";
+    document.getElementById("Planned_v20").innerHTML = "863.5";
+    document.getElementById("Planned_v21" ).innerHTML = "563.5";
+    document.getElementById("Planned_v22").innerHTML = "663.5";
+    document.getElementById("Planned_v23").innerHTML = "763.5";
+    document.getElementById("Planned_v24").innerHTML = "863.5";
+    document.getElementById("Planned_v25" ).innerHTML = "563.5";
+    document.getElementById("Planned_v26").innerHTML = "663.5";
+    document.getElementById("Planned_v27").innerHTML = "763.5";
+    document.getElementById("Planned_v28").innerHTML = "863.5";
+    document.getElementById("Planned_v29" ).innerHTML = "563.5";
+    document.getElementById("Planned_v30").innerHTML = "663.5";
+    document.getElementById("Planned_v31").innerHTML = "763.5";
+    document.getElementById("Planned_v32").innerHTML = "863.5";
+
+
+    document.getElementById("Planned_hc1" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc2").innerHTML = "5.5";
+    document.getElementById("Planned_hc3").innerHTML = "8.05";
+    document.getElementById("Planned_hc4").innerHTML = "4.5";
+    document.getElementById("Planned_hc5" ).innerHTML = "3.15";
+    document.getElementById("Planned_hc6").innerHTML = "4.5";
+    document.getElementById("Planned_hc7").innerHTML = "3.5";
+    document.getElementById("Planned_hc8").innerHTML = "2.05";
+    document.getElementById("Planned_hc9" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc10").innerHTML = "6.5";
+    document.getElementById("Planned_hc11").innerHTML = "6.5";
+    document.getElementById("Planned_hc12").innerHTML = "8.5";
+    document.getElementById("Planned_hc13" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc14").innerHTML = "6.5";
+    document.getElementById("Planned_hc15").innerHTML = "76.35";
+    document.getElementById("Planned_hc16").innerHTML = "8.5";
+    document.getElementById("Planned_hc17" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc18").innerHTML = "66.5";
+    document.getElementById("Planned_hc19").innerHTML = "6.35";
+    document.getElementById("Planned_hc20").innerHTML = "6.5";
+    document.getElementById("Planned_hc21" ).innerHTML = "6.05";
+    document.getElementById("Planned_hc22").innerHTML = "66.5";
+    document.getElementById("Planned_hc23").innerHTML = "6.5";
+    document.getElementById("Planned_hc24").innerHTML = "86.5";
+    document.getElementById("Planned_hc25" ).innerHTML = "56.15";
+    document.getElementById("Planned_hc26").innerHTML = "66.5";
+    document.getElementById("Planned_hc27").innerHTML = "6.5";
+    document.getElementById("Planned_hc28").innerHTML = "6.5";
+    document.getElementById("Planned_hc29" ).innerHTML = "6.15";
+    document.getElementById("Planned_hc30").innerHTML = "6.5";
+    document.getElementById("Planned_hc31").innerHTML = "7.5";
+    document.getElementById("Planned_hc32").innerHTML = "6.5";
+
+
+    document.getElementById("Planned_prod1" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod2").innerHTML = "6.5";
+    document.getElementById("Planned_prod3").innerHTML = "68.5";
+    document.getElementById("Planned_prod4").innerHTML = "4.5";
+    document.getElementById("Planned_prod5" ).innerHTML = "4.5";
+    document.getElementById("Planned_prod6").innerHTML = "34.5";
+    document.getElementById("Planned_prod7").innerHTML = "5.5";
+    document.getElementById("Planned_prod8").innerHTML = "6.5";
+    document.getElementById("Planned_prod9" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod10").innerHTML = "1.5";
+    document.getElementById("Planned_prod11").innerHTML = "3.5";
+    document.getElementById("Planned_prod12").innerHTML = "863.5";
+    document.getElementById("Planned_prod13" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod14").innerHTML = "6.5";
+    document.getElementById("Planned_prod15").innerHTML = "7.5";
+    document.getElementById("Planned_prod16").innerHTML = "3.5";
+    document.getElementById("Planned_prod17" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod18").innerHTML = "6.5";
+    document.getElementById("Planned_prod19").innerHTML = "7.5";
+    document.getElementById("Planned_prod20").innerHTML = "8.5";
+    document.getElementById("Planned_prod21" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod22").innerHTML = "6.5";
+    document.getElementById("Planned_prod23").innerHTML = "7.5";
+    document.getElementById("Planned_prod24").innerHTML = "8.5";
+    document.getElementById("Planned_prod25" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod26").innerHTML = "6.5";
+    document.getElementById("Planned_prod27").innerHTML = "7.5";
+    document.getElementById("Planned_prod28").innerHTML = "8.5";
+    document.getElementById("Planned_prod29" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod30").innerHTML = "6.5";
+    document.getElementById("Planned_prod31").innerHTML = "7.5";
+    document.getElementById("Planned_prod32").innerHTML = "8.5";
+    
+  }
+
+  else if( x=== "2020-W27" || x=== "2020-W28" || x=== "2020-W29" || x=== "2020-W30" || x=== "2020-W31" || x=== "2020-W32" || x=== "2020-W33" || x=== "2020-W34"|| x=== "2020-W35"|| x=== "2020-W36" || x=== "2020-W37" || x=== "2020-W38"|| x=== "2020-W39"|| x=== "2020-W40" ){
+    document.getElementById("Planned_v1" ).innerHTML = "563.5";
+    document.getElementById("Planned_v2").innerHTML = "663.5";
+    document.getElementById("Planned_v3").innerHTML = "763.5";
+    document.getElementById("Planned_v4").innerHTML = "863.5";
+    document.getElementById("Planned_v5" ).innerHTML = "563.5";
+    document.getElementById("Planned_v6").innerHTML = "663.5";
+    document.getElementById("Planned_v7").innerHTML = "763.5";
+    document.getElementById("Planned_v8").innerHTML = "863.5";
+    document.getElementById("Planned_v9" ).innerHTML = "563.5";
+    document.getElementById("Planned_v10").innerHTML = "663.5";
+    document.getElementById("Planned_v11").innerHTML = "763.5";
+    document.getElementById("Planned_v12").innerHTML = "863.5";
+    document.getElementById("Planned_v13" ).innerHTML = "563.5";
+    document.getElementById("Planned_v14").innerHTML = "663.5";
+    document.getElementById("Planned_v15").innerHTML = "763.5";
+    document.getElementById("Planned_v16").innerHTML = "863.5";
+    document.getElementById("Planned_v17" ).innerHTML = "563.5";
+    document.getElementById("Planned_v18").innerHTML = "663.5";
+    document.getElementById("Planned_v19").innerHTML = "763.5";
+    document.getElementById("Planned_v20").innerHTML = "863.5";
+    document.getElementById("Planned_v21" ).innerHTML = "563.5";
+    document.getElementById("Planned_v22").innerHTML = "663.5";
+    document.getElementById("Planned_v23").innerHTML = "763.5";
+    document.getElementById("Planned_v24").innerHTML = "863.5";
+    document.getElementById("Planned_v25" ).innerHTML = "563.5";
+    document.getElementById("Planned_v26").innerHTML = "663.5";
+    document.getElementById("Planned_v27").innerHTML = "763.5";
+    document.getElementById("Planned_v28").innerHTML = "863.5";
+    document.getElementById("Planned_v29" ).innerHTML = "563.5";
+    document.getElementById("Planned_v30").innerHTML = "663.5";
+    document.getElementById("Planned_v31").innerHTML = "763.5";
+    document.getElementById("Planned_v32").innerHTML = "863.5";
+
+    document.getElementById("Planned_hc1" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc2").innerHTML = "5.5";
+    document.getElementById("Planned_hc3").innerHTML = "8.05";
+    document.getElementById("Planned_hc4").innerHTML = "4.5";
+    document.getElementById("Planned_hc5" ).innerHTML = "3.15";
+    document.getElementById("Planned_hc6").innerHTML = "4.5";
+    document.getElementById("Planned_hc7").innerHTML = "3.5";
+    document.getElementById("Planned_hc8").innerHTML = "2.05";
+    document.getElementById("Planned_hc9" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc10").innerHTML = "6.5";
+    document.getElementById("Planned_hc11").innerHTML = "6.5";
+    document.getElementById("Planned_hc12").innerHTML = "8.5";
+    document.getElementById("Planned_hc13" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc14").innerHTML = "6.5";
+    document.getElementById("Planned_hc15").innerHTML = "76.35";
+    document.getElementById("Planned_hc16").innerHTML = "8.5";
+    document.getElementById("Planned_hc17" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc18").innerHTML = "66.5";
+    document.getElementById("Planned_hc19").innerHTML = "6.35";
+    document.getElementById("Planned_hc20").innerHTML = "6.5";
+    document.getElementById("Planned_hc21" ).innerHTML = "6.05";
+    document.getElementById("Planned_hc22").innerHTML = "66.5";
+    document.getElementById("Planned_hc23").innerHTML = "6.5";
+    document.getElementById("Planned_hc24").innerHTML = "86.5";
+    document.getElementById("Planned_hc25" ).innerHTML = "56.15";
+    document.getElementById("Planned_hc26").innerHTML = "66.5";
+    document.getElementById("Planned_hc27").innerHTML = "6.5";
+    document.getElementById("Planned_hc28").innerHTML = "6.5";
+    document.getElementById("Planned_hc29" ).innerHTML = "6.15";
+    document.getElementById("Planned_hc30").innerHTML = "6.5";
+    document.getElementById("Planned_hc31").innerHTML = "7.5";
+    document.getElementById("Planned_hc32").innerHTML = "6.5";
+
+    document.getElementById("Planned_prod1" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod2").innerHTML = "6.5";
+    document.getElementById("Planned_prod3").innerHTML = "68.5";
+    document.getElementById("Planned_prod4").innerHTML = "4.5";
+    document.getElementById("Planned_prod5" ).innerHTML = "4.5";
+    document.getElementById("Planned_prod6").innerHTML = "34.5";
+    document.getElementById("Planned_prod7").innerHTML = "5.5";
+    document.getElementById("Planned_prod8").innerHTML = "6.5";
+    document.getElementById("Planned_prod9" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod10").innerHTML = "1.5";
+    document.getElementById("Planned_prod11").innerHTML = "3.5";
+    document.getElementById("Planned_prod12").innerHTML = "863.5";
+    document.getElementById("Planned_prod13" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod14").innerHTML = "6.5";
+    document.getElementById("Planned_prod15").innerHTML = "7.5";
+    document.getElementById("Planned_prod16").innerHTML = "3.5";
+    document.getElementById("Planned_prod17" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod18").innerHTML = "6.5";
+    document.getElementById("Planned_prod19").innerHTML = "7.5";
+    document.getElementById("Planned_prod20").innerHTML = "8.5";
+    document.getElementById("Planned_prod21" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod22").innerHTML = "6.5";
+    document.getElementById("Planned_prod23").innerHTML = "7.5";
+    document.getElementById("Planned_prod24").innerHTML = "8.5";
+    document.getElementById("Planned_prod25" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod26").innerHTML = "6.5";
+    document.getElementById("Planned_prod27").innerHTML = "7.5";
+    document.getElementById("Planned_prod28").innerHTML = "8.5";
+    document.getElementById("Planned_prod29" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod30").innerHTML = "6.5";
+    document.getElementById("Planned_prod31").innerHTML = "7.5";
+    document.getElementById("Planned_prod32").innerHTML = "8.5";
+    
+  }
+  else   if(x=== "2020-W41" || x=== "2020-W42" || x=== "2020-W43" || x=== "2020-W44" || x=== "2020-W45" || x=== "2020-W46"   || x=== "2020-W47" || x=== "2020-W48" || x=== "2020-W49" || x=== "2020-W50" || x=== "2020-W51" || x=== "2020-W52" || x=== "2020-W53" ){
+    document.getElementById("Planned_v1" ).innerHTML = "363.5";
+    document.getElementById("Planned_v2").innerHTML = "663.5";
+    document.getElementById("Planned_v3").innerHTML = "563.5";
+    document.getElementById("Planned_v4").innerHTML = "963.5";
+    document.getElementById("Planned_v5" ).innerHTML = "563.5";
+    document.getElementById("Planned_v6").innerHTML = "663.5";
+    document.getElementById("Planned_v7").innerHTML = "763.5";
+    document.getElementById("Planned_v8").innerHTML = "863.5";
+    document.getElementById("Planned_v9" ).innerHTML = "763.5";
+    document.getElementById("Planned_v10").innerHTML = "663.5";
+    document.getElementById("Planned_v11").innerHTML = "763.5";
+    document.getElementById("Planned_v12").innerHTML = "863.5";
+    document.getElementById("Planned_v13" ).innerHTML = "563.5";
+    document.getElementById("Planned_v14").innerHTML = "663.5";
+    document.getElementById("Planned_v15").innerHTML = "763.5";
+    document.getElementById("Planned_v16").innerHTML = "863.5";
+    document.getElementById("Planned_v17" ).innerHTML = "563.5";
+    document.getElementById("Planned_v18").innerHTML = "663.5";
+    document.getElementById("Planned_v19").innerHTML = "763.5";
+    document.getElementById("Planned_v20").innerHTML = "863.5";
+    document.getElementById("Planned_v21" ).innerHTML = "563.5";
+    document.getElementById("Planned_v22").innerHTML = "663.5";
+    document.getElementById("Planned_v23").innerHTML = "763.5";
+    document.getElementById("Planned_v24").innerHTML = "863.5";
+    document.getElementById("Planned_v25" ).innerHTML = "563.5";
+    document.getElementById("Planned_v26").innerHTML = "663.5";
+    document.getElementById("Planned_v27").innerHTML = "763.5";
+    document.getElementById("Planned_v28").innerHTML = "863.5";
+    document.getElementById("Planned_v29" ).innerHTML = "563.5";
+    document.getElementById("Planned_v30").innerHTML = "663.5";
+    document.getElementById("Planned_v31").innerHTML = "763.5";
+    document.getElementById("Planned_v32").innerHTML = "863.5";
+
+    document.getElementById("Planned_hc1" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc2").innerHTML = "5.5";
+    document.getElementById("Planned_hc3").innerHTML = "8.05";
+    document.getElementById("Planned_hc4").innerHTML = "4.5";
+    document.getElementById("Planned_hc5" ).innerHTML = "3.15";
+    document.getElementById("Planned_hc6").innerHTML = "4.5";
+    document.getElementById("Planned_hc7").innerHTML = "3.5";
+    document.getElementById("Planned_hc8").innerHTML = "2.05";
+    document.getElementById("Planned_hc9" ).innerHTML = "1.35";
+    document.getElementById("Planned_hc10").innerHTML = "6.5";
+    document.getElementById("Planned_hc11").innerHTML = "6.5";
+    document.getElementById("Planned_hc12").innerHTML = "8.5";
+    document.getElementById("Planned_hc13" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc14").innerHTML = "6.5";
+    document.getElementById("Planned_hc15").innerHTML = "76.35";
+    document.getElementById("Planned_hc16").innerHTML = "8.5";
+    document.getElementById("Planned_hc17" ).innerHTML = "6.5";
+    document.getElementById("Planned_hc18").innerHTML = "66.5";
+    document.getElementById("Planned_hc19").innerHTML = "6.35";
+    document.getElementById("Planned_hc20").innerHTML = "6.5";
+    document.getElementById("Planned_hc21" ).innerHTML = "6.05";
+    document.getElementById("Planned_hc22").innerHTML = "66.5";
+    document.getElementById("Planned_hc23").innerHTML = "6.5";
+    document.getElementById("Planned_hc24").innerHTML = "86.5";
+    document.getElementById("Planned_hc25" ).innerHTML = "56.15";
+    document.getElementById("Planned_hc26").innerHTML = "66.5";
+    document.getElementById("Planned_hc27").innerHTML = "6.5";
+    document.getElementById("Planned_hc28").innerHTML = "6.5";
+    document.getElementById("Planned_hc29" ).innerHTML = "6.15";
+    document.getElementById("Planned_hc30").innerHTML = "6.5";
+    document.getElementById("Planned_hc31").innerHTML = "7.5";
+    document.getElementById("Planned_hc32").innerHTML = "6.5";
+
+    document.getElementById("Planned_prod1" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod2").innerHTML = "6.5";
+    document.getElementById("Planned_prod3").innerHTML = "68.5";
+    document.getElementById("Planned_prod4").innerHTML = "4.5";
+    document.getElementById("Planned_prod5" ).innerHTML = "4.5";
+    document.getElementById("Planned_prod6").innerHTML = "34.5";
+    document.getElementById("Planned_prod7").innerHTML = "5.5";
+    document.getElementById("Planned_prod8").innerHTML = "6.5";
+    document.getElementById("Planned_prod9" ).innerHTML = "1.5";
+    document.getElementById("Planned_prod10").innerHTML = "1.5";
+    document.getElementById("Planned_prod11").innerHTML = "3.5";
+    document.getElementById("Planned_prod12").innerHTML = "863.5";
+    document.getElementById("Planned_prod13" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod14").innerHTML = "6.5";
+    document.getElementById("Planned_prod15").innerHTML = "7.5";
+    document.getElementById("Planned_prod16").innerHTML = "3.5";
+    document.getElementById("Planned_prod17" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod18").innerHTML = "6.5";
+    document.getElementById("Planned_prod19").innerHTML = "7.5";
+    document.getElementById("Planned_prod20").innerHTML = "8.5";
+    document.getElementById("Planned_prod21" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod22").innerHTML = "6.5";
+    document.getElementById("Planned_prod23").innerHTML = "7.5";
+    document.getElementById("Planned_prod24").innerHTML = "8.5";
+    document.getElementById("Planned_prod25" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod26").innerHTML = "6.5";
+    document.getElementById("Planned_prod27").innerHTML = "7.5";
+    document.getElementById("Planned_prod28").innerHTML = "8.5";
+    document.getElementById("Planned_prod29" ).innerHTML = "5.5";
+    document.getElementById("Planned_prod30").innerHTML = "6.5";
+    document.getElementById("Planned_prod31").innerHTML = "7.5";
+    document.getElementById("Planned_prod32").innerHTML = "8.5";
+
+
+  }
+
+  else{
+  	document.getElementById("Planned_v1" ).innerHTML = x;
+    document.getElementById("Planned_v2").innerHTML = x;
+    document.getElementById("Planned_v3").innerHTML = x;
+    document.getElementById("Planned_v4").innerHTML = x;
+    document.getElementById("Planned_v5" ).innerHTML =  x;
+    document.getElementById("Planned_v6").innerHTML =  x;
+    document.getElementById("Planned_v7").innerHTML =  x;
+    document.getElementById("Planned_v8").innerHTML = x;
+    document.getElementById("Planned_v9" ).innerHTML =  x;
+    document.getElementById("Planned_v10").innerHTML =  x;
+  	document.getElementById("Planned_v21" ).innerHTML = x;
+    document.getElementById("Planned_v22").innerHTML = x;
+    document.getElementById("Planned_v23").innerHTML = x;
+    document.getElementById("Planned_v24").innerHTML = x;
+    document.getElementById("Planned_v25" ).innerHTML =  x;
+    document.getElementById("Planned_v26").innerHTML =  x;
+    document.getElementById("Planned_v27").innerHTML =  x;
+    document.getElementById("Planned_v28").innerHTML = x;
+    document.getElementById("Planned_v29" ).innerHTML =  x;
+    document.getElementById("Planned_v30").innerHTML =  x;
+  	document.getElementById("Planned_v31" ).innerHTML = x;
+    document.getElementById("Planned_v32").innerHTML = x;
+
+    document.getElementById("Planned_hc1" ).innerHTML = null
+    document.getElementById("Planned_hc2").innerHTML = null;
+    document.getElementById("Planned_hc3").innerHTML =  null ;
+    document.getElementById("Planned_hc4").innerHTML =  null ;
+    document.getElementById("Planned_hc5" ).innerHTML = null; 
+    document.getElementById("Planned_hc6").innerHTML =  null;
+    document.getElementById("Planned_hc7").innerHTML =  null;
+    document.getElementById("Planned_hc8").innerHTML = null ;
+    document.getElementById("Planned_hc9" ).innerHTML =  null;
+    document.getElementById("Planned_hc10").innerHTML =  null;
+    document.getElementById("Planned_hc11").innerHTML = null; 
+    document.getElementById("Planned_hc12").innerHTML = null ;
+    document.getElementById("Planned_hc13" ).innerHTML = null;
+       document.getElementById("Planned_hc14").innerHTML = null ;
+       document.getElementById("Planned_hc15").innerHTML =  null;
+        document.getElementById("Planned_hc16").innerHTML = null;
+       document.getElementById("Planned_hc17" ).innerHTML =  null;
+      document.getElementById("Planned_hc18").innerHTML = null;
+        document.getElementById("Planned_hc19").innerHTML =  null;
+       document.getElementById("Planned_hc20").innerHTML =  null;
+      document.getElementById("Planned_hc21" ).innerHTML =  null;
+       document.getElementById("Planned_hc22").innerHTML = null ;
+
+    document.getElementById("Planned_hc23").innerHTML =  null;
+        document.getElementById("Planned_hc24").innerHTML =  null;
+
+    document.getElementById("Planned_hc25" ).innerHTML =  null;
+    
+    document.getElementById("Planned_hc26").innerHTML = null ;
+
+    document.getElementById("Planned_hc27").innerHTML =  null;
+        document.getElementById("Planned_hc28").innerHTML =  null;
+        document.getElementById("Planned_hc29" ).innerHTML = null;
+    
+    document.getElementById("Planned_hc30").innerHTML =  null;
+        document.getElementById("Planned_hc31").innerHTML =  null;
+        document.getElementById("Planned_hc32").innerHTML = null ;
+
+
+
+        
+
+  }
+}
+  
   
 </script>
+
 
 <div class="container">
   <div class="row">
     <h1 style="text-align: center">Create New metrics of the week</h1>
     <div style="margin: 25px auto; ">
       <form action="/campgrounds/itbshow" method="POST">
-        <table class="ui celled structured striped table">
+        <table class="ui celled structured striped table" >
           <thead>
             <tr>
               <th>
-                <div class="ui action input">
-                  <button class="ui blue  icon button">
-                    Select:
-                  </button>
-
-                  <input type="week" name="week" required />
-                </div>
+                <form class="ui fluid form">
+                    <div class="field  ">
+                      <div class="ui input focus pointing below label">
+                        Choose :
+                        <input  name="week"  type="week" id="myText" onchange="weekly()" >
+                      </div>
+                      
+                      
+                    </div>
+                  </form>
+                
               </th>
-              <th class="ui center aligned header" colspan="3">Planned</th>
+              <th class="ui center aligned header" colspan="2">Planned</th>
               <th class="ui center aligned header" colspan="4">Actual</th>
             </tr>
 
@@ -58,7 +842,7 @@
               </th>
               <th>Volume</th>
               <th>Head Count</th>
-              <th>Productivity</th>
+             
               <th>Volume</th>
               <th>Head Count</th>
               <th>Call outs</th>
@@ -70,32 +854,12 @@
                 Proactive (Fresh Audits)
               </th>
               <td>
-                <input
-                  name="P_Vol1"
-                  class="form-control"
-                  type="text"
-                  value="589.77"
-                  readonly
-                />
-              </td>
-
-              <td>
-                <input
-                  name="P_HCount1"
-                  class="form-control"
-                  type="text"
-                  value="3.56"
-                  readonly
-                />
+                <label for="week" id="Planned_v1" ></label>
               </td>
               <td>
-                <input
-                  class="form-control"
-                  type="text"
-                  value="13.5"
-                  readonly
-                />
+                <label for="week" id="Planned_hc1" ></label>
               </td>
+              
 
               <td>
                 <input
@@ -122,31 +886,13 @@
             <tr>
               <th>Best Sellers</th>
               <td>
-                <input
-                  name="P_Vol2"
-                  class="form-control"
-                  type="text"
-                  value="46.15"
-                  readonly
-                />
+               
+                <label for="week" id="Planned_v2" ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount2"
-                  class="form-control"
-                  type="text"
-                  value=".38"
-                  readonly
-                />
+                <label for="week" id="Planned_hc2" ></label>
               </td>
-              <td>
-                <input
-                  class="form-control"
-                  type="text"
-                  value="23.2"
-                  readonly
-                />
-              </td>
+             
               <td>
                 <input
                   name="A_Vol2"
@@ -155,7 +901,7 @@
                   class="form-control"
                   type="text"
                 />
-              </td>0
+              </td>
               <td>
                 <input
                   name="A_HCount2"
@@ -173,31 +919,12 @@
             <tr>
               <th>Pre-Orders</th>
               <td>
-                <input
-                  name="P_Vol3"
-                  class="form-control"
-                  type="text"
-                  value="264.69"
-                  readonly
-                />
+                <label for="week" id="Planned_v3" ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount3"
-                  class="form-control"
-                  type="text"
-                  value="1.61"
-                  readonly
-                />
+                <label for="week" id="Planned_hc3" ></label>
               </td>
-              <td>
-                <input
-                  class="form-control"
-                  type="text"
-                  value="33.4"
-                  readonly
-                />
-              </td>
+              
               <td>
                 <input
                   name="A_Vol3"
@@ -224,31 +951,12 @@
             <tr>
               <th>Big Books</th>
               <td>
-                <input
-                  name="P_Vol4"
-                  class="form-control"
-                  type="text"
-                  value="10.15"
-                  readonly
-                />
+                <label id="Planned_v4" name="P_Vol4"  ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount4"
-                  class="form-control"
-                  type="text"
-                  value="0.12"
-                  readonly
-                />
+                <label for="week" id="Planned_hc4" ></label>
               </td>
-              <td>
-                <input
-                  class="form-control"
-                  type="text"
-                  value="19.9"
-                  readonly
-                />
-              </td>
+              
               <td>
                 <input
                   name="A_Vol4"
@@ -275,33 +983,15 @@
             <tr>
               <th>Kindle Deals</th>
               <td>
-                <input
-                  name="P_Vol5"
-                  class="form-control"
-                  type="text"
-                  value="184.62"
-                  readonly
-                />
+                <label id="Planned_v5" name="P_Vol5"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount5"
-                  class="form-control"
-                  type="text"
-                  value="1.40"
-                  readonly
-                />
+                <label for="week" id="Planned_hc5" ></label>
               </td>
+              
 
-              <td>
-                <input
-                  class="form-control"
-                  type="text"
-                  value="25.9"
-                  readonly
-                />
-              </td>
-
+              
+              
               <td>
                 <input
                   name="A_Vol5"
@@ -335,31 +1025,12 @@
             <tr>
               <th>Ad-hoc Requests / Escalation Audits</th>
               <td>
-                <input
-                  name="P_Vol6"
-                  class="form-control"
-                  type="text"
-                  value="6.46"
-                  readonly
-                />
+                <label id="Planned_v6" name="P_Vol6"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount6"
-                  class="form-control"
-                  type="text"
-                  value="0.05"
-                  readonly
-                />
+                <label for="week" id="Planned_hc6" ></label>
               </td>
-              <td>
-                <input
-                  class="form-control"
-                  type="text"
-                  value="27.8"
-                  readonly
-                />
-              </td>
+             
               <td>
                 <input
                   name="A_Vol6"
@@ -387,31 +1058,12 @@
             <tr>
               <th> KU Page Violation Audits </th>
               <td>
-                <input
-                  name="P_Vol7"
-                  class="form-control"
-                  type="text"
-                  value="84.16"
-                  readonly
-                />
+                <label id="Planned_v7" name="P_Vol7"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount7"
-                  class="form-control"
-                  type="text"
-                  value="0.05"
-                  readonly
-                />
+                <label for="week" id="Planned_hc7" ></label>
               </td>
-              <td>
-                <input
-                  class="form-control"
-                  type="text"
-                  value="27.8"
-                  readonly
-                />
-              </td>
+              
               <td>
                 <input
                   name="A_Vol7"
@@ -434,37 +1086,22 @@
             </tr>
 
 
-   
 
         <!--8. Reactive (Contacts) -->
           <tr>
             <th class="ui center aligned header blue" >Reactive (Contacts) </th>
             <td>
-              <input
-                name="P_Vol8"
-                class="form-control"
-                type="text"
-                value="1572"
-                readonly
-              />
+              <label id="Planned_v8" name="P_Vol8"   ></label>
             </td>
             <td>
-              <input
-                name="P_HCount8"
-                class="form-control"
-                type="text"
-                value="10.65"
-                readonly
-              />
+              <label for="week" id="Planned_hc8" ></label>
+            </td>
+            
+            <td>
+              <input name="A_Vol8" class="form-control" type="text" id="sum_reactive"   readonly />
             </td>
             <td>
-              <input class="form-control" type="text" value="25.9" readonly />
-            </td>
-            <td>
-              <input name="A_Vol8" class="form-control" type="text" id="sum_value2" readonly />
-            </td>
-            <td>
-              <input name="A_HCount8" class="form-control" type="text"  id="hc_value2" readonly />
+              <input name="A_HCount8" class="form-control" type="text"  id="sum_reactiveHCount" readonly />
             </td>
             <td><textarea rows="2" name="couts8"></textarea></td>
           </tr>
@@ -475,34 +1112,32 @@
             <tr>
               <th class="ui  header subhead grey " >Andons & Regulars</th>
               <td>
-                <input
-                  name="P_Vol9"
-                  class="form-control"
-                  type="text"
-                  value="127.62"
-                  readonly
-                />
+                <label id="Planned_v9" name="P_Vol9"   ></label>
               </td>
+              <td>
+                <label for="week" id="Planned_hc9" ></label>
+              </td>
+              
+
               <td>
                 <input
-                  name="P_HCount9"
+                  name="A_Vol9"
+                  id="value11"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="0.97"
-                  readonly
+                />
+              </td>          
+              <td>
+                <input
+                  name="A_HCount9"
+                  id="value111"
+                  onkeyup="reactiveHCount();"
+                  class="form-control"
+                  type="text"
                 />
               </td>
-              <td>
-                <input class="form-control" type="text" value="52.2" readonly    />
-              </td>
-              <td>
-                <input name="A_Vol9" class="form-control" type="text"  id="value7"
-                onkeyup="sum2();" />
-              </td>
-              <td>
-                <input name="A_HCount9" class="form-control" type="text"  id="headcount7"
-                onkeyup="hcsum2();" />
-              </td>
+
               <td><textarea rows="2" name="couts9"></textarea></td>
             </tr>
 
@@ -513,31 +1148,29 @@
               <th class="ui  header subhead grey ">Report Content Errors</th>
               </th>
               <td>
+                <label id="Planned_v10" name="P_Vol10"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc10" ></label>
+              </td>
+              
+              <td>
                 <input
-                  name="P_Vol10"
+                  name="A_Vol10"
+                  id="value12"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="1005.62"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount10"
+                  name="A_HCount10"
+                  id="value112"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="7.62"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol10" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount10" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts10"></textarea></td>
             </tr>
@@ -546,31 +1179,29 @@
             <tr>
               <th>English</th>
               <td>
+                <label id="Planned_v11" name="P_Vol11"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc11" ></label>
+              </td>
+              
+              <td>
                 <input
-                  name="P_Vol11"
+                  name="A_Vol11"
+                  id="value13"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="779.16"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount11"
+                  name="A_HCount11"
+                  id="value113"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="6.03"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol11" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount11" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts11"></textarea></td>
             </tr>
@@ -580,31 +1211,29 @@
             <tr>
               <th>English (High-value titles to be considered by Ops)</th>
               <td>
+                <label id="Planned_v12" name="P_Vol12"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc12" ></label>
+              </td>
+              
+              <td>
                 <input
-                  name="P_Vol12"
+                  name="A_Vol12"
+                  id="value14"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="0"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount12"
+                  name="A_HCount12"
+                  id="value114"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="0"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol12" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount12" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts12"></textarea></td>
             </tr>
@@ -612,35 +1241,32 @@
 
 
             <!-- 13.German  -->
-
             <tr>
               <th>German</th>
               <td>
+                <label id="Planned_v13" name="P_Vol13"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc13" ></label>
+              </td>
+              
+              <td>
                 <input
-                  name="P_Vol13"
+                  name="A_Vol13"
+                  id="value15"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="173"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount13"
+                  name="A_HCount13"
+                  id="value115"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="1.22"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol13" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount13" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts13"></textarea></td>
             </tr>
@@ -651,67 +1277,66 @@
             <tr>
               <th>French</th>
               <td>
+                <label id="Planned_v14" name="P_Vol14"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc14" ></label>
+              </td>
+              
+              <td>
                 <input
-                  name="P_Vol14"
+                  name="A_Vol14"
+                  id="value16"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="53.47"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount14"
+                  name="A_HCount14"
+                  id="value116"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="0.38"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol14" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount14" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts14"></textarea></td>
             </tr>
             </tr>
 
-
             <!--  15.Customer Reviews -->
             <tr>
-              <th class="ui  header subhead grey">Customer Reviews  </th>
+              <th class="ui header subhead grey" >Customer Reviews  </th>
+              <td>
+                <label id="Planned_v15" name="P_Vol15"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc15" ></label>
+              </td>
+              
+
+
               <td>
                 <input
-                  name="P_Vol15"
+                  name="A_Vol15"
+                  id="value17"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="125.08"
-                  readonly
                 />
               </td>
+
               <td>
                 <input
-                  name="P_HCount15"
+                  name="A_HCount15"
+                  id="value117"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="0.95"
-                  readonly
                 />
               </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol15" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount15" class="form-control" type="text"  />
-              </td>
+
               <td><textarea rows="2" name="couts15"></textarea></td>
             </tr>
             </tr>
@@ -721,31 +1346,30 @@
             <tr>
               <th class="ui  header subhead grey">Massmail Tickets </th>
               <td>
+                <label id="Planned_v16" name="P_Vol16"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc16" ></label>
+              </td>
+              
+
+              <td>
                 <input
-                  name="P_Vol16"
+                  name="A_Vol16"
+                  id="value18"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="50.77"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount16"
+                  name="A_HCount16"
+                  id="value118"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="0.29"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol16" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount16" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts16"></textarea></td>
             </tr>
@@ -754,36 +1378,33 @@
 
 
             <!-- 17. Publisher Response  -->
-            
-
             <tr>
-              <th class="ui  header subhead grey">Publisher Response       </th>
+              <th class="ui  header subhead grey">Publisher Response </th>
+              <td>
+                <label id="Planned_v17" name="P_Vol17"   > </label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc17" ></label>
+              </td>
+              
+
               <td>
                 <input
-                  name="P_Vol17"
+                  name="A_Vol17"
+                  id="value19"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="262.93"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount17"
+                  name="A_HCount17"
+                  id="value119"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="0.82"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol17" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount17" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts17"></textarea></td>
             </tr>
@@ -797,31 +1418,30 @@
             <tr>
               <th>Submitted Corrections   </th>
               <td>
+                <label id="Planned_v18" name="P_Vol18"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc18" ></label>
+              </td>
+            
+
+              <td>
                 <input
-                  name="P_Vol18"
+                  name="A_Vol18"
+                  id="value20"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="202.92"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount18"
+                  name="A_HCount18"
+                  id="value120"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="0.32"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol18" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount18" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts18"></textarea></td>
             </tr>
@@ -834,31 +1454,30 @@
             <tr>
               <th>Queries + Escalations     </th>
               <td>
+                <label id="Planned_v19" name="P_Vol19"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc19" ></label>
+              </td>
+              
+              
+              <td>
                 <input
-                  name="P_Vol19"
+                  name="A_Vol19"
+                  id="value21"
+                  onkeyup="reactive();"
                   class="form-control"
                   type="text"
-                  value="60"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount19"
+                  name="A_HCount19"
+                  id="value121"
+                  onkeyup="reactiveHCount();"
                   class="form-control"
                   type="text"
-                  value="0.50"
-                  readonly
                 />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol19" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount19" class="form-control" type="text"  />
               </td>
               <td><textarea rows="2" name="couts19"></textarea></td>
             </tr>
@@ -870,31 +1489,18 @@
             <tr>
               <th class="ui center aligned header blue">Rework  </th>
               <td>
-                <input
-                  name="P_Vol20"
-                  class="form-control"
-                  type="text"
-                  value="462.93"
-                  readonly
-                />
+                <label id="Planned_v20" name="P_Vol20"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount20"
-                  class="form-control"
-                  type="text"
-                  value="1.22"
-                  readonly
-                />
+                <label for="week" id="Planned_hc20" ></label>
+              </td>
+              
+             
+              <td>
+                <input name="A_Vol20" class="form-control" type="text" id="sum_rework"  readonly />
               </td>
               <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol20" class="form-control" type="text"  readonly />
-              </td>
-              <td>
-                <input name="A_HCount20" class="form-control" type="text"  readonly />
+                <input name="A_HCount20" class="form-control" type="text"  id="sum_reworkHCount" readonly />
               </td>
               <td><textarea rows="2" name="couts20"></textarea></td>
             </tr>
@@ -907,32 +1513,33 @@
             <tr>
               <th>Rework Blocking  </th>
               <td>
+                <label id="Planned_v21" name="P_Vol21"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc21" ></label>
+              </td>
+              
+              
+              <td>
                 <input
-                  name="P_Vol21"
+                  name="A_Vol21"
+                  id="value1110"
+                  onkeyup="rework();"
                   class="form-control"
                   type="text"
-                  value="48.46"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount21"
+                  name="A_HCount21"
+                  id="value1010"
+                  onkeyup="reworkHCount();"
                   class="form-control"
                   type="text"
-                  value="0.35"
-                  readonly
                 />
+               
               </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol21" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount21" class="form-control" type="text"  />
-              </td>
+              
               <td><textarea rows="2" name="couts21"></textarea></td>
             </tr>
             </tr>
@@ -945,31 +1552,30 @@
             <tr>
               <th>Rework CFQI </th>
               <td>
+                <label id="Planned_v22" name="P_Vol22"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc22" ></label>
+              </td>
+              
+              
+              <td>
                 <input
-                  name="P_Vol22"
+                  name="A_Vol22"
+                  id="value1120"
+                  onkeyup="rework();"
                   class="form-control"
                   type="text"
-                  value="40.07"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount22"
-                  class="form-control"
-                  type="text"
-                  value="0.11"
-                  readonly
-                />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol22" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount22" class="form-control" type="text"  />
+                name="A_HCount22"
+                id="value1020"
+                onkeyup="reworkHCount();"
+                class="form-control"
+                type="text"
+              />
               </td>
               <td><textarea rows="2" name="couts22"></textarea></td>
             </tr>
@@ -983,31 +1589,30 @@
             <tr>
               <th>Rework Non-Blocking  </th>
               <td>
+                <label id="Planned_v23" name="P_Vol23"   ></label>
+              </td>
+              <td>
+                <label for="week" id="Planned_hc23" ></label>
+              </td>
+              
+              
+             <td>
                 <input
-                  name="P_Vol23"
+                  name="A_Vol23"
+                  id="value1130"
+                  onkeyup="rework();"
                   class="form-control"
                   type="text"
-                  value="374.38"
-                  readonly
                 />
               </td>
               <td>
                 <input
-                  name="P_HCount23"
-                  class="form-control"
-                  type="text"
-                  value="0.76"
-                  readonly
-                />
-              </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol23" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount23" class="form-control" type="text"  />
+                name="A_HCount23"
+                id="value1030"
+                onkeyup="reworkHCount();"
+                class="form-control"
+                type="text"
+              />
               </td>
               <td><textarea rows="2" name="couts23"></textarea></td>
             </tr>
@@ -1021,31 +1626,19 @@
             <tr>
               <th class="ui center aligned header blue">KCVP Detections   </th>
               <td>
-                <input
-                  name="P_Vol24"
-                  class="form-control"
-                  type="text"
-                  value="165.62"
-                  readonly
-                />
+                <label id="Planned_v24" name="P_Vol24"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount24"
-                  class="form-control"
-                  type="text"
-                  value="0.30"
-                  readonly
-                />
+                <label for="week" id="Planned_hc24" ></label>
+              </td>
+              
+
+              
+              <td>
+                <input name="A_Vol24" class="form-control" type="text" id="sum_kcvp" readonly  />
               </td>
               <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol24" class="form-control" type="text" readonly  />
-              </td>
-              <td>
-                <input name="A_HCount24" class="form-control" type="text"  readonly />
+                <input name="A_HCount24" class="form-control" type="text"  id="sum_kcvpHCount"  readonly />
               </td>
               <td><textarea rows="2" name="couts24"></textarea></td>
             </tr>
@@ -1058,31 +1651,30 @@
             <tr>
               <th > Language Mismatch  </th>
               <td>
-                <input
-                  name="P_Vol25"
-                  class="form-control"
-                  type="text"
-                  value="125"
-                  readonly
-                />
+                <label id="Planned_v25" name="P_Vol25"   ></label>
               </td>
+              <td>
+                <label for="week" id="Planned_hc25" ></label>
+              </td>
+             
               <td>
                 <input
-                  name="P_HCount25"
+                  name="A_Vol25"
+                  id="kcvp1"
+                  onkeyup="kcvp();"
                   class="form-control"
                   type="text"
-                  value="0.20"
-                  readonly
                 />
               </td>
+
               <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol25" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount25" class="form-control" type="text"  />
+                <input
+                  name="A_HCount25"
+                  id="kcvpHCount1"
+                  onkeyup="kcvpHCount();"
+                  class="form-control"
+                  type="text"
+                />
               </td>
               <td><textarea rows="2" name="couts25"></textarea></td>
             </tr>
@@ -1093,31 +1685,30 @@
             <tr>
               <th >Unknown Language </th>
               <td>
-                <input
-                  name="P_Vol26"
-                  class="form-control"
-                  type="text"
-                  value="18.47"
-                  readonly
-                />
+                <label id="Planned_v26" name="P_Vol26"   ></label>
               </td>
+              <td>
+                <label for="week" id="Planned_hc26" ></label>
+              </td>
+             
               <td>
                 <input
-                  name="P_HCount26"
+                  name="A_Vol26"
+                  id="kcvp2"
+                  onkeyup="kcvp();"
                   class="form-control"
                   type="text"
-                  value="0.03"
-                  readonly
                 />
               </td>
+              
               <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol26" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount26" class="form-control" type="text"  />
+                <input
+                  name="A_HCount26"
+                  id="kcvpHCount2"
+                  onkeyup="kcvpHCount();"
+                  class="form-control"
+                  type="text"
+                />
               </td>
               <td><textarea rows="2" name="couts26"></textarea></td>
             </tr>
@@ -1130,31 +1721,31 @@
             <tr>
               <th >Switcheroo</th>
               <td>
-                <input
-                  name="P_Vol27"
-                  class="form-control"
-                  type="text"
-                  value="15.70"
-                  readonly
-                />
+                <label id="Planned_v27" name="P_Vol27"   ></label>
               </td>
+              <td>
+                <label for="week" id="Planned_hc27" ></label>
+              </td>
+              
+
               <td>
                 <input
-                  name="P_HCount27"
+                  name="A_Vol27"
+                  id="kcvp3"
+                  onkeyup="kcvp();"
                   class="form-control"
                   type="text"
-                  value="0.05"
-                  readonly
                 />
               </td>
+
               <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol27" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount27" class="form-control" type="text"  />
+                <input
+                  name="A_HCount27"
+                  id="kcvpHCount3"
+                  onkeyup="kcvpHCount();"
+                  class="form-control"
+                  type="text"
+                />
               </td>
               <td><textarea rows="2" name="couts27"></textarea></td>
             </tr>
@@ -1167,31 +1758,31 @@
             <tr>
               <th>Fixed Layout   </th>
               <td>
-                <input
-                  name="P_Vol28"
-                  class="form-control"
-                  type="text"
-                  value="6.47"
-                  readonly
-                />
+                <label id="Planned_v28" name="P_Vol28"   ></label>
               </td>
+              <td>
+                <label for="week" id="Planned_hc28" ></label>
+              </td>
+              
+
               <td>
                 <input
-                  name="P_HCount28"
+                  name="A_Vol28"
+                  id="kcvp4"
+                  onkeyup="kcvp();"
                   class="form-control"
                   type="text"
-                  value="0.02"
-                  readonly
                 />
               </td>
+
               <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
-              <td>
-                <input name="A_Vol28" class="form-control" type="text"  />
-              </td>
-              <td>
-                <input name="A_HCount28" class="form-control" type="text"  />
+                <input
+                  name="A_HCount28"
+                  id="kcvpHCount4"
+                  onkeyup="kcvpHCount();"
+                  class="form-control"
+                  type="text"
+                />
               </td>
               <td><textarea rows="2" name="couts28"></textarea></td>
             </tr>
@@ -1204,26 +1795,13 @@
             <tr>
               <th class="ui center aligned header blue">Content Testing  </th>
               <td>
-                <input
-                  name="P_Vol29"
-                  class="form-control"
-                  type="text"
-                  value="92.30"
-                  readonly
-                />
+                <label id="Planned_v29" name="P_Vol29"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount29"
-                  class="form-control"
-                  type="text"
-                  value="2"
-                  readonly
-                />
+                <label for="week" id="Planned_hc29" ></label>
               </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
+             
+
               <td>
                 <input name="A_Vol29" class="form-control" type="text"  />
               </td>
@@ -1241,26 +1819,13 @@
             <tr>
               <th class="ui center aligned header blue">KDP Cover Gen  </th>
               <td>
-                <input
-                  name="P_Vol30"
-                  class="form-control"
-                  type="text"
-                  value="2500"
-                  readonly
-                />
+                <label id="Planned_v30" name="P_Vol30"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount30"
-                  class="form-control"
-                  type="text"
-                  value="0.10"
-                  readonly
-                />
+                <label for="week" id="Planned_hc30" ></label>
               </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
+             
+
               <td>
                 <input name="A_Vol30" class="form-control" type="text"  />
               </td>
@@ -1275,26 +1840,13 @@
             <tr>
               <th class="ui center aligned header blue">Author Fix-up</th>
               <td>
-                <input
-                  name="P_Vol31"
-                  class="form-control"
-                  type="text"
-                  value="92.30"
-                  readonly
-                />
+                <label id="Planned_v31" name="P_Vol31"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount31"
-                  class="form-control"
-                  type="text"
-                  value="0.01"
-                  readonly
-                />
+                <label for="week" id="Planned_hc31" ></label>
               </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
+            
+
               <td>
                 <input name="A_Vol31" class="form-control" type="text"  />
               </td>
@@ -1312,26 +1864,12 @@
             <tr>
               <th class="ui center aligned header blue"> All Field Audit   </th>
               <td>
-                <input
-                  name="P_Vol32"
-                  class="form-control"
-                  type="text"
-                  value="85.84"
-                  readonly
-                />
+                <label id="Planned_v32" name="P_Vol32"   ></label>
               </td>
               <td>
-                <input
-                  name="P_HCount32"
-                  class="form-control"
-                  type="text"
-                  value="0.10"
-                  readonly
-                />
+                <label for="week" id="Planned_hc32" ></label>
               </td>
-              <td>
-                <input class="form-control" type="text" value="0" readonly />
-              </td>
+             
               <td>
                 <input name="A_Vol32" class="form-control" type="text"  />
               </td>

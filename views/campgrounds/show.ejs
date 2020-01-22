@@ -1,20 +1,154 @@
 <% include ../partials/header %>
-<div class="container" >
+<div  class="show" >
+    <script>
+            
+            function exportTableToExcel(tableID, filename = ''){
+            var downloadLink;
+            var dataType = 'application/vnd.ms-excel';
+            var tableSelect = document.getElementById(tableID);
+            var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+            
+            // Specify file name
+            filename = filename?filename+'.xls':'excel_data.xls';
+            
+            // Create download link element
+            downloadLink = document.createElement("a");
+            
+            document.body.appendChild(downloadLink);
+            
+            if(navigator.msSaveOrOpenBlob){
+                var blob = new Blob(['\ufeff', tableHTML], {
+                    type: dataType
+                });
+                navigator.msSaveOrOpenBlob( blob, filename);
+            }else{
+                // Create a link to the file
+                downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+            
+                // Setting the file name
+                downloadLink.download = filename;
+                
+                //triggering the function
+                downloadLink.click();
+            }
+        }
+    
+    </script>
+    
     <div class="row">
     <div>
+     
         <div class="thumbnail">
             <div class="caption-full">
               <caption>
-                <h2 class="team " > ITB Team:[Year<%= campground.week %> ]</h2>
+                <% week= campground.week %>
+
+                <h2 class="team " > ITB Team: [ <%= week %> ]</h2>
+
+                <% if(week== "2019-W27" || week== "2019-W28" || week== "2019-W29" || week== "2019-W30" || week== "2019-W31" || week== "2019-W32" || week== "2019-W33" || week== "2019-W34"|| week== "2019-W35"|| week== "2019-W36" || week== "2019-W37" || week== "2019-W38"|| week== "2019-W39" ) { %>
+
+                  <% week_v1= "596.23" %> <%  week_v2= "46.15"%> <% week_v3= "264.69"%> <% week_v4= "10.15" %> <%  week_v5= "184.61"%> <% week_v6= "6.47"%>  <% week_v7= "85.15"%> <% week_v8= "1572"%> 
+                   <% week_v9= "127.61"%> <% week_v10= "1005.62"%> <% week_v11= "780" %> <%  week_v12= ""%> <% week_v13= "173"%> <% week_v14= "53.46" %> <%  week_v15= "125.1"%> <% week_v16= "50.76"%>  
+                   <% week_v17= "262.92"%> <% week_v18= "202.92"%> <% week_v19= "60"%> <% week_v20= "462.92"%>  <% week_v21= "48.46" %> <%  week_v22= "40.07"%> <% week_v23= "374.41"%> <% week_v24= "165.62" %> 
+                   <% week_v25= "125"%> <% week_v26= "18.46"%>  <% week_v27= "15.69"%> <% week_v28= "6.46"%> <% week_v29= "92.31"%> <% week_v30= "2500"%> <% week_v31= "92.31"%> <% week_v32= "85.85"%> 
+
+                   <% week_hc1= "4.05" %> <%  week_hc2= "0.38"%> <% week_hc3= "1.61"%> <% week_hc4= "0.12" %> <%  week_hc5= "1.40"%> <% week_hc6= "0.05"%>  <% week_hc7= "0.49"%> <% week_hc8= "17.65"%> 
+                   <% week_hc9= "0.97"%> <% week_hc10= "7.62"%> <% week_hc11= "6.03" %> <%  week_hc12= ""%> <% week_hc13= "1.22"%> <% week_hc14= "0.38" %> <%  week_hc15= "0.95"%> <% week_hc16= "0.29"%>  
+                   <% week_hc17= "0.82"%> <% week_hc18= "0.32"%> <% week_hc19= "0.50"%> <% week_hc20= "1.22"%>  <% week_hc21= "0.35" %> <%  week_hc22= "0.11"%> <% week_hc23= "0.76"%> <% week_hc24= "0.30" %> 
+                   <% week_hc25= "0.2"%> <% week_hc26= "0.03"%>  <% week_hc27= "0.05"%> <% week_hc28= "0.02"%> <% week_hc29= "2"%> <% week_hc30= "0.10"%> <% week_hc31= "2"%> <% week_hc32= "0.10"%>                                       
+
+                   
+                <% } else if( week== "2019-W40" || week== "2019-W41" || week== "2019-W42" || week== "2019-W43" || week== "2019-W44"|| week== "2019-W45"|| week== "2019-W46" || week== "2019-W47" || week== "2019-W48"|| week== "2019-W49") { %>
+                  
+                  <% week_v1= "345" %> <%  week_v2= "8678"%> <% week_v3= "123"%> <% week_v4= "212" %> <%  week_v5= "432"%> <% week_v6= "885"%>  <% week_v7= "385"%> <% week_v8= "285"%> 
+                  <% week_v9= "885"%> <% week_v10= "685"%> <% week_v11= "212" %> <%  week_v12= "432"%> <% week_v13= "885"%> <% week_v14= "212" %> <%  week_v15= "432"%> <% week_v16= "885"%>  
+                  <% week_v17= "385"%> <% week_v18= "285"%> <% week_v19= "885"%> <% week_v20= "685"%>  <% week_v21= "212" %> <%  week_v22= "432"%> <% week_v23= "885"%> <% week_v24= "212" %> 
+                  <% week_v25= "432"%> <% week_v26= "885"%>  <% week_v27= "385"%> <% week_v28= "285"%> <% week_v29= "885"%> <% week_v30= "685"%> <% week_v31= "685"%> <% week_v32= "685"%> 
+
+                  <% week_hc1= "212" %> <%  week_hc2= "432"%> <% week_hc3= "885"%> <% week_hc4= "212" %> <%  week_hc5= "432"%> <% week_hc6= "885"%>  <% week_hc7= "385"%> <% week_hc8= "285"%> 
+                   <% week_hc9= "885"%> <% week_hc10= "685"%> <% week_hc11= "212" %> <%  week_hc12= "432"%> <% week_hc13= "885"%> <% week_hc14= "212" %> <%  week_hc15= "432"%> <% week_hc16= "885"%>  
+                   <% week_hc17= "385"%> <% week_hc18= "285"%> <% week_hc19= "885"%> <% week_hc10= "685"%>  <% week_hc21= "212" %> <%  week_hc22= "432"%> <% week_hc23= "885"%> <% week_hc24= "212" %> 
+                   <% week_hc25= "432"%> <% week_hc26= "885"%>  <% week_hc27= "385"%> <% week_hc28= "285"%> <% week_hc29= "885"%> <% week_hc30= "685"%> <% week_hc31= "685"%> <% week_hc32= "685"%> 
+                   
+               <% } else if( week== "2020-W01" || week== "2020-W02" || week== "2020-W03" || week== "2020-W04" || week== "2020-W05" || week== "2020-W06"   || week== "2020-W07" || week== "2020-W08" || week== "2020-W09" || week== "2020-W10" || week== "2020-W11" || week== "2020-W12" || week== "2020-W13" ) { %>
+                        <% week_v1= "345" %> <%  week_v2= "8678"%> <% week_v3= "123"%> <% week_v4= "212" %> <%  week_v5= "432"%> <% week_v6= "885"%>  <% week_v7= "385"%> <% week_v8= "285"%> 
+                        <% week_v9= "885"%> <% week_v10= "685"%> <% week_v11= "212" %> <%  week_v12= "432"%> <% week_v13= "885"%> <% week_v14= "212" %> <%  week_v15= "432"%> <% week_v16= "885"%>  
+                        <% week_v17= "385"%> <% week_v18= "285"%> <% week_v19= "885"%> <% week_v20= "685"%>  <% week_v21= "212" %> <%  week_v22= "432"%> <% week_v23= "885"%> <% week_v24= "212" %> 
+                        <% week_v25= "432"%> <% week_v26= "885"%>  <% week_v27= "385"%> <% week_v28= "285"%> <% week_v29= "885"%> <% week_v30= "685"%> <% week_v31= "685"%> <% week_v32= "685"%> 
+
+                        <% week_hc1= "212" %> <%  week_hc2= "432"%> <% week_hc3= "885"%> <% week_hc4= "212" %> <%  week_hc5= "432"%> <% week_hc6= "885"%>  <% week_hc7= "385"%> <% week_hc8= "285"%> 
+                        <% week_hc9= "885"%> <% week_hc10= "685"%> <% week_hc11= "212" %> <%  week_hc12= "432"%> <% week_hc13= "885"%> <% week_hc14= "212" %> <%  week_hc15= "432"%> <% week_hc16= "885"%>  
+                        <% week_hc17= "385"%> <% week_hc18= "285"%> <% week_hc19= "885"%> <% week_hc10= "685"%>  <% week_hc21= "212" %> <%  week_hc22= "432"%> <% week_hc23= "885"%> <% week_hc24= "212" %> 
+                        <% week_hc25= "432"%> <% week_hc26= "885"%>  <% week_hc27= "385"%> <% week_hc28= "285"%> <% week_hc29= "885"%> <% week_hc30= "685"%> <% week_hc31= "685"%> <% week_hc32= "685"%> 
+
+               
+               
+               <% }  else if(week== "2020-W14" || week== "2020-W15" || week== "2020-W16"   || week== "2020-W17" || week== "2020-W18" || week== "2020-W19" || week== "2020-W20" || week== "2020-W21" || week== "2020-W22" || week== "2020-W23" || week== "2020-W24"|| week== "2020-W25"|| week== "2020-W26" ) { %>
+                        <% week_v1= "345" %> <%  week_v2= "8678"%> <% week_v3= "123"%> <% week_v4= "212" %> <%  week_v5= "432"%> <% week_v6= "885"%>  <% week_v7= "385"%> <% week_v8= "285"%> 
+                        <% week_v9= "885"%> <% week_v10= "685"%> <% week_v11= "212" %> <%  week_v12= "432"%> <% week_v13= "885"%> <% week_v14= "212" %> <%  week_v15= "432"%> <% week_v16= "885"%>  
+                        <% week_v17= "385"%> <% week_v18= "285"%> <% week_v19= "885"%> <% week_v20= "685"%>  <% week_v21= "212" %> <%  week_v22= "432"%> <% week_v23= "885"%> <% week_v24= "212" %> 
+                        <% week_v25= "432"%> <% week_v26= "885"%>  <% week_v27= "385"%> <% week_v28= "285"%> <% week_v29= "885"%> <% week_v30= "685"%> <% week_v31= "685"%> <% week_v32= "685"%> 
+
+                        <% week_hc1= "212" %> <%  week_hc2= "432"%> <% week_hc3= "885"%> <% week_hc4= "212" %> <%  week_hc5= "432"%> <% week_hc6= "885"%>  <% week_hc7= "385"%> <% week_hc8= "285"%> 
+                        <% week_hc9= "885"%> <% week_hc10= "685"%> <% week_hc11= "212" %> <%  week_hc12= "432"%> <% week_hc13= "885"%> <% week_hc14= "212" %> <%  week_hc15= "432"%> <% week_hc16= "885"%>  
+                        <% week_hc17= "385"%> <% week_hc18= "285"%> <% week_hc19= "885"%> <% week_hc20= "685"%>  <% week_hc21= "212" %> <%  week_hc22= "432"%> <% week_hc23= "885"%> <% week_hc24= "212" %> 
+                        <% week_hc25= "432"%> <% week_hc26= "885"%>  <% week_hc27= "385"%> <% week_hc28= "285"%> <% week_hc29= "885"%> <% week_hc30= "585"%> <% week_hc31= "685"%> <% week_hc32= "685"%> 
+
+             
+                <% } else if (week== "2020-W27" || week== "2020-W28" || week== "2020-W29" || week== "2020-W30" || week== "2020-W31" || week== "2020-W32" || week== "2020-W33" || week== "2020-W34"|| week== "2020-W35"|| week== "2020-W36" || week== "2020-W37" || week== "2020-W38"|| week== "2020-W39"|| week== "2020-W40") { %>
+
+                  <% week_v1= "345" %> <%  week_v2= "8678"%> <% week_v3= "123"%> <% week_v4= "212" %> <%  week_v5= "432"%> <% week_v6= "885"%>  <% week_v7= "385"%> <% week_v8= "285"%> 
+                  <% week_v9= "885"%> <% week_v10= "685"%> <% week_v11= "212" %> <%  week_v12= "432"%> <% week_v13= "885"%> <% week_v14= "212" %> <%  week_v15= "432"%> <% week_v16= "885"%>  
+                  <% week_v17= "385"%> <% week_v18= "285"%> <% week_v19= "885"%> <% week_v20= "685"%>  <% week_v21= "212" %> <%  week_v22= "432"%> <% week_v23= "885"%> <% week_v24= "212" %> 
+                  <% week_v25= "432"%> <% week_v26= "885"%>  <% week_v27= "385"%> <% week_v28= "285"%> <% week_v29= "885"%> <% week_v30= "655"%> <% week_v31= "685"%> <% week_v32= "985"%> 
+
+                  <% week_hc1= "212" %> <%  week_hc2= "432"%> <% week_hc3= "885"%> <% week_hc4= "212" %> <%  week_hc5= "432"%> <% week_hc6= "885"%>  <% week_hc7= "385"%> <% week_hc8= "285"%> 
+                  <% week_hc9= "885"%> <% week_hc10= "685"%> <% week_hc11= "212" %> <%  week_hc12= "432"%> <% week_hc13= "885"%> <% week_hc14= "212" %> <%  week_hc15= "432"%> <% week_hc16= "885"%>  
+                  <% week_hc17= "385"%> <% week_hc18= "285"%> <% week_hc19= "885"%> <% week_hc20= "635"%>  <% week_hc21= "212" %> <%  week_hc22= "432"%> <% week_hc23= "885"%> <% week_hc24= "212" %> 
+                  <% week_hc25= "432"%> <% week_hc26= "885"%>  <% week_hc27= "385"%> <% week_hc28= "285"%> <% week_hc29= "885"%> <% week_hc30= "685"%> <% week_hc31= "685"%> <% week_hc32= "685"%> 
+
+                  
+                  <% } else if (week== "2020-W27" || week== "2020-W28" || week== "2020-W29" || week== "2020-W30" || week== "2020-W31" || week== "2020-W32" || week== "2020-W33" || week== "2020-W34"|| week== "2020-W35"|| week== "2020-W36" || week== "2020-W37" || week== "2020-W38"|| week== "2020-W39"|| week== "2020-W40") { %>
+
+                    <% week_v1= "345" %> <%  week_v2= "8678"%> <% week_v3= "123"%> <% week_v4= "212" %> <%  week_v5= "432"%> <% week_v6= "885"%>  <% week_v7= "385"%> <% week_v8= "285"%> 
+                    <% week_v9= "885"%> <% week_v10= "685"%> <% week_v11= "212" %> <%  week_v12= "432"%> <% week_v13= "885"%> <% week_v14= "212" %> <%  week_v15= "432"%> <% week_v16= "885"%>  
+                    <% week_v17= "385"%> <% week_v18= "285"%> <% week_v19= "885"%> <% week_v20= "695"%>  <% week_v21= "212" %> <%  week_v22= "432"%> <% week_v23= "885"%> <% week_v24= "212" %> 
+                    <% week_v25= "432"%> <% week_v26= "885"%>  <% week_v27= "385"%> <% week_v28= "285"%> <% week_v29= "885"%> <% week_v30= "685"%> <% week_v31= "685"%> <% week_v32= "685"%> 
+  
+                    <% week_hc1= "212" %> <%  week_hc2= "432"%> <% week_hc3= "885"%> <% week_hc4= "212" %> <%  week_hc5= "432"%> <% week_hc6= "885"%>  <% week_hc7= "385"%> <% week_hc8= "285"%> 
+                    <% week_hc9= "885"%> <% week_hc10= "685"%> <% week_hc11= "212" %> <%  week_hc12= "432"%> <% week_hc13= "885"%> <% week_hc14= "212" %> <%  week_hc15= "432"%> <% week_hc16= "885"%>  
+                    <% week_hc17= "385"%> <% week_hc18= "285"%> <% week_hc19= "885"%> <% week_hc20= "685"%>  <% week_hc21= "212" %> <%  week_hc22= "432"%> <% week_hc23= "885"%> <% week_hc24= "212" %> 
+                    <% week_hc25= "432"%> <% week_hc26= "885"%>  <% week_hc27= "385"%> <% week_hc28= "285"%> <% week_hc29= "885"%> <% week_hc30= "615"%> <% week_hc31= "605"%> <% week_hc32= "685"%> 
+  
+                  <% } else if (week== "2020-W41" || week== "2020-W42" || week== "2020-W43" || week== "2020-W44" || week== "2020-W45" || week== "2020-W46"   || week== "2020-W47" || week== "2020-W48" || week== "2020-W49" || week== "2020-W50" || week== "2020-W51" || week== "2020-W52" || week== "2020-W53") { %>
+
+                    <% week_v1= "345" %> <%  week_v2= "8678"%> <% week_v3= "123"%> <% week_v4= "212" %> <%  week_v5= "432"%> <% week_v6= "885"%>  <% week_v7= "385"%> <% week_v8= "285"%> 
+                    <% week_v9= "885"%> <% week_v10= "685"%> <% week_v11= "212" %> <%  week_v12= "432"%> <% week_v13= "885"%> <% week_v14= "212" %> <%  week_v15= "432"%> <% week_v16= "885"%>  
+                    <% week_v17= "385"%> <% week_v18= "285"%> <% week_v19= "885"%> <% week_v20= "685"%>  <% week_v21= "212" %> <%  week_v22= "432"%> <% week_v23= "885"%> <% week_v24= "212" %> 
+                    <% week_v25= "432"%> <% week_v26= "885"%>  <% week_v27= "385"%> <% week_v28= "285"%> <% week_v29= "885"%> <% week_v30= "685"%> <% week_v31= "695"%> <% week_v32= "685"%> 
+  
+                    <% week_hc1= "212" %> <%  week_hc2= "432"%> <% week_hc3= "885"%> <% week_hc4= "212" %> <%  week_hc5= "432"%> <% week_hc6= "885"%>  <% week_hc7= "385"%> <% week_hc8= "285"%> 
+                    <% week_hc9= "885"%> <% week_hc10= "685"%> <% week_hc11= "212" %> <%  week_hc12= "432"%> <% week_hc13= "885"%> <% week_hc14= "212" %> <%  week_hc15= "432"%> <% week_hc16= "885"%>  
+                    <% week_hc17= "385"%> <% week_hc18= "285"%> <% week_hc19= "885"%> <% week_hc20= "685"%>  <% week_hc21= "212" %> <%  week_hc22= "432"%> <% week_hc23= "885"%> <% week_hc24= "212" %> 
+                    <% week_hc25= "432"%> <% week_hc26= "885"%>  <% week_hc27= "385"%> <% week_hc28= "285"%> <% week_hc29= "885"%> <% week_hc30= "685"%> <% week_hc31= "685"%> <% week_hc32= "685"%>               
+                <% } %>
+             
+             
               </caption>
-        <table class="ui celled structured striped table">
+        <div>
+         
+          <button class="btn btn-success btn-xs"  onclick="exportTableToExcel('tblData', '<%= week %>')">Export Excel <i class=" download icon"></i>  </i></button>
+        </div>    
+        <table id="tblData" class="ui celled structured striped table">
         <thead>
           <tr>
             <th>
-              [Year- Week]:<p>[ <%= campground.week %>] </p>
+              <h4><%= campground.week %></h4>
             </th>
             <th class="ui center aligned header" colspan="3">Planned</th>
-            <th class="ui center aligned header" colspan="4">Actual</th>
+            <th class="ui center aligned header" colspan="3">Actual</th>
+            <th class="ui center aligned header" colspan="3">Variance</th>
+            <th class="ui center aligned header" colspan="1">Call Outs</th>
           </tr>
 
           <tr>
@@ -25,381 +159,2373 @@
             <th>Volume</th>
             <th>Head Count</th>
             <th>Productivity</th>
-            <th>Call outs</th>
+            <th>Volume</th>
+            <th>Head Count</th>
+            <th>Productivity</th>
+          
           </tr>
 
           <tr>
+
+            <!--Planned  -->
             <th  class="ui center aligned header blue" >Proactive (Fresh Audits)</th>
-            <td><%= campground.P_Vol1 %></td> 
-            <td><%= campground.P_HCount1 %></td>
-            <td><%= (campground.P_Vol1 / campground.P_HCount1)/5 %></td>
-            <td><%= campground.A_Vol1 %></td> 
-            <td><%= campground.A_HCount1 %></td>
+            <td ><b><%= week_v1 %></b></td>
+            <td> <b><%= week_hc1 %></b> </td>
+            <td>  
+              <% var fix_Pprod1= (week_v1 / week_hc1)/5 %>  
+               <b><%=fix_Pprod1.toFixed(2) %></b>  
+            </td> 
+
+
+            <td><b><%= campground.A_Vol1.toFixed(2) %></b></td> 
+            <td><b><%= campground.A_HCount1.toFixed(2) %></b></td>
+
             <td>
-              
-              <%= campground.prod1 = (campground.A_Vol1/ campground.A_HCount1)/5 %>
+              <% var fix_Aprod1  = (campground.A_Vol1/ campground.A_HCount1)/5 %>
+              <b><%=  fix_Aprod1.toFixed(2) %></b>
             </td>
+             <!-- variance -->
+             <% var vol_variance1= (((campground.A_Vol1 - week_v1)/week_v1)*100).toFixed()  %>
+             <% var HCount_variance1= (((campground.A_HCount1 - week_hc1)/week_hc1)*100).toFixed()  %>
+             <% var Prod_variance1= (((fix_Aprod1 - fix_Pprod1)/fix_Pprod1)*100).toFixed() %>
+             <!-- Volume variance -->
+             <% if( vol_variance1 >= -9  &&  vol_variance1 <= 9 ) {   %>
+              <td   >
+                <%= vol_variance1 %> % 
+              </td>
+            <%  } else if( vol_variance1 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= vol_variance1 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= vol_variance1 %> %
+                </td>
+            <% } %>
+            
+            <!-- HCount  variance -->
+
+            <% if( HCount_variance1 >= -9  &&  HCount_variance1 <= 9 ) {   %>
+              <td   >
+                <%= HCount_variance1 %> %
+              </td>
+            <%  } else if( HCount_variance1 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= HCount_variance1 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= HCount_variance1 %> %
+                </td>
+            <% } %>
+
+            <!-- Prod Variance -->
+
+            <% if( Prod_variance1 >= -9  &&  Prod_variance1 <= 9 ) {   %>
+              <td   >
+                <%= Prod_variance1 %> %
+              </td>
+            <%  } else if( Prod_variance1 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= Prod_variance1 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= Prod_variance1 %> %
+                </td>
+            <% } %>
+
             <td><%= campground.couts1 %></td>
 
           </tr>
 
           
-          
+          <!--====================== BEST SELLERS ==================================  -->
+
              <tr>
-            <th>Best Sellers</th>
-            <td><%= campground.P_Vol2 %></td> 
-            <td><%= campground.P_HCount2 %></td>
-            <td><%= (campground.P_Vol2 / campground.P_HCount2)/5 %></td>
+            <th>Best Sellers</th> 
+            <td><%= week_v2 %></td>   
+            <td><%= week_hc2 %></td>  
+            <td>  
+              <% var fix_Pprod2= (week_v2 / week_hc2)/5 %>  
+              <%=  fix_Pprod2.toFixed(2) %> 
+            </td> 
+
+
             <td><%= campground.A_Vol2 %></td> 
             <td><%= campground.A_HCount2 %></td>
+
             <td>
-              
-              <%= campground.prod2 = (campground.A_Vol2/ campground.A_HCount2)/5 %>
+              <% var fix_Aprod2  = (campground.A_Vol2/ campground.A_HCount2)/5 %>
+              <%=  fix_Aprod2.toFixed(2) %>
             </td>
+             <!-- variance -->
+             <% var vol_variance2= (((campground.A_Vol2 - week_v2)/week_v2)*100).toFixed()  %>
+             <% var HCount_variance2= (((campground.A_HCount2 - week_hc2)/week_hc2)*100).toFixed()  %>
+             <% var Prod_variance2= (((fix_Aprod2 - fix_Pprod2)/fix_Pprod2)*100).toFixed() %>
+             <!-- Volume variance -->
+             <% if( vol_variance2 >= -9  &&  vol_variance2 <= 9 ) {   %>
+              <td   >
+                <%= vol_variance2 %> %
+              </td>
+            <%  } else  if( vol_variance2 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= vol_variance2 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= vol_variance2 %>  %
+                </td>
+            <% } %>
+            
+            <!-- HCount  variance -->
+            <% if( HCount_variance2 >= -9  &&  HCount_variance2 <= 9 ) {   %>
+              <td   >
+                <%= HCount_variance2 %> %
+              </td>
+            <%  } else  if( HCount_variance2 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= HCount_variance2 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= HCount_variance2 %> %
+                </td>
+            <% } %>
+
+            <!-- Prod Variance -->
+            <% if( Prod_variance2 >= -9  &&  Prod_variance2 <= 9 ) {   %>
+              <td   >
+                 <%= Prod_variance2 %> %
+              </td>
+            <%  } else  if( Prod_variance2 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= Prod_variance2 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= Prod_variance2 %> %
+                </td>
+            <% } %>
+            <!-- call outs -->
             <td><%= campground.couts2 %></td>
           </tr>
           
+
+          <!-- ======================= PRE-Orders  ==========================  -->
+
           <tr>
             <th>Pre-Orders</th>
-            <td><%= campground.P_Vol3 %></td> 
-            <td><%= campground.P_HCount3 %></td>
-            <td><%= (campground.P_Vol3 / campground.P_HCount3)/5 %></td>
+            <td><%= week_v3 %></td> 
+            <td><%= week_hc3 %></td>
+            <td>  
+              <% var fix_Pprod3= (week_v3 / week_hc3)/5 %>  
+              <%=  fix_Pprod3.toFixed(2) %> 
+            </td> 
+
+
             <td><%= campground.A_Vol3 %></td> 
             <td><%= campground.A_HCount3 %></td>
-            <td><%= campground.prod3 = (campground.A_Vol3/ campground.A_HCount3)/5 %></td>
+
+            <td>
+              <% var fix_Aprod3  = (campground.A_Vol3/ campground.A_HCount3)/5 %>
+              <%=  fix_Aprod3.toFixed(2) %>
+            </td>
+             <!-- variance -->
+             <% var vol_variance3= (((campground.A_Vol3 - week_v3)/week_v3)*100).toFixed()  %>
+             <% var HCount_variance3= (((campground.A_HCount3 - week_hc3)/week_hc3)*100).toFixed()  %>
+             <% var Prod_variance3= (((fix_Aprod3 - fix_Pprod3)/fix_Pprod3)*100).toFixed() %>
+             <!-- Volume variance -->
+             <% if( vol_variance3 >= -9  &&  vol_variance3 <= 9 ) {   %>
+              <td   >
+                <%= vol_variance3 %> % 
+              </td>
+            <%  } else  if( vol_variance3 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= vol_variance3 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= vol_variance3 %> %
+                </td>
+            <% } %>
+            
+            <!-- HCount  variance -->
+            <% if( HCount_variance3 >= -9  &&  HCount_variance3 <= 9 ) {   %>
+              <td   >
+                <%= HCount_variance3 %> %
+              </td>
+            <%  } else  if( HCount_variance3 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= HCount_variance3 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= HCount_variance3 %> %
+                </td>
+            <% } %>
+
+            <!-- Prod Variance -->
+            <% if( Prod_variance3 >= -9  &&  Prod_variance3 <= 9 ) {   %>
+              <td   >
+                <%= Prod_variance3 %> %
+              </td>
+            <%  } else  if( Prod_variance3 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= Prod_variance3 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= Prod_variance3 %> %
+                </td>
+            <% } %>
+
+            <!-- call outs -->
             <td><%= campground.couts3 %></td>
           </tr>
+
+
           
           <tr>
             <th>Big Books</th>
-            <td><%= campground.P_Vol4  %></td> 
-            <td><%= campground.P_HCount4  %></td>
-            <td><%= (campground.P_Vol4  / campground.P_HCount4 )/5 %></td>
-            <td><%= campground.A_Vol4  %></td> 
-            <td><%= campground.A_HCount4  %></td>
-            <td><%= campground.prod4  = (campground.A_Vol4 / campground.A_HCount4 )/5 %></td>
+            <td><%= week_v4 %></td> 
+            <td><%= week_hc4 %></td>
+            <td>  
+              <% var fix_Pprod4= (week_v4 / week_hc4)/5 %>  
+              <%=  fix_Pprod4.toFixed(2) %> 
+            </td> 
+
+
+            <td><%= campground.A_Vol4 %></td> 
+            <td><%= campground.A_HCount4 %></td>
+
+            <td>
+              <% var fix_Aprod4  = (campground.A_Vol4/ campground.A_HCount4)/5 %>
+              <%=  fix_Aprod4.toFixed(2) %>
+            </td>
+             <!-- variance -->
+             <% var vol_variance4= (((campground.A_Vol4 - week_v4)/week_v4)*100).toFixed()  %>
+             <% var HCount_variance4= (((campground.A_HCount4 - week_hc4)/week_hc4)*100).toFixed()  %>
+             <% var Prod_variance4= (((fix_Aprod4 - fix_Pprod4)/fix_Pprod4)*100).toFixed() %>
+             <!-- Volume variance -->
+             <% if( vol_variance4 >= -9  &&  vol_variance4 <= 9 ) {   %>
+              <td   >
+                <%= vol_variance4 %> % 
+              </td>
+            <%  }else  if( vol_variance4 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= vol_variance4 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= vol_variance4 %> %
+                </td>
+            <% } %>
+            
+            <!-- HCount  variance -->
+            <% if( HCount_variance4 >= -9  &&  HCount_variance4 <= 9 ) {   %>
+              <td   >
+                <%= HCount_variance4 %> %
+              </td>
+            <%  }else  if( HCount_variance4 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= HCount_variance4 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= HCount_variance4 %> %
+                </td>
+            <% } %>
+
+            <!-- Prod Variance -->
+            <% if( Prod_variance4 >= -9  &&  Prod_variance4 <= 9 ) {   %>
+              <td   >
+                <%= Prod_variance4 %> %
+              </td>
+            <%  }else  if( Prod_variance4 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= Prod_variance4 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= Prod_variance4 %> %
+                </td>
+            <% } %>
+
+            <!-- call outs -->
             <td><%= campground.couts4 %></td>
           </tr>
-          
+
+
+
+          <!--  =================== Kindle Deals =======================   -->
           <tr>
             <th>Kindle Deals</th>
-            <td><%= campground.P_Vol5  %></td> 
-            <td><%= campground.P_HCount5  %></td>
-            <td><%= (campground.P_Vol5  / campground.P_HCount5 )/5 %></td>
-            <td><%= campground.A_Vol5  %></td> 
-            <td><%= campground.A_HCount5  %></td>
-            <td><%= campground.prod5  = (campground.A_Vol5 / campground.A_HCount5 )/5 %></td>
+            <td><%= week_v5 %></td> 
+            <td><%= week_hc5 %></td>
+            <td>  
+              <% var fix_Pprod5= (week_v5 / week_hc5)/5 %>  
+              <%=  fix_Pprod5.toFixed(2) %> 
+            </td> 
+
+
+            <td><%= campground.A_Vol5 %></td> 
+            <td><%= campground.A_HCount5 %></td>
+
+            <td>
+              <% var fix_Aprod5  = (campground.A_Vol5/ campground.A_HCount5)/5 %>
+              <%=  fix_Aprod5.toFixed(2) %>
+            </td>
+             <!-- variance -->
+             <% var vol_variance5= (((campground.A_Vol5 - week_v5)/week_v5)*100).toFixed()  %>
+             <% var HCount_variance5= (((campground.A_HCount5 - week_hc5)/week_hc5)*100).toFixed()  %>
+             <% var Prod_variance5= (((fix_Aprod5 - fix_Pprod5)/fix_Pprod5)*100).toFixed() %>
+             <!-- Volume variance -->
+             <% if( vol_variance5 >= -9  &&  vol_variance5 <= 9 ) {   %>
+              <td   >
+                <%= vol_variance5 %> % 
+              </td>
+            <%  }else  if( vol_variance5 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= vol_variance5 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= vol_variance5 %> %
+                </td>
+            <% } %>
+            
+            <!-- HCount  variance -->
+            <% if( HCount_variance5 >= -9  &&  HCount_variance5 <= 9 ) {   %>
+              <td   >
+                <%= HCount_variance5 %> %
+              </td>
+            <%  }else  if( HCount_variance5 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= HCount_variance5 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= HCount_variance5 %> %
+                </td>
+            <% } %>
+
+            <!-- Prod Variance -->
+            <% if( Prod_variance5 >= -9  &&  Prod_variance5 <= 9 ) {   %>
+              <td   >
+                <%= Prod_variance5 %> %
+              </td>
+            <%  }else  if( Prod_variance5 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= Prod_variance5 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= Prod_variance5 %> %
+                </td>
+            <% } %>
+            <!-- call outs -->
             <td><%= campground.couts5 %></td>
           </tr>
 
-          <tr>
-            <th>Ad-hoc Requests /Esclation Audits</th>
-            <td><%= campground.P_Vol6  %></td> 
-            <td><%= campground.P_HCount6  %></td>
-            <td><%= (campground.P_Vol6  / campground.P_HCount6 )/5 %></td>
-            <td><%= campground.A_Vol6  %></td> 
-            <td><%= campground.A_HCount6  %></td>
-            <td><%= campground.prod6  = (campground.A_Vol6 / campground.A_HCount6 )/5 %></td>
+           <!--  =================== Ad-hoc Requests / Escalation Audits=======================   -->
+           <tr>
+            <th>Ad-hoc Requests / Escalation Audits</th>
+            <td><%= week_v6 %></td> 
+            <td><%= week_hc6 %></td>
+            <td>  
+              <% var fix_Pprod6= (week_v6 / week_hc6)/5 %>  
+              <%=  fix_Pprod6.toFixed(2) %> 
+            </td> 
+
+
+            <td><%= campground.A_Vol6 %></td> 
+            <td><%= campground.A_HCount6 %></td>
+
+            <td>
+              <% var fix_Aprod6  = (campground.A_Vol6/ campground.A_HCount6)/5 %>
+              <%=  fix_Aprod6.toFixed(2) %>
+            </td>
+             <!-- variance -->
+             <% var vol_variance6= (((campground.A_Vol6 - week_v6)/week_v6)*100).toFixed()  %>
+             <% var HCount_variance6= (((campground.A_HCount6 - week_hc6)/week_hc6)*100).toFixed()  %>
+             <% var Prod_variance6= (((fix_Aprod6 - fix_Pprod6)/fix_Pprod6)*100).toFixed() %>
+             <!-- Volume variance -->
+             <% if( vol_variance6 >= -9  &&  vol_variance6 <= 9 ) {   %>
+              <td   >
+                <%= vol_variance6 %> % 
+              </td>
+            <%  }else  if( vol_variance6 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= vol_variance6 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= vol_variance6 %> %
+                </td>
+            <% } %>
+            
+            <!-- HCount  variance -->
+            <% if( HCount_variance6 >= -9  &&  HCount_variance6 <= 9 ) {   %>
+              <td   >
+                <%= HCount_variance6 %> %
+              </td>
+            <%  }else  if( HCount_variance6 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= HCount_variance6 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= HCount_variance6 %> %
+                </td>
+            <% } %>
+
+            <!-- Prod Variance -->
+            <% if( Prod_variance6 >= -9  &&  Prod_variance6 <= 9 ) {   %>
+              <td   >
+                <%= Prod_variance6 %> %
+              </td>
+            <%  }else  if( Prod_variance6 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= Prod_variance6 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= Prod_variance6 %> %
+                </td>
+            <% } %>
+            <!-- call outs -->
             <td><%= campground.couts6 %></td>
           </tr>
           
+<!-- ====================== KU Page Violation Audits ========================== -->
           <tr>
             <th>KU Page Violation Audits</th>
-              <td><%= campground.P_Vol7  %></td> 
-              <td><%= campground.P_HCount7  %></td>
-              <td><%= (campground.P_Vol7  / campground.P_HCount7 )/5 %></td>
-              <td><%= campground.A_Vol7  %></td> 
-              <td><%= campground.A_HCount7  %></td>
-              <td><%= campground.prod7  = (campground.A_Vol7 / campground.A_HCount7 )/5 %></td>
+            <td><%= week_v7 %></td> 
+            <td><%= week_hc7 %></td>
+            <td>  
+              <% var fix_Pprod7= (week_v7 / week_hc7)/5 %>  
+              <%=  fix_Pprod7.toFixed(2) %> 
+            </td> 
+
+
+            <td><%= campground.A_Vol7 %></td> 
+            <td><%= campground.A_HCount7 %></td>
+
+            <td>
+              <% var fix_Aprod7  = (campground.A_Vol7/ campground.A_HCount7)/5 %>
+              <%=  fix_Aprod7.toFixed(2) %>
+            </td>
+             <!-- variance -->
+             <% var vol_variance7= (((campground.A_Vol7 - week_v7)/week_v7)*100).toFixed()  %>
+             <% var HCount_variance7= (((campground.A_HCount7 - week_hc7)/week_hc7)*100).toFixed()  %>
+             <% var Prod_variance7= (((fix_Aprod7 - fix_Pprod7)/fix_Pprod7)*100).toFixed() %>
+             <!-- Volume variance -->
+             <% if( vol_variance7 >= -9  &&  vol_variance7 <= 9 ) {   %>
+              <td   >
+                <%= vol_variance7 %> % 
+              </td>
+            <%  } else  if( vol_variance7 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= vol_variance7 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= vol_variance7 %> %
+                </td>
+            <% } %>
+            
+            <!-- HCount  variance -->
+            <% if( HCount_variance7 >= -9  &&  HCount_variance7 <= 9 ) {   %>
+              <td   >
+                <%= HCount_variance7 %> %
+              </td>
+            <%  } else  if( HCount_variance7 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= HCount_variance7 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= HCount_variance7 %> %
+                </td>
+            <% } %>
+
+            <!-- Prod Variance -->
+            <% if( Prod_variance7 >= -9  &&  Prod_variance7 <= 9 ) {   %>
+              <td   >
+                <%= Prod_variance7 %> %
+              </td>
+            <%  } else  if( Prod_variance7 > 10 ) {  %>
+              <td  class="positive"   >
+                <%= Prod_variance7 %> %
+              </td>
+              <%  } else {  %>
+                <td class="negative"  >
+                  <%= Prod_variance7 %> %
+                </td>
+            <% } %>
+            <!-- call outs -->
               <td><%= campground.couts7 %></td>
           </tr>
-
+          
+          <!-- ============ Reactive (Contacts) ================ -->
           <tr>
             <th class="ui center aligned header blue" >Reactive (Contacts)</th>
-              <td><%= campground.P_Vol8  %></td> 
-              <td><%= campground.P_HCount8  %></td>
-              <td><%= (campground.P_Vol8  / campground.P_HCount8 )/5 %></td>
-              <td><%= campground.A_Vol8  %></td> 
-              <td><%= campground.A_HCount8  %></td>
-              <td><%= campground.prod8  = (campground.A_Vol8 / campground.A_HCount8 )/5 %></td>
+              <td><b><%= week_v8 %></b></td> 
+              <td> <b><%= week_hc8 %></b> </td>
+              <td>  
+                <% var fix_Pprod8= (week_v8 / week_hc8)/5 %>  
+                <b><%=  fix_Pprod8.toFixed(2) %></b> 
+              </td> 
+              
+              <td><b><%= campground.A_Vol8 %></b></td> 
+              <td><b><%= campground.A_HCount8.toFixed(2) %></b></td>
+  
+              <td>
+                <% var fix_Aprod8  = (campground.A_Vol8/ campground.A_HCount8)/5 %>
+                <b><%=  fix_Aprod8.toFixed(2) %></b>
+              </td>
+               <!-- variance -->
+               <% var vol_variance8= (((campground.A_Vol8 - week_v8)/week_v8)*100).toFixed()  %>
+               <% var HCount_variance8= (((campground.A_HCount8 - week_hc8)/week_hc8)*100).toFixed()  %>
+               <% var Prod_variance8= (((fix_Aprod8 - fix_Pprod8)/fix_Pprod8)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance8 >= -9  &&  vol_variance8 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance8 %> % 
+                </td>
+              <%  }else  if( vol_variance8 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance8 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance8 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance8 >= -9  &&  HCount_variance8 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance8 %> %
+                </td>
+              <%  }else  if( HCount_variance8 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance8 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance8 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance8 >= -9  &&  Prod_variance8 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance8 %> %
+                </td>
+              <%  }else  if( Prod_variance8 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance8 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance8 %> %
+                  </td>
+              <% } %>
+            <!-- call outs -->
               <td><%= campground.couts8 %></td>
           </tr>
 
+
+          <!-- ====================      Andons & Regulars   ==================  -->
           <tr>
+
             <th class="ui  header subhead grey ">Andons & Regulars	</th>
-              <td><%= campground.P_Vol9  %></td> 
-              <td><%= campground.P_HCount9  %></td>
-              <td><%= (campground.P_Vol9  / campground.P_HCount9 )/5 %></td>
-              <td><%= campground.A_Vol9  %></td> 
-              <td><%= campground.A_HCount9  %></td>
-              <td><%= campground.prod9  = (campground.A_Vol9 / campground.A_HCount9 )/5 %></td>
+              <td><%= week_v9 %></td> 
+              <td><%= week_hc9 %></td>
+              <td>  
+                <% var fix_Pprod9= (week_v9 / week_hc9)/5 %>  
+                <%=  fix_Pprod9.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol9 %></td> 
+              <td><%= campground.A_HCount9 %></td>
+  
+              <td>
+                <% var fix_Aprod9  = (campground.A_Vol9/ campground.A_HCount9)/5 %>
+                <%=  fix_Aprod9.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance9= (((campground.A_Vol9 - week_v9)/week_v9)*100).toFixed()  %>
+               <% var HCount_variance9= (((campground.A_HCount9 - week_hc9)/week_hc9)*100).toFixed()  %>
+               <% var Prod_variance9= (((fix_Aprod9 - fix_Pprod9)/fix_Pprod9)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance9 >= -9  &&  vol_variance9 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance9 %> % 
+                </td>
+              <%  }else  if( vol_variance9 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance9 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance9 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance9 >= -9  &&  HCount_variance9 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance9 %> %
+                </td>
+              <%  }else  if( HCount_variance9 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance9 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance9 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance9 >= -9  &&  Prod_variance9 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance9 %> %
+                </td>
+              <%  }else  if( Prod_variance9 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance9 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance9 %> %
+                  </td>
+              <% } %>
+            <!-- call outs -->           
               <td><%= campground.couts9 %></td>
           </tr>
           
+
+<!-- =====================  Report Content Errors =============================== -->
           <tr>
-            <th class="ui  header subhead grey">Report Content Errors		</th>
-              <td><%= campground.P_Vol10  %></td> 
-              <td><%= campground.P_HCount10  %></td>
-              <td><%= (campground.P_Vol10  / campground.P_HCount10 )/5 %></td>
-              <td><%= campground.A_Vol10  %></td> 
-              <td><%= campground.A_HCount10  %></td>
-              <td><%= campground.prod10  = (campground.A_Vol10 / campground.A_HCount10 )/5 %></td>
+
+            <th class="ui  header subhead grey ">Report Content Errors	</th>
+              <td><%= week_v10 %></td> 
+              <td><%= week_hc10 %></td>
+              <td>  
+                <% var fix_Pprod10= (week_v10 / week_hc10)/5 %>  
+                <%=  fix_Pprod10.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol10 %></td> 
+              <td><%= campground.A_HCount10 %></td>
+  
+              <td>
+                <% var fix_Aprod10  = (campground.A_Vol10/ campground.A_HCount10)/5 %>
+                <%=  fix_Aprod10.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance10= (((campground.A_Vol10 - week_v10)/week_v10)*100).toFixed()  %>
+               <% var HCount_variance10= (((campground.A_HCount10 - week_hc10)/week_hc10)*100).toFixed()  %>
+               <% var Prod_variance10= (((fix_Aprod10 - fix_Pprod10)/fix_Pprod10)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance10 >= -9  &&  vol_variance10 <= 9 ) {   %>
+                <td>
+                  <%= vol_variance10 %> % 
+                </td>
+              <%  } else if( vol_variance10 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance10 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance10 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance10 >= -9  &&  HCount_variance10 <= 9 ) {   %>
+                <td>
+                  <%= HCount_variance10 %> %
+                </td>
+              <%  }else   if( HCount_variance10 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance10 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance10 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance10 >= -9  &&  Prod_variance10 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance10 %> %
+                </td>
+              <%  }else  if( Prod_variance10 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance10 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance10 %> %
+                  </td>
+              <% } %>
+            <!-- call outs -->           
               <td><%= campground.couts10 %></td>
           </tr>
           
+          <!-- ======================= English ========================= -->
           <tr>
             <th>English</th>
-              <td><%= campground.P_Vol11  %></td> 
-              <td><%= campground.P_HCount11  %></td>
-              <td><%= (campground.P_Vol11  / campground.P_HCount11 )/5 %></td>
-              <td><%= campground.A_Vol11  %></td> 
-              <td><%= campground.A_HCount11  %></td>
-              <td><%= campground.prod11  = (campground.A_Vol11 / campground.A_HCount11 )/5 %></td>
+              <td><%= week_v11 %></td> 
+              <td><%= week_hc11 %></td>
+              <td>  
+                <% var fix_Pprod11= (week_v11 / week_hc11)/5 %>  
+                <%=  fix_Pprod11.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol11 %></td> 
+              <td><%= campground.A_HCount11 %></td>
+  
+              <td>
+                <% var fix_Aprod11  = (campground.A_Vol11/ campground.A_HCount11)/5 %>
+                <%=  fix_Aprod11.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance11= (((campground.A_Vol11 - week_v11)/week_v11)*100).toFixed()  %>
+               <% var HCount_variance11= (((campground.A_HCount11 - week_hc11)/week_hc11)*100).toFixed()  %>
+               <% var Prod_variance11= (((fix_Aprod11 - fix_Pprod11)/fix_Pprod11)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance11 >= -9  &&  vol_variance11 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance11 %> % 
+                </td>
+              <%  }else  if( vol_variance11 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance11 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance11 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance11 >= -9  &&  HCount_variance11 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance11 %> %
+                </td>
+              <%  }else  if( HCount_variance11 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance11 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance11 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance11 >= -9  &&  Prod_variance11 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance11 %> %
+                </td>
+              <%  }else  if( Prod_variance11 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance11 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance11 %> %
+                  </td>
+              <% } %>
+            <!-- call outs --> 
               <td><%= campground.couts11 %></td>
           </tr>
 
           <tr>
             <th>English (High-value titles to be considered by Ops)</th>
-              <td><%= campground.P_Vol12  %></td> 
-              <td><%= campground.P_HCount12  %></td>
-              <td><%= (campground.P_Vol12  / campground.P_HCount12 )/5 %></td>
-              <td><%= campground.A_Vol12  %></td> 
-              <td><%= campground.A_HCount12  %></td>
-              <td><%= campground.prod12  = (campground.A_Vol12 / campground.A_HCount12 )/5 %></td>
+              <td><%= week_v12 %></td> 
+              <td><%= week_hc12 %></td>
+              <td>  
+                <% var fix_Pprod12= (week_v12 / week_hc12)/5 %>  
+                <%=  fix_Pprod12.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol12 %></td> 
+              <td><%= campground.A_HCount12 %></td>
+  
+              <td>
+                <% var fix_Aprod12  = (campground.A_Vol12/ campground.A_HCount12)/5 %>
+                <%=  fix_Aprod12.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance12= (((campground.A_Vol12 - week_v12)/week_v12)*100).toFixed()  %>
+               <% var HCount_variance12= (((campground.A_HCount12 - week_hc12)/week_hc12)*100).toFixed()  %>
+               <% var Prod_variance12= (((fix_Aprod12 - fix_Pprod12)/fix_Pprod12)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance12 >= -9  &&  vol_variance12 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance12 %> % 
+                </td>
+              <%  }else  if( vol_variance12 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance12 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance12 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance12 >= -9  &&  HCount_variance12 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance12 %> %
+                </td>
+              <%  }else  if( HCount_variance12 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance12 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance12 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance12 >= -9  &&  Prod_variance12 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance12 %> %
+                </td>
+              <%  }else  if( Prod_variance12 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance12 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance12 %> %
+                  </td>
+              <% } %>
+            <!-- call outs --> 
               <td><%= campground.couts12 %></td>
           </tr>
 
           <tr>
             <th>German</th>
-              <td><%= campground.P_Vol13  %></td> 
-              <td><%= campground.P_HCount13  %></td>
-              <td><%= (campground.P_Vol13  / campground.P_HCount13 )/5 %></td>
-              <td><%= campground.A_Vol13  %></td> 
-              <td><%= campground.A_HCount13  %></td>
-              <td><%= campground.prod13  = (campground.A_Vol13 / campground.A_HCount13 )/5 %></td>
+              <td><%= week_v13 %></td> 
+              <td><%= week_hc13 %></td>
+              
+              <td>  
+                <% var fix_Pprod13= (week_v13 / week_hc13)/5 %>  
+                <%=  fix_Pprod13.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol13 %></td> 
+              <td><%= campground.A_HCount13 %></td>
+  
+              <td>
+                <% var fix_Aprod13  = (campground.A_Vol13/ campground.A_HCount13)/5 %>
+                <%=  fix_Aprod13.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance13= (((campground.A_Vol13 - week_v13)/week_v13)*100).toFixed()  %>
+               <% var HCount_variance13= (((campground.A_HCount13 - week_hc13)/week_hc13)*100).toFixed()  %>
+               <% var Prod_variance13= (((fix_Aprod13 - fix_Pprod13)/fix_Pprod13)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance13 >= -9  &&  vol_variance13 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance13 %> % 
+                </td>
+              <%  }else  if( vol_variance13 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance13 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance13 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance13 >= -9  &&  HCount_variance13 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance13 %> %
+                </td>
+              <%  }else  if( HCount_variance13 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance13 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance13 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance13 >= -9  &&  Prod_variance13 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance13 %> %
+                </td>
+              <%  }else  if( Prod_variance13 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance13 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance13 %> %
+                  </td>
+              <% } %>
+
+
+            <!-- call outs --> 
               <td><%= campground.couts13 %></td>
           </tr>
 
           <tr>
-            <th>French</th>
-              <td><%= campground.P_Vol14  %></td> 
-              <td><%= campground.P_HCount14  %></td>
-              <td><%= (campground.P_Vol14  / campground.P_HCount14 )/5 %></td>
-              <td><%= campground.A_Vol14  %></td> 
-              <td><%= campground.A_HCount14  %></td>
-              <td><%= campground.prod14  = (campground.A_Vol14 / campground.A_HCount14 )/5 %></td>
-              <td><%= campground.couts14 %></td>
+            <th>French </th>
+              <td><%= week_v14  %></td> 
+              <td><%= week_hc14 %></td> 
+             
+              <td>   
+                <% var fix_Pprod14= (week_v14 / week_hc14)/5 %>
+                <%=  fix_Pprod14.toFixed(2) %>
+              </td>  
+              
+              <td><%= campground.A_Vol14 %></td> 
+              <td><%= campground.A_HCount14 %></td>
+  
+              <td>
+                <% var fix_Aprod14  = (campground.A_Vol14/ campground.A_HCount14)/5 %>
+                <%=  fix_Aprod14.toFixed(2) %>
+                                
+              </td>
+               <!-- variance -->
+               <% var vol_variance14= (((campground.A_Vol14 - week_v14)/week_v14)*100).toFixed()  %>
+               <% var HCount_variance14= (((campground.A_HCount14 - week_hc14)/week_hc14)*100).toFixed()  %>
+               <% var Prod_variance14= (((fix_Aprod14 - fix_Pprod14)/fix_Pprod14)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance14 >= -9  &&  vol_variance14 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance14 %> % 
+                </td>
+              <%  }else  if( vol_variance14 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance14 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance14 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance14 >= -9  &&  HCount_variance14 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance14 %> %
+                </td>
+              <%  }else  if( HCount_variance14 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance14 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance14 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance14 >= -9  &&  Prod_variance14 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance14 %> %
+                </td>
+              <%  } else if( Prod_variance14 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance14 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative">
+                    <%= Prod_variance14 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+
+            <!-- call outs --> 
+              <td > <%= campground.couts14 %> </td>
           </tr>
 
           <tr>
-            <th class="ui  header subhead grey "  >Customer Reviews</th>
-              <td><%= campground.P_Vol15  %></td> 
-              <td><%= campground.P_HCount15  %></td>
-              <td><%= (campground.P_Vol15  / campground.P_HCount15 )/5 %></td>
-              <td><%= campground.A_Vol15  %></td> 
-              <td><%= campground.A_HCount15  %></td>
-              <td><%= campground.prod15  = (campground.A_Vol15 / campground.A_HCount15 )/5 %></td>
+            <th class="ui  header subhead grey "  >Customer Reviews</th> 
+              <td><%= week_v15  %></td>  
+              <td><%= week_hc15 %></td> 
+
+              <td>  
+                <% var fix_Pprod15= (week_v15 / week_hc15)/5 %>   
+                <%=  fix_Pprod15.toFixed(2) %>  
+              </td> 
+              
+              <td><%= campground.A_Vol15 %></td> 
+              <td><%= campground.A_HCount15 %></td>
+  
+              <td>
+                <% var fix_Aprod15  = (campground.A_Vol15/ campground.A_HCount15)/5 %>
+                <%=  fix_Aprod15.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance15= (((campground.A_Vol15 - week_v15)/week_v15)*100).toFixed()  %>
+               <% var HCount_variance15= (((campground.A_HCount15 - week_hc15)/week_hc15)*100).toFixed()  %>
+               <% var Prod_variance15= (((fix_Aprod15 - fix_Pprod15)/fix_Pprod15)*100).toFixed() %>
+
+               <!-- Volume variance -->
+
+               <% if( vol_variance15 >= -9  &&  vol_variance15 <= 9 ) {   %>
+                <td>
+                  <%= vol_variance15 %> %
+                </td>
+
+               <%  } else  if ( vol_variance15 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance15 %> %
+                </td>
+
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance15 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance15 >= -9  &&  HCount_variance15 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance15 %> %
+                </td>
+              <%  }else  if( HCount_variance15 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance15 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance15 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance15 >= -9  &&  Prod_variance15 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance15 %> %
+                </td>
+              <%  }else  if( Prod_variance15 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance15 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance15 %> %
+                  </td>
+              <% } %>
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts15 %></td>
           </tr>
 
           <tr>
             <th class="ui  header subhead grey "  >Massmail Tickets</th>
-              <td><%= campground.P_Vol16  %></td> 
-              <td><%= campground.P_HCount16  %></td>
-              <td><%= (campground.P_Vol16  / campground.P_HCount16 )/5 %></td>
-              <td><%= campground.A_Vol16  %></td> 
-              <td><%= campground.A_HCount16  %></td>
-              <td><%= campground.prod16  = (campground.A_Vol16 / campground.A_HCount16 )/5 %></td>
+              <td><%= week_v16  %></td> 
+              <td><%= week_hc16 %></td>
+              
+              <td>  
+                <% var fix_Pprod16= (week_v16 / week_hc16)/5 %>  
+                <%=  fix_Pprod16.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol16 %></td> 
+              <td><%= campground.A_HCount16 %></td>
+  
+              <td>
+                <% var fix_Aprod16  = (campground.A_Vol16/ campground.A_HCount16)/5 %>
+                <%=  fix_Aprod16.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance16= (((campground.A_Vol16 - week_v16)/week_v16)*100).toFixed()  %>
+               <% var HCount_variance16= (((campground.A_HCount16 - week_hc16)/week_hc16)*100).toFixed()  %>
+               <% var Prod_variance16= (((fix_Aprod16 - fix_Pprod16)/fix_Pprod16)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance16 >= -9  &&  vol_variance16 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance16 %> % 
+                </td>
+              <%  } else  if( vol_variance16 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance16 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance16 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance16 >= -9  &&  HCount_variance16 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance16 %> %
+                </td>
+              <%  }else if( HCount_variance16 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance16 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance16 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance16 >= -9  &&  Prod_variance16 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance16 %> %
+                </td>
+              <%  }else if( Prod_variance16 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance16 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance16 %> %
+                  </td>
+              <% } %>
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts16 %></td>
           </tr>
           
+
+          <!-- =============  -->
           <tr>
             <th class="ui  header subhead grey "  >Publisher Response	</th>
-              <td><%= campground.P_Vol17  %></td> 
-              <td><%= campground.P_HCount17  %></td>
-              <td><%= (campground.P_Vol17  / campground.P_HCount17 )/5 %></td>
-              <td><%= campground.A_Vol17  %></td> 
-              <td><%= campground.A_HCount17  %></td>
-              <td><%= campground.prod17  = (campground.A_Vol17 / campground.A_HCount17 )/5 %></td>
+              <td><%= week_v17  %></td> 
+              <td><%= week_hc17 %></td>
+              
+
+
+              <td>  
+                <% var fix_Pprod17= (week_v17 / week_hc17)/5 %>  
+                <%=  fix_Pprod17.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol17 %></td> 
+              <td><%= campground.A_HCount17 %></td>
+  
+              <td>
+                <% var fix_Aprod17  = (campground.A_Vol17/ campground.A_HCount17)/5 %>
+                <%=  fix_Aprod17.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance17= (((campground.A_Vol17 - week_v17)/week_v17)*100).toFixed()  %>
+               <% var HCount_variance17= (((campground.A_HCount17 - week_hc17)/week_hc17)*100).toFixed()  %>
+               <% var Prod_variance17= (((fix_Aprod17 - fix_Pprod17)/fix_Pprod17)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance17 >= -9  &&  vol_variance17 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance17 %> % 
+                </td>
+              <%  }else  if( vol_variance17 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance17 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance17 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance17 >= -9  &&  HCount_variance17 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance17 %> %
+                </td>
+              <%  }else  if( HCount_variance17 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance17 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance17 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance17 >= -9  &&  Prod_variance17 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance17 %> %
+                </td>
+              <%  }else  if( Prod_variance17 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance17 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance17 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts17 %></td>
           </tr>
 
           <tr>
             <th>Submitted Corrections	</th>
-              <td><%= campground.P_Vol18  %></td> 
-              <td><%= campground.P_HCount18  %></td>
-              <td><%= (campground.P_Vol18  / campground.P_HCount18 )/5 %></td>
-              <td><%= campground.A_Vol18  %></td> 
-              <td><%= campground.A_HCount18  %></td>
-              <td><%= campground.prod18  = (campground.A_Vol18 / campground.A_HCount18 )/5 %></td>
+              <td><%= week_v18  %></td> 
+              <td><%= week_hc18 %></td>
+              
+
+               
+
+              <td>  
+                <% var fix_Pprod18= (week_v18 / week_hc18)/5 %>  
+                <%=  fix_Pprod18.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol18 %></td> 
+              <td><%= campground.A_HCount18 %></td>
+  
+              <td>
+                <% var fix_Aprod18  = (campground.A_Vol18/ campground.A_HCount18)/5 %>
+                <%=  fix_Aprod18.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance18= (((campground.A_Vol18 - week_v18)/week_v18)*100).toFixed()  %>
+               <% var HCount_variance18= (((campground.A_HCount18 - week_hc18)/week_hc18)*100).toFixed()  %>
+               <% var Prod_variance18= (((fix_Aprod18 - fix_Pprod18)/fix_Pprod18)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance18 >= -9  &&  vol_variance18 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance18 %> % 
+                </td>
+              <%  }else if( vol_variance18 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance18 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance18 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance18 >= -9  &&  HCount_variance18 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance18 %> %
+                </td>
+              <%  }else if( HCount_variance18 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance18 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance18 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance18 >= -9  &&  Prod_variance18 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance18 %> %
+                </td>
+              <%  }else if( Prod_variance18 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance18 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance18 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts18 %></td>
           </tr>
 
           <tr>
             <th>Queries + Escalations</th>
-              <td><%= campground.P_Vol19  %></td> 
-              <td><%= campground.P_HCount19  %></td>
-              <td><%= (campground.P_Vol19  / campground.P_HCount19 )/5 %></td>
-              <td><%= campground.A_Vol19  %></td> 
-              <td><%= campground.A_HCount19  %></td>
-              <td><%= campground.prod19  = (campground.A_Vol19 / campground.A_HCount19 )/5 %></td>
+              <td><%= week_v19  %></td> 
+              <td><%= week_hc19 %></td>
+
+              <td>
+                <% var fix_Pprod19= (week_v19 / week_hc19)/5 %>  
+                <%=  fix_Pprod19.toFixed(2) %> 
+              </td>
+              
+              <td><%= campground.A_Vol19 %></td> 
+              <td><%= campground.A_HCount19 %></td>
+  
+              <td>
+                <% var fix_Aprod19  = (campground.A_Vol19/ campground.A_HCount19)/5 %>
+                <%=  fix_Aprod19.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance19= (((campground.A_Vol19 - week_v19)/week_v19)*100).toFixed()  %>
+               <% var HCount_variance19= (((campground.A_HCount19 - week_hc19)/week_hc19)*100).toFixed()  %>
+               <% var Prod_variance19= (((fix_Aprod19 - fix_Pprod19)/fix_Pprod19)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance19 >= -9  &&  vol_variance19 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance19 %> % 
+                </td>
+              <%  }else if( vol_variance19 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance19 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance19 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance19 >= -9  &&  HCount_variance19 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance19 %> %
+                </td>
+              <%  }else if( HCount_variance19 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance19 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance19 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance19 >= -9  &&  Prod_variance19 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance19 %> %
+                </td>
+              <%  }else if( Prod_variance19 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance19 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance19 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts19 %></td>
           </tr>
 
           <tr>
             <th class="ui center aligned header blue" >Rework</th>
-              <td><%= campground.P_Vol20  %></td> 
-              <td><%= campground.P_HCount20  %></td>
-              <td><%= (campground.P_Vol20  / campground.P_HCount20 )/5 %></td>
-              <td><%= campground.A_Vol20  %></td> 
-              <td><%= campground.A_HCount20  %></td>
-              <td><%= campground.prod20  = (campground.A_Vol20 / campground.A_HCount20 )/5 %></td>
+              <td><b><%= week_v20  %></b></td> 
+              <td><b><%= week_hc20 %></b></td>
+              
+              <td>  
+                <% var fix_Pprod20= (week_v20 / week_hc20)/5 %>  
+                <b><%=  fix_Pprod20.toFixed(2) %></b> 
+              </td> 
+              
+              <td> <b><%= campground.A_Vol20 %></b></td> 
+              <td> <b><%= campground.A_HCount20 %></b></td>
+  
+              <td>
+                <% var fix_Aprod20  = (campground.A_Vol20/ campground.A_HCount20)/5 %>
+                <b></b><%=  fix_Aprod20.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance20= (((campground.A_Vol20 - week_v20)/week_v20)*100).toFixed()  %>
+               <% var HCount_variance20= (((campground.A_HCount20 - week_hc20)/week_hc20)*100).toFixed()  %>
+               <% var Prod_variance20= (((fix_Aprod20 - fix_Pprod20)/fix_Pprod20)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance20 >= -9  &&  vol_variance20 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance20 %> % 
+                </td>
+              <%  }else if( vol_variance20 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance20 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance20 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance20 >= -9  &&  HCount_variance20 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance20 %> %
+                </td>
+              <%  }else if( HCount_variance20 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance20 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance20 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance20 >= -9  &&  Prod_variance20 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance20 %> %
+                </td>
+              <%  }else if( Prod_variance20 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance20 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance20 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts20 %></td>
           </tr>
 
           <tr>
             <th>Rework Blocking</th>
-              <td><%= campground.P_Vol21  %></td> 
-              <td><%= campground.P_HCount21  %></td>
-              <td><%= (campground.P_Vol21  / campground.P_HCount21 )/5 %></td>
-              <td><%= campground.A_Vol21  %></td> 
-              <td><%= campground.A_HCount21  %></td>
-              <td><%= campground.prod21  = (campground.A_Vol21 / campground.A_HCount21 )/5 %></td>
+              <td><%= week_v21  %></td> 
+              <td><%= week_hc21 %></td>
+              
+
+
+
+              <td>  
+                <% var fix_Pprod21= (week_v21 / week_hc21)/5 %>  
+                <%=  fix_Pprod21.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol21 %></td> 
+              <td><%= campground.A_HCount21 %></td>
+  
+              <td>
+                <% var fix_Aprod21  = (campground.A_Vol21/ campground.A_HCount21)/5 %>
+                <%=  fix_Aprod21.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance21= (((campground.A_Vol21 - week_v21)/week_v21)*100).toFixed()  %>
+               <% var HCount_variance21= (((campground.A_HCount21 - week_hc21)/week_hc21)*100).toFixed()  %>
+               <% var Prod_variance21= (((fix_Aprod21 - fix_Pprod21)/fix_Pprod21)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance21 >= -9  &&  vol_variance21 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance21 %> % 
+                </td>
+              <%  }else if( vol_variance21 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance21 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance21 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance21 >= -9  &&  HCount_variance21 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance21 %> %
+                </td>
+              <%  }else if( HCount_variance21 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance21 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance21 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance21 >= -9  &&  Prod_variance21 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance21 %> %
+                </td>
+              <%  }else if( Prod_variance21 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance21 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance21 %> %
+                  </td>
+              <% } %>
+
+
+
+
+              
+            <!-- call outs --> 
               <td><%= campground.couts21 %></td>
           </tr>
           
-          
+          <!-- .==================================== -->
           <tr>
             <th>Rework CFQI</th>
-              <td><%= campground.P_Vol22  %></td> 
-              <td><%= campground.P_HCount22  %></td>
-              <td><%= (campground.P_Vol22  / campground.P_HCount22 )/5 %></td>
-              <td><%= campground.A_Vol22  %></td> 
-              <td><%= campground.A_HCount22  %></td>
-              <td><%= campground.prod22  = (campground.A_Vol22 / campground.A_HCount22 )/5 %></td>
+              <td><%= week_v22  %></td> 
+              <td><%= week_hc22 %></td>
+              
+              <td>  
+                <% var fix_Pprod22= (week_v22 / week_hc22)/5 %>  
+                <%=  fix_Pprod22.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol22 %></td> 
+              <td><%= campground.A_HCount22 %></td>
+  
+              <td>
+                <% var fix_Aprod22  = (campground.A_Vol22/ campground.A_HCount22)/5 %>
+                <%=  fix_Aprod22.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance22= (((campground.A_Vol22 - week_v22)/week_v22)*100).toFixed()  %>
+               <% var HCount_variance22= (((campground.A_HCount22 - week_hc22)/week_hc22)*100).toFixed()  %>
+               <% var Prod_variance22= (((fix_Aprod20 - fix_Pprod22)/fix_Pprod22)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance22 >= -9  &&  vol_variance22 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance22 %> % 
+                </td>
+              <%  }else  if( vol_variance22 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance22 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance22 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance22 >= -9  &&  HCount_variance22 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance22 %> %
+                </td>
+              <%  }else  if( HCount_variance22 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance22 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance22 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance22 >= -9  &&  Prod_variance22 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance22 %> %
+                </td>
+              <%  }else  if( Prod_variance22 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance22 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance22 %> %
+                  </td>
+              <% } %>
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts22 %></td>
           </tr>
-
+<!-- ================================================  -->
 
           <tr>
             <th>Rework Non-Blocking	</th>
-              <td><%= campground.P_Vol23  %></td> 
-              <td><%= campground.P_HCount23  %></td>
-              <td><%= (campground.P_Vol23  / campground.P_HCount23 )/5 %></td>
-              <td><%= campground.A_Vol23  %></td> 
-              <td><%= campground.A_HCount23  %></td>
-              <td><%= campground.prod23  = (campground.A_Vol23 / campground.A_HCount23 )/5 %></td>
+              <td><%= week_v23  %></td> 
+              <td><%= week_hc23 %></td>
+             
+
+
+              <td>  
+                <% var fix_Pprod23= (week_v23 / week_hc23)/5 %>  
+                <%=  fix_Pprod23.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol23 %></td> 
+              <td><%= campground.A_HCount23 %></td>
+  
+              <td>
+                <% var fix_Aprod23  = (campground.A_Vol23/ campground.A_HCount23)/5 %>
+                <%=  fix_Aprod23.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance23= (((campground.A_Vol23 - week_v23)/week_v23)*100).toFixed()  %>
+               <% var HCount_variance23= (((campground.A_HCount23 - week_hc23)/week_hc23)*100).toFixed()  %>
+               <% var Prod_variance23= (((fix_Aprod23 - fix_Pprod23)/fix_Pprod23)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance23 >= -9  &&  vol_variance23 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance23 %> % 
+                </td>
+              <%  }else  if( vol_variance23 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance23 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance23 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance23 >= -9  &&  HCount_variance23 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance23 %> %
+                </td>
+              <%  }else  if( HCount_variance23 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance23 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance23 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance23 >= -9  &&  Prod_variance23 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance23 %> %
+                </td>
+              <%  } else if( Prod_variance23 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance23 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance23 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts23 %></td>
           </tr>
-          
+          <!--======================================= KCVP Detections ========================================================= -->
           <tr>
-            <th class="ui center aligned header blue">KCVP Detections</th>
-              <td><%= campground.P_Vol24  %></td> 
-              <td><%= campground.P_HCount24  %></td>
-              <td><%= (campground.P_Vol24  / campground.P_HCount24 )/5 %></td>
-              <td><%= campground.A_Vol24  %></td> 
-              <td><%= campground.A_HCount24  %></td>
-              <td><%= campground.prod24  = (campground.A_Vol24 / campground.A_HCount24 )/5 %></td>
+            <th class="ui center aligned header blue">KCVP Detections </th>
+              <td><b> <%= week_v24  %></b></td> 
+              <td><b> <%= week_hc24 %></b></td>
+              
+
+              <td>
+                <% var fix_Pprod24= (week_v24 / week_hc24)/5 %>  
+                <b> <%=  fix_Pprod24.toFixed(2) %> </b> 
+              </td> 
+              
+              <td><b><%= campground.A_Vol24.toFixed(2) %></b></td> 
+              <td><b><%= campground.A_HCount24 %></b></td>
+  
+              <td>
+                <% var fix_Aprod24  = (campground.A_Vol24/ campground.A_HCount24)/5 %>
+                <b><%=  fix_Aprod24.toFixed(2) %></b>
+              </td>
+               <!-- variance -->
+               <% var vol_variance24= (((campground.A_Vol24 - week_v24)/week_v24)*100).toFixed()  %>
+               <% var HCount_variance24= (((campground.A_HCount24 - week_hc24)/week_hc24)*100).toFixed()  %>
+               <% var Prod_variance24= (((fix_Aprod24 - fix_Pprod24)/fix_Pprod24)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance24 >= -9  &&  vol_variance24 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance24 %> % 
+                </td>
+              <%  } else if( vol_variance24 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance24 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance24 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance24 >= -9  &&  HCount_variance24 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance24 %> %
+                </td>
+              <%  } else if( HCount_variance24 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance24 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance24 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance24 >= -9  &&  Prod_variance24 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance24 %> %
+                </td>
+              <%  } else if( Prod_variance24 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance24 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance24 %> %
+                  </td>
+              <% } %>
+
+
+            <!-- call outs --> 
               <td><%= campground.couts24 %></td>
           </tr>
 
-
+<!-- =========================== Language Mismatch ===============================   -->
           <tr>
             <th>Language Mismatch</th>
-              <td><%= campground.P_Vol25  %></td> 
-              <td><%= campground.P_HCount25  %></td>
-              <td><%= (campground.P_Vol25  / campground.P_HCount25 )/5 %></td>
-              <td><%= campground.A_Vol25  %></td> 
-              <td><%= campground.A_HCount25  %></td>
-              <td><%= campground.prod25  = (campground.A_Vol25 / campground.A_HCount25 )/5 %></td>
+              <td><%= week_v25  %></td> 
+              <td><%= week_hc25 %></td>
+              
+              <td>  
+                <% var fix_Pprod25= (week_v25 / week_hc25)/5 %>  
+                <%=  fix_Pprod25.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol25 %></td> 
+              <td><%= campground.A_HCount25 %></td>
+  
+              <td>
+                <% var fix_Aprod25  = (campground.A_Vol25/ campground.A_HCount25)/5 %>
+                <%=  fix_Aprod25.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance25= (((campground.A_Vol25 - week_v25)/week_v25)*100).toFixed()  %>
+               <% var HCount_variance25= (((campground.A_HCount25 - week_hc25)/week_hc25)*100).toFixed()  %>
+               <% var Prod_variance25= (((fix_Aprod25 - fix_Pprod25)/fix_Pprod25)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance25 >= -9  &&  vol_variance25 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance25 %> % 
+                </td>
+              <%  }else  if( vol_variance25 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance25 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance25 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance25 >= -9  &&  HCount_variance25 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance25 %> %
+                </td>
+              <%  }else  if( HCount_variance25 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance25 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance25 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance25 >= -9  &&  Prod_variance25 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance25 %> %
+                </td>
+              <%  }else  if( Prod_variance25 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance25 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance25 %> %
+                  </td>
+              <% } %>
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts25 %></td>
           </tr>
 
+
+          <!-- =======================  -->
           <tr>
             <th>Unknown Language</th>
-              <td><%= campground.P_Vol26  %></td> 
-              <td><%= campground.P_HCount26  %></td>
-              <td><%= (campground.P_Vol26  / campground.P_HCount26 )/5 %></td>
-              <td><%= campground.A_Vol26  %></td> 
-              <td><%= campground.A_HCount26  %></td>
-              <td><%= campground.prod26  = (campground.A_Vol26 / campground.A_HCount26 )/5 %></td>
+              <td><%=week_v26  %></td> 
+              <td><%= week_hc26 %></td>
+              
+
+
+              <td>  
+                <% var fix_Pprod26= (week_v26 / week_hc26)/5 %>  
+                <%=  fix_Pprod26.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol26 %></td> 
+              <td><%= campground.A_HCount26 %></td>
+  
+              <td>
+                <% var fix_Aprod26  = (campground.A_Vol26/ campground.A_HCount26)/5 %>
+                <%=  fix_Aprod26.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance26= (((campground.A_Vol26 - week_v26)/week_v26)*100).toFixed()  %>
+               <% var HCount_variance26= (((campground.A_HCount26 - week_hc26)/week_hc26)*100).toFixed()  %>
+               <% var Prod_variance26= (((fix_Aprod26 - fix_Pprod26)/fix_Pprod26)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance26 >= -9  &&  vol_variance26 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance26 %> % 
+                </td>
+              <%  }else  if( vol_variance26 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance26 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance26 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance26 >= -9  &&  HCount_variance26 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance26 %> %
+                </td>
+              <%  }else  if( HCount_variance26 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance26 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance26 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance26 >= -9  &&  Prod_variance26 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance26 %> %
+                </td>
+              <%  }else  if( Prod_variance26 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance26 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance26 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts26 %></td>
           </tr>
 
+          <!-- =====================  Switcheroo    =========================  -->
           <tr>
             <th>Switcheroo</th>
-              <td><%= campground.P_Vol27  %></td> 
-              <td><%= campground.P_HCount27  %></td>
-              <td><%= (campground.P_Vol27  / campground.P_HCount25 )/5 %></td>
-              <td><%= campground.A_Vol27  %></td> 
-              <td><%= campground.A_HCount27  %></td>
-              <td><%= campground.prod257 = (campground.A_Vol27 / campground.A_HCount27 )/5 %></td>
+              <td><%= week_v27  %></td> 
+              <td><%= week_hc27 %></td>
+              
+              <td>  
+                <% var fix_Pprod27= (week_v27 / week_hc27)/5 %>  
+                <%=  fix_Pprod27.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol27 %></td> 
+              <td><%= campground.A_HCount27 %></td>
+  
+              <td>
+                <% var fix_Aprod27  = (campground.A_Vol27/ campground.A_HCount27)/5 %>
+                <%=  fix_Aprod27.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance27= (((campground.A_Vol27 - week_v27)/week_v27)*100).toFixed()  %>
+               <% var HCount_variance27= (((campground.A_HCount27 - week_hc27)/week_hc27)*100).toFixed()  %>
+               <% var Prod_variance27= (((fix_Aprod27 - fix_Pprod27)/fix_Pprod27)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance27 >= -9  &&  vol_variance27 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance27 %> % 
+                </td>
+              <%  }else  if( vol_variance27 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance27 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance27 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance27 >= -9  &&  HCount_variance27 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance27 %> %
+                </td>
+              <%  }else  if( HCount_variance27 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance27 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance27 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance27 >= -9  &&  Prod_variance27 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance27 %> %
+                </td>
+              <%  }else  if( Prod_variance27 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance27 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance27 %> %
+                  </td>
+              <% } %>
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts27 %></td>
           </tr>
 
+
+          <!-- ====================================================   -->
           <tr>
             <th>Fixed Layout</th>
-              <td><%= campground.P_Vol28  %></td> 
-              <td><%= campground.P_HCount28  %></td>
-              <td><%= (campground.P_Vol28  / campground.P_HCount28 )/5 %></td>
-              <td><%= campground.A_Vol28  %></td> 
-              <td><%= campground.A_HCount28  %></td>
-              <td><%= campground.prod28  = (campground.A_Vol28 / campground.A_HCount28 )/5 %></td>
+              <td><%= week_v28  %></td> 
+              <td><%= week_hc28 %></td>
+              <td>  
+                <% var fix_Pprod28= (week_v28 / week_hc28)/5 %>  
+                <%=  fix_Pprod28.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol28 %></td> 
+              <td><%= campground.A_HCount28 %></td>
+  
+              <td>
+                <% var fix_Aprod28  = (campground.A_Vol28/ campground.A_HCount28)/5 %>
+                <%=  fix_Aprod28.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance28= (((campground.A_Vol28 - week_v28)/week_v28)*100).toFixed()  %>
+               <% var HCount_variance28= (((campground.A_HCount28 - week_hc28)/week_hc28)*100).toFixed()  %>
+               <% var Prod_variance28= (((fix_Aprod26 - fix_Pprod28)/fix_Pprod28)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance28 >= -9  &&  vol_variance28 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance28 %> % 
+                </td>
+              <%  }else  if( vol_variance28 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance28 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance28 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance28 >= -9  &&  HCount_variance28 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance28 %> %
+                </td>
+              <%  }else  if( HCount_variance28 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance28 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance28 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance28 >= -9  &&  Prod_variance28 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance28 %> %
+                </td>
+              <%  }else  if( Prod_variance28 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance28 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance28 %> %
+                  </td>
+              <% } %>
+
+
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts28 %></td>
           </tr>
-          
+
+
+
+          <!--                 ==========================================================              -->
           <tr>
             <th class="ui center aligned header blue" >Content Testing</th>
-              <td><%= campground.P_Vol29  %></td> 
-              <td><%= campground.P_HCount29  %></td>
-              <td><%= (campground.P_Vol29  / campground.P_HCount29 )/5 %></td>
+              <td><%= week_v29  %></td> 
+              <td><%= week_hc29 %></td>
+              
+
+              <td>  
+                <% var fix_Pprod29= (week_v29 / week_hc29)/5 %>  
+                <%=  fix_Pprod29.toFixed(2) %> 
+              </td> 
+              
               <td><%= campground.A_Vol29 %></td> 
-              <td><%= campground.A_HCount29  %></td>
-              <td><%= campground.prod29  = (campground.A_Vol29 / campground.A_HCount29 )/5 %></td>
+              <td><%= campground.A_HCount29 %></td>
+  
+              <td>
+                <% var fix_Aprod29  = (campground.A_Vol29/ campground.A_HCount29)/5 %>
+                <%=  fix_Aprod29.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance29= (((campground.A_Vol29 - week_v29)/week_v29)*100).toFixed()  %>
+               <% var HCount_variance29= (((campground.A_HCount29 - week_hc29)/week_hc29)*100).toFixed()  %>
+               <% var Prod_variance29= (((fix_Aprod29 - fix_Pprod29)/fix_Pprod29)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance29 >= -9  &&  vol_variance29 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance29 %> % 
+                </td>
+              <%  }else if( vol_variance29 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance29 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance29 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance29 >= -9  &&  HCount_variance29 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance29 %> %
+                </td>
+              <%  }else if( HCount_variance29 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance29 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance29 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance29 >= -9  &&  Prod_variance29 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance29 %> %
+                </td>
+              <%  }else if( Prod_variance29 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance29 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance29 %> %
+                  </td>
+              <% } %>
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts29 %></td>
           </tr>
 
           <tr>
             <th class="ui center aligned header blue" >KDP Cover Gen</th>
-              <td><%= campground.P_Vol30  %></td> 
-              <td><%= campground.P_HCount30  %></td>
-              <td><%= (campground.P_Vol30  / campground.P_HCount30 )/5 %></td>
-              <td><%= campground.A_Vol30  %></td> 
-              <td><%= campground.A_HCount30  %></td>
-              <td><%= campground.prod30  = (campground.A_Vol30 / campground.A_HCount30 )/5 %></td>
+              <td><%= week_v30  %></td> 
+              <td><%= week_hc30 %></td>
+              
+              <td>  
+                <% var fix_Pprod30= (week_v30 / week_hc30)/5 %>  
+                <%=  fix_Pprod30.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol30 %></td> 
+              <td><%= campground.A_HCount30 %></td>
+  
+              <td>
+                <% var fix_Aprod30  = (campground.A_Vol30/ campground.A_HCount30)/5 %>
+                <%=  fix_Aprod30.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance30= (((campground.A_Vol30 - week_v30)/week_v30)*100).toFixed()  %>
+               <% var HCount_variance30= (((campground.A_HCount30 - week_hc30)/week_hc30)*100).toFixed()  %>
+               <% var Prod_variance30= (((fix_Aprod30 - fix_Pprod30)/fix_Pprod30)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance30 >= -9  &&  vol_variance30 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance30 %> % 
+                </td>
+              <%  }else  if( vol_variance30 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance30 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance30 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance30 >= -9  &&  HCount_variance30 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance30 %> %
+                </td>
+              <%  }else  if( HCount_variance30 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance30 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance30 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance30 >= -9  &&  Prod_variance30 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance30 %> %
+                </td>
+              <%  }else  if( Prod_variance30 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance30 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance30 %> %
+                  </td>
+              <% } %>
+
+
+            <!-- call outs --> 
               <td><%= campground.couts30 %></td>
           </tr>
           <tr>
             <th class="ui center aligned header blue" >Author Fix-up</th>
-              <td><%= campground.P_Vol31  %></td> 
-              <td><%= campground.P_HCount31  %></td>
-              <td><%= (campground.P_Vol31  / campground.P_HCount31 )/5 %></td>
-              <td><%= campground.A_Vol31  %></td> 
-              <td><%= campground.A_HCount31  %></td>
-              <td><%= campground.prod31  = (campground.A_Vol31 / campground.A_HCount31 )/5 %></td>
+              <td><%= week_v31  %></td> 
+              <td><%= week_hc31 %></td>
+             
+
+              <td>  
+                <% var fix_Pprod31= (week_v31 / week_hc31)/5 %>  
+                <%=  fix_Pprod31.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol31 %></td> 
+              <td><%= campground.A_HCount31 %></td>
+  
+              <td>
+                <% var fix_Aprod31  = (campground.A_Vol31/ campground.A_HCount31)/5 %>
+                <%=  fix_Aprod31.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance31= (((campground.A_Vol31 - week_v31)/week_v31)*100).toFixed()  %>
+               <% var HCount_variance31= (((campground.A_HCount31 - week_hc31)/week_hc31)*100).toFixed()  %>
+               <% var Prod_variance31= (((fix_Aprod31 - fix_Pprod31)/fix_Pprod31)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance31 >= -9  &&  vol_variance31 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance31 %> % 
+                </td>
+              <%  } else  if( vol_variance31 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance31 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance31 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance31 >= -9  &&  HCount_variance31 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance31 %> %
+                </td>
+              <%  }  else if( HCount_variance31 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance31 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance31 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance31 >= -9  &&  Prod_variance31 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance31 %> %
+                </td>
+              <%  } else  if( Prod_variance31 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance31 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance31 %> %
+                  </td>
+              <% } %>
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts31 %></td>
           </tr>
           <tr>
             <th class="ui center aligned header blue" >All Field Audit</th>
-              <td><%= campground.P_Vol32  %></td> 
-              <td><%= campground.P_HCount32  %></td>
-              <td><%= (campground.P_Vol32  / campground.P_HCount32 )/5 %></td>
-              <td><%= campground.A_Vol32  %></td> 
-              <td><%= campground.A_HCount32  %></td>
-              <td><%= campground.prod32  = (campground.A_Vol32 / campground.A_HCount32 )/5 %></td>
+              <td><%= week_v32  %></td> 
+              <td><%= week_hc32 %></td>
+              
+
+              <td>  
+                <% var fix_Pprod32= (week_v32 / week_hc32)/5 %>  
+                <%=  fix_Pprod32.toFixed(2) %> 
+              </td> 
+              
+              <td><%= campground.A_Vol32 %></td> 
+              <td><%= campground.A_HCount32 %></td>
+  
+              <td>
+                <% var fix_Aprod32  = (campground.A_Vol32/ campground.A_HCount32)/5 %>
+                <%=  fix_Aprod32.toFixed(2) %>
+              </td>
+               <!-- variance -->
+               <% var vol_variance32= (((campground.A_Vol32 - week_v32)/week_v32)*100).toFixed()  %>
+               <% var HCount_variance32= (((campground.A_HCount32 - week_hc32)/week_hc32)*100).toFixed()  %>
+               <% var Prod_variance32= (((fix_Aprod32 - fix_Pprod32)/fix_Pprod32)*100).toFixed() %>
+               <!-- Volume variance -->
+               <% if( vol_variance32 >= -9  &&  vol_variance32 <= 9 ) {   %>
+                <td   >
+                  <%= vol_variance32 %> % 
+                </td>
+              <%  }else  if( vol_variance32 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= vol_variance32 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= vol_variance32 %> %
+                  </td>
+              <% } %>
+              
+              <!-- HCount  variance -->
+              <% if( HCount_variance32 >= -9  &&  HCount_variance32 <= 9 ) {   %>
+                <td   >
+                  <%= HCount_variance32 %> %
+                </td>
+              <%  }else  if( HCount_variance32 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= HCount_variance32 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= HCount_variance32 %> %
+                  </td>
+              <% } %>
+  
+              <!-- Prod Variance -->
+              <% if( Prod_variance32 >= -9  &&  Prod_variance32 <= 9 ) {   %>
+                <td   >
+                  <%= Prod_variance32 %> %
+                </td>
+              <%  }else  if( Prod_variance32 > 10 ) {  %>
+                <td  class="positive"   >
+                  <%= Prod_variance32 %> %
+                </td>
+                <%  } else {  %>
+                  <td class="negative"  >
+                    <%= Prod_variance32 %> %
+                  </td>
+              <% } %>
+
+
+
+
+            <!-- call outs --> 
               <td><%= campground.couts32 %></td>
           </tr>          
         </thead>
       </thead>
     </table>
+  
+    
         <p>
             <em>Submitted By <%= campground.author.username %></em>
         </p>
         <span><i>Created on :</i><%=  campground.created.toDateString() %></span><br>
         <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
-            <a class="btn  btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit <i class="edit icon" > </i> </a>
+            <a class="btn  btn-warning btn-xs " href="/campgrounds/<%= campground._id %>/edit">Edit <i class="edit icon" > </i> </a>
             <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-                <button class="btn  btn-danger">Delete <i class="trash alternate icon" > </i></button>
+                <button class="btn   btn-danger btn-xs">Delete <i class="trash alternate icon" > </i></button>
             </form>
         <% }%>
             </div>
